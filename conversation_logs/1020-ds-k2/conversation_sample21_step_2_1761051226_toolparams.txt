@@ -1,0 +1,1 @@
+regs,context,stack 30,telescope $rsp 40,hexdump 0x7ffefac41930 40,x/gx 0x602080,malloc_chunk 0x288cd000,bins,disassemble $rip,vmmap heap,continue

@@ -1,0 +1,1 @@
+procinfo,heap,search "/bin/sh",search "name",telescope 0x5e2d5a18d000 20,x/gx 0x7ce8201917a8,x/gx 0x7ce81fdcb000 + 0x453a0,search -x 0x0000000000000004,search 0x0000000000000004,bins,regs,stack 10,continue

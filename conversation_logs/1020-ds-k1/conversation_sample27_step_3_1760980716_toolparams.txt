@@ -1,0 +1,1 @@
+regs,context,telescope 0x55a8e6402060 20,hexdump 0x55a8e6402040 32,telescope 0x55a8eace4080 4,hexdump 0x55a8eace4020 32,hexdump 0x55a8eace4050 32,heap,bins,continue

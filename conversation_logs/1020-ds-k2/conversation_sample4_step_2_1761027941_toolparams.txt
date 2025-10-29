@@ -1,0 +1,1 @@
+x/gx 0x6020B8,telescope 0x1710010 20,search DREAM,stack 20,malloc_chunk 0x1710010,gotplt,continue

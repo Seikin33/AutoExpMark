@@ -1,0 +1,1 @@
+telescope 0x6020a0 10,telescope 0x6020b0 1,telescope 0x6020a0 10,telescope 0x6020a0 10 -h,x/10gx 0x6020a0,x/10gx 0x6020a0+0x20,hexdump 0x2b84a0d0 32,hexdump 0x75f85f1657a8 8,malloc_chunk 0x2b84a0d0,continue

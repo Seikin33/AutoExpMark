@@ -1,0 +1,1 @@
+telescope 0x6020d8 10,malloc_chunk 0x13e05330,malloc_chunk 0x13e05440,unsortedbin,gotplt,heap,search "/bin/sh",continue

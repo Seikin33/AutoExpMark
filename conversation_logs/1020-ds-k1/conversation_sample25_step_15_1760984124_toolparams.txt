@@ -1,0 +1,1 @@
+regs,context,telescope 0x5774da946000 50,hexdump 0x5774da946000 200,x/gx 0x707b5d0de000 + 0x3c4b10,x/gx 0x707b5d0de000 + 0x3c4b18,telescope 0x626ed0a02260 20,search -p 0x707629ac8d88,x/10gx 0x707629ac8b20 + 0x10,stack 20,continue

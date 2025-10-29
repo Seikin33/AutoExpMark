@@ -1,0 +1,1 @@
+regs,stack 20,retaddr,canary,telescope $rsp 40,search /bin/sh,heap chunks,nearpc,continue

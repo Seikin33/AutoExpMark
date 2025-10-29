@@ -1,0 +1,1 @@
+regs,context,heap,search "leak",search "author",telescope $rsp 50,vmmap,bins,hexdump $rsp 0x100,continue

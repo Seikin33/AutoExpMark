@@ -1,0 +1,1 @@
+telescope 0x804B070 10,telescope 0x92ec410 20,search -p 0xff9b30d8,heap,stack 20,x/x 0xf7f347b0,bins,hexdump 0x92ec7e0 32,continue

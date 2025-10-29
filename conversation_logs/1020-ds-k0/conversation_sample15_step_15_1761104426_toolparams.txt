@@ -1,0 +1,1 @@
+regs,context,vmmap,telescope 0x64577c6db000 40,telescope 0x64574d825000 20,search aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,x/gx 0x77f935348000 + 0x3c4b20,x/gx 0x77f935348000 + 0x3c4b20 + 0x10,x/gx &__malloc_hook,x/gx &__realloc_hook,stack 20,continue

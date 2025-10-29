@@ -1,0 +1,5 @@
+run,vmmap,Ctrl+C,interrupt,3,run,\x03,signal SIGINT,kill,quit,detach,kill
+y,quit
+y,monitor interrupt,file ./data/sample4,quit
+n,\x04,quit
+,quit,quit

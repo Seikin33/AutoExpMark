@@ -1,0 +1,1 @@
+telescope 0x6021E0 32,hexdump 0x21aaf000 0x100,hexdump 0x21aaf100 0x100,hexdump 0x21aaf200 0x100,hexdump 0x21aaf300 0x100,bins,gotplt,x/gx 0x602018,x/gx &__free_hook,search -p 0x4527a,search -t integer 2,search -t dword 2,x/wx 0x6022b8,continue

@@ -1,0 +1,1 @@
+regs,context,stack 30,telescope $rsp 40,search MIRACLE,x/gx &qword_6020B8,x/gx 0x6020B8,bins,heap chunks,continue

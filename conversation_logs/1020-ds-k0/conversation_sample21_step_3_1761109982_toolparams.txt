@@ -1,0 +1,1 @@
+regs,stack 20,telescope 0x3ac53000 10,search sh,context,continue

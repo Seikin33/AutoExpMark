@@ -1,0 +1,1 @@
+pid,regs,stack 20,search '/bin/sh',continue

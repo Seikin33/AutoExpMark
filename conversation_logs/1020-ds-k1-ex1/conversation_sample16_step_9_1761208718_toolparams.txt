@@ -1,0 +1,1 @@
+regs,x/10i $rip,gotplt,x/gx 0x602018,vmmap,stack 20,telescope $rsp 20,search /bin/sh,heap,procinfo

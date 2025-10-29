@@ -1,0 +1,1 @@
+context,regs,vmmap,heap,bins,search /bin/sh,x/gx 0x78d7160b47a8,x/gx &__free_hook,x/gx &system,x/gx 0x78d7160b57a8,info address __free_hook,x/gx &__malloc_hook,search system,p system,search 0x78d715d343a0,telescope 0x5937c17f9000 20,continue

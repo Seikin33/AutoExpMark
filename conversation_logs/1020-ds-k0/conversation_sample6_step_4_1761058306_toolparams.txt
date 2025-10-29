@@ -1,0 +1,1 @@
+x/gx 0x6020d0,x/gx 0x6020d8,x/gx 0x6020e0,malloc_chunk 0x213992e0,hexdump 0x213992e0 64,x/gx 0x602018,x/gx 0x602020,x/gx 0x602028,bins,heap,telescope 0x6020b0 40,continue

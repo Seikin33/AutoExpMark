@@ -1,0 +1,1 @@
+x/10gx 0x6020D8,x/gx 0x602018,malloc_chunk 0x10847000,malloc_chunk 0x10847110,malloc_chunk 0x10847220,malloc_chunk 0x10847330,bins,search "/bin/sh",top_chunk,telescope 0x6020D8 10,arena,continue

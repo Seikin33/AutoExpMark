@@ -1,0 +1,1 @@
+telescope 0x11854891e000 48,telescope 0x11854891e000 48,hexdump 0x11854891e000 384,search -t qword 0x5a88fedf4010,telescope 0x11854891e3d0 48,telescope 0x11854891e3d0 96,telescope 0x5a88fedf4010 4,malloc_chunk 0x5a88fedf4000,continue

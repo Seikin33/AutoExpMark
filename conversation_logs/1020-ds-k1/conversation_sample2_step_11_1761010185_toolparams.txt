@@ -1,0 +1,1 @@
+regs,stack 20,vmmap,procinfo,continue

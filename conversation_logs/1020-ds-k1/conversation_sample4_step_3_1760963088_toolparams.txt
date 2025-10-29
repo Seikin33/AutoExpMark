@@ -1,0 +1,1 @@
+regs,telescope $rsp 40,x/gx 0x6020B8,telescope 0x204cf3f0 5,telescope 0x204cf3c0 5,telescope 0x204cf390 5,telescope 0x204cf130 5,telescope 0x204cf100 5,telescope 0x204cf090 5,telescope 0x204cf060 5,hexdump 0x204ce000 0x100,telescope 0x204cf010 5,malloc_chunk 0x204cf010,malloc_chunk 0x204cf0b0,search ROCK,search DREAM,x/gx 0x204cf170,vmmap heap,continue

@@ -1,0 +1,1 @@
+regs,context,vmmap,hexdump 0x5dce3d701000 256,search /bin/sh,telescope $sp 20,continue

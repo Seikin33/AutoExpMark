@@ -1,0 +1,1 @@
+regs,telescope $rbp-0x50 20,bt,x/10i 0x400824,telescope $rbp-0x90 10,heap,x/gx &ptr,info address ptr,bins,vmmap stack,search -x 48686a,search -x 48686a 0x7ffcffc53000 0x7ffcffc74000,search -x 48686a stack,context,telescope 0x7ffcffc71ab0 20,telescope 0x7ffcffc71a60 10,telescope 0x7ffcffc71a20 20,info variables ptr,x/20gx 0x602000,x/gx 0x602090

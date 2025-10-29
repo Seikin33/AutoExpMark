@@ -1,0 +1,1 @@
+x/gx 0x6020a8,telescope 0x281ca010 40,hexdump 0x281cb830 16,hexdump 0x281cb8c0 16,hexdump 0x281cb950 16,hexdump 0x281cb9e0 16,heap chunks,bins,malloc_chunk 0x281cb820,malloc_chunk 0x281cb940,search 0x3837363534333231,continue

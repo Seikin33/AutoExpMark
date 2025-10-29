@@ -1,0 +1,1 @@
+pid,regs,gotplt,stack,search /bin/sh,telescope 0x602120 4,context,hexdump 0x602018 16,continue

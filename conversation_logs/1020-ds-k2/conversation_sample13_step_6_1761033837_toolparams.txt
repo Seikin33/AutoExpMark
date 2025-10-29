@@ -1,0 +1,1 @@
+telescope 0x5b5d3e602060 20,telescope 0x5b5d43dd9010,hexdump 0x7a858befbb10 32,x/gx 0x5b5d43dd90d0+8,x/gx 0x5b5d43dd90d0+16,hexdump 0x7a858befbafd 64,p &__malloc_hook,heap chunks,continue

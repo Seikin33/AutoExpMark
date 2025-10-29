@@ -1,0 +1,1 @@
+x/50wx 0x804b0a0,telescope 0x937e000 20,hexdump 0x937e000 0x50,x/10wx 0x937e048,search 0x61616161,continue

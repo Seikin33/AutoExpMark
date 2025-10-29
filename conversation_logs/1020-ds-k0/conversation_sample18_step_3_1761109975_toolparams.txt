@@ -1,0 +1,1 @@
+x/wx 0x804A288,x/wx 0x804A2A4,x/wx 0x804A2A0,x/wx 0x804A2A8,x/s 0x804A2C0,gotplt,telescope 0x9fed450,bins,continue

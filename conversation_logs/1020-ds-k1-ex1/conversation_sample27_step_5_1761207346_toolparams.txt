@@ -1,0 +1,1 @@
+telescope 0x63d577802060 20,hexdump 0x63d57780205b 32,telescope 0x63d58bdf8080,telescope 0x63d58bdf8170,telescope 0x63d58bdf8110,telescope 0x63d58bdf8020,telescope 0x63d58bdf81d0,telescope 0x63d58bdf82e0,heap chunks,context

@@ -1,0 +1,1 @@
+x/wx 0x0804d09c,info proc mappings,info registers,heap,bins,telescope 0x64977ab00360 8,telescope 0x64977ab003a0 8,stack 20,info proc,info threads

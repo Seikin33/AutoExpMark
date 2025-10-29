@@ -1,0 +1,1 @@
+regs,context,stack 20,telescope $rsp 40,x/gx 0x6020d0,x/gx 0x6020d8,x/gx 0x6020e0,x/gx 0x602018,x/gx 0x602020,x/gx 0x602080,heap bins,malloc_chunk 0x2e07f930,gotplt,continue

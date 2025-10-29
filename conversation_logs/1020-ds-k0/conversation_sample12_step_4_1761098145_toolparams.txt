@@ -1,0 +1,1 @@
+regs,stack 20,malloc_chunk 0x63e941dd2000,malloc_chunk 0x63e941dd20a0,telescope 0x63e910202060 20,search -p 0x63e910202048,vmmap libc,p &__free_hook,search -p 0x79290e0cb7a8,p system,bins,continue

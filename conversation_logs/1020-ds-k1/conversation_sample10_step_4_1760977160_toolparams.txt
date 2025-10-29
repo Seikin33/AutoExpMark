@@ -1,0 +1,1 @@
+telescope 0x291c010 20,hexdump 0x291d830 16,hexdump 0x291d950 16,got,gotplt,search -p 0x7fa1ddf09b78,malloc_chunk 0x291d820,malloc_chunk 0x291d940,stack 20,canary,continue

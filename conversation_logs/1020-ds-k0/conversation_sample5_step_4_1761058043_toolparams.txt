@@ -1,0 +1,1 @@
+telescope 0x804d000 40,gotplt,telescope 0x83c42a8 20,regs,stack 20,continue

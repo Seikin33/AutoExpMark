@@ -1,0 +1,1 @@
+regs,stack 30,telescope 0x804b070 10,telescope 0xffc176e8 10,gotplt,x/x 0xffc17708,x/x 0x804b03c+0x2a,heap chunks,disassemble $eip, +20,continue

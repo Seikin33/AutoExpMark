@@ -1,0 +1,1 @@
+x/4gx 0x602100,x/4gx 0x602140,x/wx 0x602160,malloc_chunk 0x1632e000,malloc_chunk 0x1632e090,hexdump 0x1632e000 0x100,stack,telescope $rsp 20,regs,gotplt,x/gx 0x602040,continue

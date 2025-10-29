@@ -1,0 +1,1 @@
+telescope 0x42f4e7f0f880 5,telescope 0x59459c32a090 20,malloc_chunk 0x59459c32a0d0,malloc_chunk 0x59459c32a040,telescope 0x79e130a1cb20 8,heap,continue

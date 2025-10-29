@@ -1,0 +1,1 @@
+telescope 0x602040 40,x/10gx 0x602060,x/10gx 0x374cb010,x/10gx 0x374cb020,bins,x/20gx 0x374cb250,search 0x7e0dedf16b78,heap,continue

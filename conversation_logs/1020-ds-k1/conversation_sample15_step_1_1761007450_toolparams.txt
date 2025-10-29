@@ -1,0 +1,1 @@
+x/s 0x58cd17622060,x/10gx 0x58cd17602000,info address unk_202060,info variables,x/100gx 0x58cd17602000,heap,regs,nearpc,stack 10,bt,x/10i 0x58cd17400ccf,info proc,continue

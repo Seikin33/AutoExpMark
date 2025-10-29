@@ -1,0 +1,1 @@
+telescope 0x63d577802060 20,hexdump 0x63d57780205b 40,malloc_chunk 0x63d58bdf8170,telescope 0x63d58bdf81d0 10,malloc_chunk 0x63d58bdf8110,heap chunks,search 0x63d58bdf8168,fastbins,continue

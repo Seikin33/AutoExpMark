@@ -1,0 +1,1 @@
+x/10gx 0x6020A8,heap chunks,hexdump 0x281cb820 128,telescope 0x281cb820 20,vmmap heap,stack 20,regs,search 12345678,gotplt,continue

@@ -1,0 +1,1 @@
+telescope 0x6020d8 10,gotplt,hexdump 0x602018 8,telescope 0x1a513330 20,malloc_chunk 0x1a513330,regs,context,search /bin/sh,arena,continue

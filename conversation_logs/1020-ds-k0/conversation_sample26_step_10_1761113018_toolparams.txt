@@ -1,0 +1,1 @@
+regs,vmmap,context,heap,bins,search /bin/sh,telescope $rsp,x/10gx 0x6020A0,x/10gx &name,continue

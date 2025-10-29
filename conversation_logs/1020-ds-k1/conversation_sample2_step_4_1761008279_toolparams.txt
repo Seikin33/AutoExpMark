@@ -1,0 +1,1 @@
+telescope 0x6020a0 20,hexdump 0x2b84a000 0x100,fastbins,smallbins,unsortedbin,bins,malloc_chunk 0x2b84a000,malloc_chunk 0x2b84a030,arena,top_chunk,context,continue

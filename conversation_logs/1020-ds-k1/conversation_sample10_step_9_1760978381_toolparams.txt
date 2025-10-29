@@ -1,0 +1,1 @@
+x/gx 0x6020A8,telescope 0x291c000 50,hexdump 0x291d830 0x100,hexdump 0x291d8c0 0x100,malloc_chunk 0x291d830,heap chunks,gotplt,continue

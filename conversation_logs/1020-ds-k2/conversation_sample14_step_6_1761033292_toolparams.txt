@@ -1,0 +1,1 @@
+regs,context,stack 20,procinfo,search "/bin/sh",argv,envp,x/10s $rsp,info proc,info functions system,info target,continue

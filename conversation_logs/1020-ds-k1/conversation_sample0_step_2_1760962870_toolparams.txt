@@ -1,0 +1,1 @@
+x/10gx 0x602140,hexdump 0x7acf540 0x50,malloc_chunk 0x7acf530,malloc_chunk 0x7acf570,fastbins,search -p 0x602140,continue

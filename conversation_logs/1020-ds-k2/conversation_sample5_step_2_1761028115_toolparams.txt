@@ -1,0 +1,1 @@
+x/10wx 0x804d094,x/10wx 0x804d08c,x/10wx 0x804d0ac,x/10wx 0x804d0a8,malloc_chunk 0x87d3510,malloc_chunk 0x87d39c0,telescope 0x87d3510 20,telescope 0x87d39c0 20,gotplt,x/x 0x804d020,search sh,search system,context,regs,stack 20,bins,continue

@@ -1,0 +1,1 @@
+x/gx 0x58cd17602090,x/wx 0x58cd17602040,hexdump 0x58cd17602060 0x40,malloc_chunk 0x58cd2caee000,malloc_chunk 0x58cd2caee090,unsortedbin,regs,context,vmmap libc,telescope 0x58cd17602060 10,disassemble sub_BB1,disassemble main,info functions,x/10i $rip,continue

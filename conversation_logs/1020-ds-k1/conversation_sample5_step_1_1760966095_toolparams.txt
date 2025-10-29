@@ -1,0 +1,1 @@
+telescope 0x804d094,telescope 0x804d08c,telescope 0x804d09c,telescope 0x804d0a0,telescope 0x804d0ac,heap,bins,got,gotplt,search sh;,search sh\x3b,search sh,continue

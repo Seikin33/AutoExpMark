@@ -1,0 +1,1 @@
+vmmap,telescope 0x602080 10,x/10gx 0x602080,dd 0x6020B0,fastbins,unsortedbin,search aaaaaaaa,search bbbbbbbb,find 0x400000, 0x7ffffffff000, "aaaaaaaa",regs,context,x/20bx 0x7fffffffe320,info proc mappings,continue

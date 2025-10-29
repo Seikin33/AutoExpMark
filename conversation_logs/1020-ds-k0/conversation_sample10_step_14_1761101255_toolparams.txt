@@ -1,0 +1,1 @@
+context,search /bin/sh,heap,gotplt,telescope 0x62e258054000 50,bins,continue

@@ -1,0 +1,1 @@
+context,regs,telescope $rsp 20,x/gx 0x6020B8,heap chunks,search -x 6161616161616161,canary,heap,arena,malloc_chunk 0x1e07c000,top_chunk,mp,fastbins,unsortedbin,smallbins,largebins,bins,find_fake_fast,find_fake_fast 0x1e07c000 0x1000,vmmap,continue

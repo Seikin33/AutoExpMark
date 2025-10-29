@@ -1,0 +1,1 @@
+telescope 0x602040 40,heap,bins,search 0x45226,stack 20,gotplt,info functions,p &main_arena,p __environ,p 0x7ffdb2920ee8 - 240,telescope 0x7ffdb2920df8 10,x/gx 0x7ffdb2920e18,telescope 0x602080 20,x/40gx 0x602040,info registers,context,continue

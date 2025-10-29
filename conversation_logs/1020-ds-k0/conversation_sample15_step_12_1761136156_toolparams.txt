@@ -1,0 +1,1 @@
+x/8gx 0x5eb0de002060,x/gx 0x5eb0de002090,x/wx 0x5eb0de002040,telescope 0x711cd167fafd 10,x/gx 0x711cd167fb10,telescope 0x711cd167faed 10,continue

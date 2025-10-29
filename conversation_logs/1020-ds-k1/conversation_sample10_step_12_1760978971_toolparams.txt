@@ -1,0 +1,1 @@
+gotplt,x/gx 0x602018,telescope 0x6020A8 40,telescope 0x291c010 40,heap chunk 0x291d840,x/20gx 0x291d830,bins,search /bin/sh,regs,info proc mappings,info threads,x/10i $rip,bt,x/20i 0x401087,continue

@@ -1,0 +1,1 @@
+gotplt,gotplt,x/10gx 0x602018,telescope 0x602100 8,telescope 0x602140 8,hexdump 0x6020a0 0x20,x/gx 0x6020e0,malloc_chunk 0x32e1e000,malloc_chunk 0x32e1e190,hexdump 0x32e1e190 0x20,search -p 0x602090,search -p 0x32e1e000,regs,context,bins,continue

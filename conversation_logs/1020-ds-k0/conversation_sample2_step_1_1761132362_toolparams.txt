@@ -1,0 +1,1 @@
+telescope 0x6020A0 10,x/d 0x6020B0,hexdump 0x3ad39010 32,hexdump 0x3ad39040 32,bins,continue

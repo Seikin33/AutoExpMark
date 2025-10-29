@@ -1,0 +1,1 @@
+ln chunk,ln size,p &chunk,p &size,telescope 0x55cb40202260 10,telescope 0x55cb402020c0 10,hexdump 0x55cb79116000 64,hexdump 0x55cb79116020 64,hexdump 0x55cb79116050 64,fastbins,malloc_chunk 0x55cb79116000,malloc_chunk 0x55cb79116020,malloc_chunk 0x55cb79116050,top_chunk,continue

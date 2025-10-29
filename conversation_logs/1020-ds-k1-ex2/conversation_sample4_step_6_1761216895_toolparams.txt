@@ -1,0 +1,1 @@
+regs,telescope $rsp 20,heap,search -x 0x7ffdd2787f36,search 0x7ffdd2787f36,continue

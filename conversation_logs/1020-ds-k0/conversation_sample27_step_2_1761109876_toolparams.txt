@@ -1,0 +1,1 @@
+search -s "leak:",telescope 0x61e256e02000 40,search -p 0x61e268ad0080,telescope 0x61e256e02060 20,telescope 0x61e268ad0080 10,hexdump 0x61e268ad0020 0x20,hexdump 0x61e268ad0050 0x20,search -p 0x7d864d96e000,continue

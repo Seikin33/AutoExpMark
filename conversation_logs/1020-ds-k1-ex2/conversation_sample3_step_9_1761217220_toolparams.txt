@@ -1,0 +1,1 @@
+heap chunks,heap,telescope 0x1632e010 20,gotplt,x/10gx 0x602018,telescope $rsp 40,regs,telescope 0x602120 10,search /bin/sh,continue

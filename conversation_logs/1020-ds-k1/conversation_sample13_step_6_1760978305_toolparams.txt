@@ -1,0 +1,1 @@
+fastbins,telescope 0x5c0425c02060 10,x/gx 0x76fc02a8cb10,hexdump 0x76fc02a8caed 32,p/x 0x76fc026c8000 + 0xf1247,hexdump 0x76fc02a8cb00 24,x/10gx 0x76fc02a8caed,p/x 0x76fc02a8cb10 - 0x76fc02a8caed,x/8bx 0x76fc02a8cb0b,heap bins fast,bins,p main_arena,continue

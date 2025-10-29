@@ -1,0 +1,1 @@
+procinfo,regs,stack,gotplt,telescope 0x6020c8 20,continue

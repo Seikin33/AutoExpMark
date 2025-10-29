@@ -1,0 +1,1 @@
+heap,bins,telescope 0x55cb79116000 40,malloc_chunk 0x55cb79116000,telescope 0x55cb791161f0 20,search -p 0x55cb79116000,telescope 0x55cb40202000 20,telescope 0x55cb402020a0 30,telescope 0x55cb40202150 30,search -p 0x55cb79116000 0x55cb40202000 0x55cb40203000,search -p 0x55cb79116000,malloc_chunk 0x55cb79116020,vmmap,continue

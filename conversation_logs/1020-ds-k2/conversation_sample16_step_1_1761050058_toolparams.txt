@@ -1,0 +1,1 @@
+telescope 0x6020C0 20,heap,bins,hexdump 0x2619c010 16,hexdump 0x2619c030 16,hexdump 0x2619c140 16,hexdump 0x2619c250 16,continue

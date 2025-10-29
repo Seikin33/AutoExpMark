@@ -1,0 +1,1 @@
+x/32wx 0x602060,x/32gx 0x6020e0,x/wx 0x6020c0,x/wx 0x6020c4,hexdump 0x2d15c110 64,gotplt,bins,continue

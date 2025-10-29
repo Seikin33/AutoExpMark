@@ -1,0 +1,1 @@
+telescope 0x6020d8 10,x/32xb 0x13e05340,x/gx 0x602018,vmmap libc,bins,continue

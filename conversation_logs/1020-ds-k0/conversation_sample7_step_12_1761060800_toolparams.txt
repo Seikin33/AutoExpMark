@@ -1,0 +1,1 @@
+regs,context,stack 20,x/gx 0x755361517b10,x/10gx 0x755361517aed,telescope 0x3dee2000 20,info proc,continue

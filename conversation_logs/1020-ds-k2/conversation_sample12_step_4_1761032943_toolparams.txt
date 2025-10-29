@@ -1,0 +1,1 @@
+telescope 0x5d4dc9002000 20,malloc_chunk 0x5d4dcf975000,telescope 0x5d4dcf975000 10,telescope 0x5d4dcf9750a0 5,regs,stack 20,search aaaaaaaa,search bbbbbbbb,bins,telescope 0x5d4dc9002040 10,continue

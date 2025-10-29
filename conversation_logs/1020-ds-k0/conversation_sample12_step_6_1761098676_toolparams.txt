@@ -1,0 +1,1 @@
+heap chunks,bins,telescope 0x63e910202000 32,telescope 0x63e910202040 8,telescope 0x79290e0cb7a8,hexdump 0x63e941dd2000 64,hexdump 0x63e910202078 32,p system,vmmap heap,find 0x63e941dd2000 0x63e941df3000 0x63e941dd2000,find 0x63e941dd2000, +0x21000, 0x63e941dd2000,regs,stack 20,continue

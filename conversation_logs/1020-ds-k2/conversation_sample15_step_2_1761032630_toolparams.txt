@@ -1,0 +1,1 @@
+telescope 0x5b9ddb202040 10,malloc_chunk 0x5b9de10ef000,malloc_chunk 0x5b9de10ef090,hexdump 0x5b9de10ef000 0x90,hexdump 0x5b9de10ef090 0x20,x/gx 0x5b9ddb202090,continue

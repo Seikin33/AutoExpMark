@@ -1,0 +1,1 @@
+x/4wx 0x804A288,x/4wx 0x804A2A0,x/4wx 0x804A2A8,x/10wx 0x8239410,x/10wx 0x8239450,x/10wx 0x8239458,bins,heap bins,x/x 0x804a248,gotplt,context stack,telescope $esp 20,x/10s 0x804a2c0,x/10wx 0x804a2c0,continue

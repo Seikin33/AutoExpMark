@@ -1,0 +1,1 @@
+x/gx 0x602090,x/4gx 0x6020C0,x/2gx 0x602080,bins,x/10gx 0x39e92000,continue

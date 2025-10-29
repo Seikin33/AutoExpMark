@@ -1,0 +1,1 @@
+telescope 0x58cd17602040,telescope 0x58cd17602090,hexdump 0x58cd17602060 48,hexdump 0x58cd2caee010 16,hexdump 0x58cd2caee0a0 16,regs,context,continue

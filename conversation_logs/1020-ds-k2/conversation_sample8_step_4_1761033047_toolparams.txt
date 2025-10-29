@@ -1,0 +1,1 @@
+telescope 0x6020c8 20,hexdump 0x6020b0 40,got atoi,gotplt atoi,x/gx 0x602048,telescope 0x1256d020 10,search -p 0x1256d000,continue

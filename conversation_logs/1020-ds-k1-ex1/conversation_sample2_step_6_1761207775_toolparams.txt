@@ -1,0 +1,1 @@
+regs,nearpc,x/10gx 0x602080,x/wx 0x6020B0,vmmap,x/20gx 0x602070,search 0x0000000000000031,context,continue

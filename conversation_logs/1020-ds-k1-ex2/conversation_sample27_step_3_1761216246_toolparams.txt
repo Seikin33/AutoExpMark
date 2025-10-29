@@ -1,0 +1,1 @@
+context,regs,stack 20,telescope 0x5d232c402020 40,telescope 0x5d232c402058 32,hexdump 0x5d2350c15080 32,hexdump 0x5d2350c15020 32,hexdump 0x5d2350c15050 32,telescope 0x5d2350c15110 32,telescope 0x5d2350c151a0 32,continue

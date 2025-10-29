@@ -1,0 +1,1 @@
+telescope 0x602000 200,telescope 0x374cb000 50,regs,stack 20,continue

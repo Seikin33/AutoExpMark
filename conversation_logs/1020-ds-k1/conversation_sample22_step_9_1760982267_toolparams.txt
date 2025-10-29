@@ -1,0 +1,1 @@
+telescope 0x602000 40,hexdump 0x602060 32,malloc_chunk 0x2a659000,malloc_chunk 0x2a659020,regs,stack 20,search 0x6666666666666666,bins,continue

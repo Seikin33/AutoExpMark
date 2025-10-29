@@ -1,0 +1,1 @@
+malloc_chunk 0x626eff303000,malloc_chunk 0x626eff303020,malloc_chunk 0x626eff303050,malloc_chunk 0x626eff303220,telescope 0x626ed0a02260 10,telescope 0x626ed0a020c0 10,regs,context,search -t string 0x626eff303000,continue

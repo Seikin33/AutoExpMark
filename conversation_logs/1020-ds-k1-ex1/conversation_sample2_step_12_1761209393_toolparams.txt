@@ -1,0 +1,1 @@
+regs,telescope $rsp 20,x/10gx 0x602080,x/wx 0x6020b0,x/s $rsi,canary,continue

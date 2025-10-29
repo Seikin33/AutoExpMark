@@ -1,0 +1,1 @@
+telescope 0x55a8e6402060 4,x/s 0x55a8e6402040,hexdump 0x55a8e6402040 32,telescope 0x55a8eace4170 4,telescope 0x55a8eace40b0 4,x/gx 0x7f78356197a8,x/s 0x55a8eace40e0,bins,heap chunk 0x55a8eace41d0,telescope 0x55a8eace41d0 4,continue

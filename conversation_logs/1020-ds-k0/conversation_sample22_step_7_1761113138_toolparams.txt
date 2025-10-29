@@ -1,0 +1,1 @@
+regs,context,telescope 0x602040 64,telescope 0x12c29000 32,telescope 0x12c29130 64,telescope 0x602060 32,hexdump 0x12c29008 24,bins

@@ -1,0 +1,1 @@
+telescope 0x616daba02060 10,dd 0x616daba0204C,telescope 0x616dc826a010,telescope 0x616dc826a0c0,telescope 0x616dc826a150,ds 0x616dc826a030,x/s 0x616dc826a030,x/s 0x616dc826a0e0,x/s 0x616dc826a170,continue

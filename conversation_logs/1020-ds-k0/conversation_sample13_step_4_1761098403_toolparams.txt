@@ -1,0 +1,1 @@
+x/gx 0x5eb20e00204c,telescope 0x5eb20e002060 100,telescope 0x5eb230df6020 32,telescope 0x5eb230df60d0 32,telescope 0x5eb230df6160 32,x/gx &__malloc_hook,bins,continue

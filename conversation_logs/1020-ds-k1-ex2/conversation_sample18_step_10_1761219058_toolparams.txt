@@ -1,0 +1,1 @@
+pid,vmmap,heap,bins,gotplt,hexdump 0x804a258 20,x/10wx 0x804a258,search /bin/sh,stack 20,regs,context,hexdump 0x804A288 40,x/10wx 0x804A288,continue

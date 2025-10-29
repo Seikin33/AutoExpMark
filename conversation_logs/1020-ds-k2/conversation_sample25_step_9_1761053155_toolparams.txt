@@ -1,0 +1,1 @@
+telescope 0x5d91ea202260 10,telescope 0x5d91ea2020c0 10,heap chunks,x/10gx 0x5d91ee4421f0,x/gx 0x5d91ee4421f0+8,x/10gx 0x5d91ee442000,x/10gx 0x5d91ee4420e0,x/10gx 0x5d91ee442200,search 0x7d60b6845b78,search -t qword 0x7d60b6845b78,x/10gx 0x5d91ee442020,continue

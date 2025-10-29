@@ -1,0 +1,1 @@
+regs,context,telescope 0x63d577802060 20,telescope 0x63d57780205b 10,heap,bins,x/gx 0x7d8f712f0b78,vmmap,continue

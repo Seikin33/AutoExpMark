@@ -1,0 +1,1 @@
+telescope 0x6020D8 10,search "/bin/sh",search "EEEEE",x/gx 0x602018,bins,heap chunks,search -x 0x68732f6e69622f,search 0x68732f6e69622f,hexdump 0x10e67220 0x100,hexdump 0x10e67330 0x100,telescope 0x6020c0 4,continue

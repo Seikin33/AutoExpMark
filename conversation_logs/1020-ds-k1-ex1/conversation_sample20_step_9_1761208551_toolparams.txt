@@ -1,0 +1,1 @@
+telescope 0x804b120 10,telescope 0x804b0a0 10,telescope 0x804b0e0 10,gotplt,telescope 0x804b010 8,hexdump 0x804b130 40,vmmap libc,telescope 0x804b238 4,heap,continue

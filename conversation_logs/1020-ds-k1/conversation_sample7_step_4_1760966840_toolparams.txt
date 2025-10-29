@@ -1,0 +1,1 @@
+search -p 0x602dbcd95010,telescope 0x2c288f9da160 8,telescope 0x2c288f9da160 48,hexdump 0x602dbcd95010 32,hexdump 0x602dbcd95050 48,hexdump 0x602dbcd95010 64,hexdump 0x602dbcd95080 64,malloc_chunk 0x602dbcd95020,heap chunks,search -p 0x602dbcd95030,bins,continue

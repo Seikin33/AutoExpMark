@@ -1,0 +1,1 @@
+telescope &heaparray 10,x/10gx 0x6020a0,x/gx 0x6020c0,gotplt,x/10gx 0x602000,hexdump 0x33f20080 0x70,hexdump 0x6020bd 0x40,context,continue

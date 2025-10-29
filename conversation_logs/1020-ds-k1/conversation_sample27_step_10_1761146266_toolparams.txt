@@ -1,0 +1,1 @@
+telescope 0x602d22c02000 80,telescope 0x602d42704000 40,telescope 0x602d42705100 40,telescope 0x602d427051d0 20,telescope 0x602d42705168 20,telescope 0x7add36aacb10 10,p &__malloc_hook,telescope 0x7add36e34b10 10,bins,telescope 0x602d427051e0 10,continue

@@ -1,0 +1,1 @@
+x/10gx 0x6020D8,telescope 0x13e05000 20,bins,gotplt,arena,continue

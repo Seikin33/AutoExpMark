@@ -1,0 +1,1 @@
+x/gx 0x7de2918da000 + 0x3c57a8,p &__free_hook,x/gx 0x7de291ca07a8,x/10gx 0x5e848da99000,argv,envp,info proc,info registers,continue

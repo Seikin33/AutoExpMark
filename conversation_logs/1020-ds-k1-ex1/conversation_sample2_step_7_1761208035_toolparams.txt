@@ -1,0 +1,1 @@
+telescope 0x602080 10,x/wx 0x6020B0,fastbins,unsortedbin,hexdump 0x602080 80,search aaaaaaaa,telescope 0x7ffff7fec000 40,info registers,bt,x/10i $rip,disas 0x400d23,disassemble 0x400d23,disassemble main,info functions,info proc,continue

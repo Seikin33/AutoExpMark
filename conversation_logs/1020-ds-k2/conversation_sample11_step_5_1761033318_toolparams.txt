@@ -1,0 +1,1 @@
+x/4wx 0x945f7e8,telescope 0xff8f8908 20,x/x 0x0804B070,gotplt,regs,telescope $esp 20,bt,x/10i $eip,x/x 0x804b03c,x/x 0x804b03c+0x22,context,continue

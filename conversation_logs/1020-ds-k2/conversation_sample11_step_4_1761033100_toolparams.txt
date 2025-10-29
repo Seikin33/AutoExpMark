@@ -1,0 +1,1 @@
+heap,telescope 0xff8f8908 20,x/wx 0x804b00c,stack 20,x/wx 0x804b070,continue

@@ -1,0 +1,1 @@
+context,telescope 0x6020c0 20,hexdump 0x6020c0 160,gotplt,got,gotplt,disassemble 0x602068,telescope 0x602068 2,heap chunks,telescope 0x25c21000 40,malloc_chunk 0x25c21020,search /bin/sh,search 0x7f459772be90,regs,stack 20,continue

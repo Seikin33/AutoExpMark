@@ -1,0 +1,1 @@
+regs,telescope $rsp 40,gotplt,malloc_chunk 0x3799f000,x/4gx 0x602120,x/4gx 0x602140,x/gx 0x602160,search -p 0x7cfd63d7c840,x/s 0x6020e0,bins,continue

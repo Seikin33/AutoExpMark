@@ -1,0 +1,1 @@
+telescope 0x626ed0a02260 10,telescope 0x626ed0a020c0 10,hexdump 0x626eff303000 64,hexdump 0x626eff303020 64,malloc_chunk 0x626eff303020,malloc_chunk 0x626eff303050,malloc_chunk 0x626eff303260,gotplt,got,gotplt,vmmap libc,search -p 0x707629ac8b78,continue

@@ -1,0 +1,1 @@
+malloc_chunk 0x300e000,malloc_chunk 0x300e190,telescope 0x602000 40,gotplt,x/10xg 0x602018,regs,stack 20,continue

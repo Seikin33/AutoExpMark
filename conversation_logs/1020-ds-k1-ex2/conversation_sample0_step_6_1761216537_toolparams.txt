@@ -1,0 +1,1 @@
+telescope 0x602140 10,telescope 0x602018 10,telescope 0x602088 10,gotplt,telescope 0x3b668530 20,context,continue

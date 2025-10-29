@@ -1,0 +1,1 @@
+telescope 0x6020b8 10,x/10gx 0x21329960,x/gx 0x602018,x/gx 0x602020,x/gx 0x602080,regs,smallbins,continue

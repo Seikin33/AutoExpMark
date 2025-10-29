@@ -1,0 +1,1 @@
+regs,x/8gx 0x602100,x/8gx 0x602140,gotplt,gotplt,x/10gx 0x602000,heap bins,telescope 0x6020a0,telescope 0x6020e0,x/gx 0x602090,search 0x602090,x/gx 0x602018,x/5i 0x4006a0,continue

@@ -1,0 +1,1 @@
+x/gx 0x602090,telescope 0x6020C0 4,bins,heap,continue

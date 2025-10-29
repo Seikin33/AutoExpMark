@@ -1,0 +1,1 @@
+regs,context,stack 30,telescope $rsp 40,gotplt,search /bin/sh,canary,disassemble $rip,continue

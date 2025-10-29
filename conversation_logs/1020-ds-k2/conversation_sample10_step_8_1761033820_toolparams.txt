@@ -1,0 +1,1 @@
+x/gx 0x6020A8,telescope 0x6020A8 20,telescope 0x281ca010 20,hexdump 0x281cb830 0x60,hexdump 0x281cb8c0 0x100,malloc_chunk 0x281cb830,context,continue

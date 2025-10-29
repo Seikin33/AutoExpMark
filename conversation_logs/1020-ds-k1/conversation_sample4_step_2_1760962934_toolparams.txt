@@ -1,0 +1,1 @@
+regs,stack 20,malloc_chunk 0x204ce000,malloc_chunk 0x204cf010,search -s ROCK,search -s DREAM,x/gx 0x6020B8,x/10gx 0x204cf130,gotplt,fastbins,continue

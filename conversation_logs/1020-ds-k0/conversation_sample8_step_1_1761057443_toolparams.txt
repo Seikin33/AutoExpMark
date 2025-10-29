@@ -1,0 +1,1 @@
+x/10gx 0x6020c8,search -p 0x80 0x602000 0x603000,search -p 0x80,heap chunks,malloc_chunk 0x2f510000,bins,gotplt,got,plt,search -p 0x2f510030,search -p 0x2f5100c0,stack 20,canary,x/20gx 0x6020c0,hexdump 0x2f510030 0x20,hexdump 0x2f5100c0 0x20,continue

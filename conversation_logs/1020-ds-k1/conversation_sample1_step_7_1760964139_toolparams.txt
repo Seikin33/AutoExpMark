@@ -1,0 +1,1 @@
+telescope 0x6020e0 40,telescope 0x602060 40,telescope 0x6022b8 2,gotplt,telescope 0xc37b300 20,telescope 0xc37b000 20,bins,regs,context,search 0x4527a,stack 20,continue

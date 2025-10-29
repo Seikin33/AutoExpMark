@@ -1,0 +1,1 @@
+search "leak:",telescope 0x5d232c40205b 4,search -p 0x5d2350c15078,telescope 0x5d232c402000 20,hexdump 0x5d2350c15010 32,hexdump 0x5d2350c15040 32,hexdump 0x5d2350c15070 32,search -p 0x5d232c200000,telescope 0x5d2350c15080 4,telescope 0x5d232c402060 20,continue

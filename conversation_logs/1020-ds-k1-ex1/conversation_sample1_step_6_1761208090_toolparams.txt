@@ -1,0 +1,1 @@
+regs,context,x/32gx 0x6021e0,x/32gx 0x6020e0,search 0x0000000100000000,x/gx 0x601fa0,x/10gx 0x71fc100,bins,heap,continue

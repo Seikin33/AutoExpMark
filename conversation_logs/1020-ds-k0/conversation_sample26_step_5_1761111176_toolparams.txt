@@ -1,0 +1,1 @@
+got,gotplt,x/10xg 0x602000,telescope 0x300e000 10,telescope 0x300e190 10,telescope 0x602090 10,telescope 0x6020A0 8,telescope 0x6020A0 20,x/8wx 0x602140,bins,x/gx 0x602018,x/gx 0x602020,x/gx 0x602060,continue

@@ -1,0 +1,1 @@
+telescope 0x6020d8 10,hexdump 0x13e05340 0x100,gotplt,search /bin/sh,unsortedbin,smallbins,largebins,arena,telescope 0x13e05550,continue

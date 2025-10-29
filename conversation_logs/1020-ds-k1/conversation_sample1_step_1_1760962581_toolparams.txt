@@ -1,0 +1,1 @@
+p heap,telescope &heap 32,p len,telescope &len 32,p key1,p key2,hexdump 0xc37b000 32,hexdump 0xc37b100 32,hexdump 0xc37b200 32,hexdump 0xc37b300 32,continue

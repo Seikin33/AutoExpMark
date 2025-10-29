@@ -1,0 +1,1 @@
+context,ln name,info address name,info address message,info address page_list,telescope 0x6020e0 20,telescope 0x72b0655be0e0 10,search -t string a 0x602000 0x603000,search -t string a,hexdump 0x602000 0x100,telescope 0x32e1e010 20,telescope 0x32e1e0d0 20,telescope 0x32e1e190 10,bins,search -p 0x32e1e000 0x602000 0x603000,search -p 0x32e1e000,continue

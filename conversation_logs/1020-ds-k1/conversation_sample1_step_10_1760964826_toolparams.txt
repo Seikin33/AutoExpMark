@@ -1,0 +1,1 @@
+pid,regs,context,stack 20,vmmap,search /bin/sh,continue

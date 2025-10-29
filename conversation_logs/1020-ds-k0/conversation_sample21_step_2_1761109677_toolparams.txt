@@ -1,0 +1,1 @@
+hexdump $rbp-0x50 48,hexdump $rbp-0x90 64,search -t bytes 4831c0,search -t bytes 31c0,heap,x/gx 0x602080,info address ptr,info variables,x/10gx 0x602000,x/10gx 0x602080,search -t string sh,stack 20,hexdump $rbp-0x40 64,continue

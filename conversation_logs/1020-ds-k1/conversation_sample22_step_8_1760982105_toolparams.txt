@@ -1,0 +1,1 @@
+x/40gx &tinypad,x/4gx 0x602060,x/10gx 0x2a659000,unsortedbin,telescope &tinypad 10,search 0x602060,regs,continue

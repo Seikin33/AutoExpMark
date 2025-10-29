@@ -1,0 +1,1 @@
+telescope 0x602000 40,x/gx &message,x/s &name,x/s 0x6020a0,got,gotplt,x/8gx 0x602018,hexdump 0x300e000 32,bins,x/8gx 0x6020A0,x/8wx 0x6020E0,x/8gx 0x602100,x/8wx 0x602140,continue

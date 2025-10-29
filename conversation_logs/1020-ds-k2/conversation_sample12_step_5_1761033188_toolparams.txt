@@ -1,0 +1,1 @@
+context,stack 20,telescope 0x5d4dc9002000 40,heap chunks,bins,search -p 0x5d4dc9002048,telescope $rsp 20,telescope 0x5d4dc9002060 20,telescope 0x5d4dcf9750a0 10,continue

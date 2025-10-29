@@ -1,0 +1,1 @@
+heap,bins,telescope 0x6020C0 20,telescope 0x11b22000 100,search -p 0x7ef0cf997b78,regs,continue

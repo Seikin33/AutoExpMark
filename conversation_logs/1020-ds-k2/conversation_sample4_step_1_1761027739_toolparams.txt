@@ -1,0 +1,1 @@
+telescope 0x6020B8,hexdump 0x170f000 128,bins,regs,telescope $rsp 32,search -t string DREAM,continue

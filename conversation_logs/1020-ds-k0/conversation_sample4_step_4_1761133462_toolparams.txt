@@ -1,0 +1,1 @@
+regs,context,stack 20,telescope $rsp 10,malloc_chunk 0x24292010,telescope 0x242923f0 5,x/gx 0x242922d0,search -p 0x7df3e9867b78,x/gx &qword_6020B8,gotplt,continue

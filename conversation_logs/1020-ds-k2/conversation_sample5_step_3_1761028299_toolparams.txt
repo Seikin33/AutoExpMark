@@ -1,0 +1,1 @@
+x/10wx 0x804d094,x/10wx 0x804d08c,x/s 0x87d3008,x/s 0x87d42b0,heap,bins,gotplt,search "sh",search "system",stack 20,x/10wx 0x87d3510,x/10wx 0x87d39c0,x/s 0x87d39d4,continue

@@ -1,0 +1,1 @@
+x/gx 0x602090,x/wx 0x6020BC,x/4gx 0x6020A0,search -p 0x39e9200010,search 0x39e9200010,vmmap 0x602000,search -t qword 0x39e9200010 0x602000 0x603000,search -t qword 0x39e9200010,x/20gx 0x602090,malloc_chunk 0x39e92000,malloc_chunk 0x39e92050,fastbins,heap,gotplt,plt,x/gx 0x602018,x/gx 0x602028,x/gx 0x602038,continue

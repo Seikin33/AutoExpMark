@@ -1,0 +1,1 @@
+x/wx 0x804A288,x/wx 0x804A2A4,x/wx 0x804A2A0,x/wx 0x804A2A8,telescope 0x804A2A8 10,heap chunks,telescope 0x9fed410 20,telescope 0x9fed450 20,malloc_chunk 0x9fed410,malloc_chunk 0x9fed450,fastbins,unsortedbin,smallbins,largebins,hexdump 0x804a2c0 40,telescope 0x804a2c0 10,gotplt,telescope 0x804A288 10,continue

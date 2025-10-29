@@ -1,0 +1,1 @@
+context,telescope $rsp 40,search 0x7e57dacae226,hexdump 0x602060 0x100,vmmap heap,hexdump 0x5d2956a98000 0x200,telescope $rsp-0x100 20,continue

@@ -1,0 +1,1 @@
+search -p 0x63e941dd2010,search -p 0x63e941dd20b0,telescope 0x63e910202060 44,malloc_chunk 0x63e941dd2000,malloc_chunk 0x63e941dd20a0,context stack,canary,vmmap libc,p &__free_hook,p/x 0x79290e0cb7a8 - 0x79290dd05000,p/x 0x79290dd05000 + 0x3c67a8,continue

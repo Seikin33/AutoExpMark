@@ -1,0 +1,1 @@
+telescope 0x602120 4,dd 0x602140 4,dd 0x602160 1,gotplt,stack 20,search /bin/sh,malloc_chunk 0x3799f000,bins,search TheNewContents,hexdump 0x3799f010 0x100,dd 0x602040 1,p &system,continue

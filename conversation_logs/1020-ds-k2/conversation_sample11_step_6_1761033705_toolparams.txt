@@ -1,0 +1,1 @@
+regs,context,stack 20,heap,telescope 0x7fff8867882b 20,search sh,search system,gotplt,vmmap,continue

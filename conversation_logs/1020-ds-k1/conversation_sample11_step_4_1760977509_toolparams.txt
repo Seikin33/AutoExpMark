@@ -1,0 +1,1 @@
+regs,stack 20,telescope 0xffd78728 10,heap,bins,vmmap,continue

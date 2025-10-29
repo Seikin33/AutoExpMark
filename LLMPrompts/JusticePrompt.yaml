@@ -1,0 +1,18 @@
+system_prompt: |
+  你是一个漏洞利用专家，你的任务是根据已有的漏洞利用模式原型，分析一篇漏洞利用文档，并且总结出该漏洞利用文档涉及的漏洞利用模式。
+  已知的漏洞利用模式原型摘要如下：
+  {prototype_summary}
+  
+
+  输出示例：
+  {{
+    "Mode": ["unsafe_unlink", "fastbin_dup_into_stack", "fastbin_dup_consolidate"],
+    "Features": "描述漏洞利用文档中哪些内容符合漏洞利用模式原型的特征",
+    "Steps": "描述漏洞利用文档中的步骤可以怎样映射到漏洞利用模式原型",
+  }}
+
+user_prompt: |
+  # 需要分析的漏洞利用文档如下：
+  {document}
+
+  # 总结出该漏洞利用文档涉及的漏洞利用模式。

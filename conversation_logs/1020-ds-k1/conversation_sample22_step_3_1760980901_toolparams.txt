@@ -1,0 +1,1 @@
+telescope 0x602040 40,heap chunks,search aaaaaaaa,search bbbbbbbb,top_chunk,arena,gotplt,canary,continue

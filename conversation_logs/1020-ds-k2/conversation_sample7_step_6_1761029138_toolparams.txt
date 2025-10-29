@@ -1,0 +1,1 @@
+telescope 0x42f4e7f0f880 5,hexdump 0x59459c32a010 0x40,hexdump 0x59459c32a030 0x20,hexdump 0x59459c32a050 0x20,unsortedbin,search -t qword 0x51,search -t qword 0x91,malloc_chunk 0x59459c32a020,malloc_chunk 0x59459c32a050,top_chunk,malloc_chunk 0x59459c32a040,continue

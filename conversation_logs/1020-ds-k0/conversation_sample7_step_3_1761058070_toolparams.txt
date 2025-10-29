@@ -1,0 +1,1 @@
+dq 0x11854891e000 48,info registers,context,telescope 0x5a88fedf4000 40,hexdump 0x5a88fedf4000 0x200,malloc_chunk 0x5a88fedf4020,hexdump 0x5a88fedf4010 32,hexdump 0x5a88fedf4080 48,fastbins,search -t qword 0x5a88fedf4010,dq 0x11854891e3d0 48,dq 0x11854891e3d0 24,hexdump 0x5a88fedf4000 0x100,continue

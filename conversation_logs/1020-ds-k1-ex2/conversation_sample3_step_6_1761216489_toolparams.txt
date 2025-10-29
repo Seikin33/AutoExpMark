@@ -1,0 +1,1 @@
+regs,telescope $rsp 40,telescope 0x602100 10,telescope 0x602140 10,search %s,gotplt,malloc_chunk 0x1632e000,context,search /bin/sh,continue

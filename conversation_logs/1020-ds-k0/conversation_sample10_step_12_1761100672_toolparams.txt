@@ -1,0 +1,1 @@
+x/2gx qword_6020A8,info address qword_6020A8,info variables qword_6020A8,x/2gx 0x6020A8,x/2gx 0x12c35010,telescope 0x12c35010+16 12,x/gx &free@got,x/gx 0x602018,p system,malloc_chunk 0x12c36820,malloc_chunk 0x12c368b0,malloc_chunk 0x12c368c0,unsortedbin,search /bin/sh,telescope 0x602018 8,telescope 0x12c36840 8,continue

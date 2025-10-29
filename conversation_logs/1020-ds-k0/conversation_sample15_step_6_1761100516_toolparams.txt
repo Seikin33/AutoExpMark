@@ -1,0 +1,1 @@
+telescope 0x5581df002040 20,malloc_chunk 0x5581e56cd020,bins,hexdump 0x5581df002060 0x40,search 0x783e5e09db78,continue

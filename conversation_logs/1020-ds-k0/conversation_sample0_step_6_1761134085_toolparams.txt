@@ -1,0 +1,1 @@
+gotplt,x/gx 0x602020,x/gx 0x602088,x/gx 0x602138,telescope 0x602140 20,malloc_chunk 0xe149000,hexdump 0xe149000 64,search -p 0x602140,vmmap heap,continue

@@ -1,0 +1,1 @@
+telescope 0x804b120 20,malloc_chunk 0x804b238,gotplt,hexdump 0x804b000 0x100,telescope 0x804b168 10,hexdump 0x92c5000 0x100,bins,continue

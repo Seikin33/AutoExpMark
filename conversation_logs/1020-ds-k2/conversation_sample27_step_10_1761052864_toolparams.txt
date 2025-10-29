@@ -1,0 +1,1 @@
+telescope 0x5acb77c02060 20,malloc_chunk 0x5acb7db82080,malloc_chunk 0x5acb7db82170,malloc_chunk 0x5acb7db820b0,heap bins,gotplt,vmmap libc,p __malloc_hook,bins,hexdump 0x5acb7db82080 0x30,hexdump 0x5acb7db82170 0x30,hexdump 0x5acb7db820b0 0x30,hexdump 0x5acb77c02040 0x30,hexdump 0x5acb7db820c0 0x20,p &__malloc_hook,continue

@@ -1,0 +1,1 @@
+x/wx 0x804d0a8,telescope 0x87d42b0 20,telescope 0x87d3510 10,telescope 0x87d39c0 10,x/wx 0x804d09c,x/wx 0x804d0a0,gotplt,search sh,search system,context,continue

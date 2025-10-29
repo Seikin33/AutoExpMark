@@ -1,0 +1,1 @@
+x/gx &qword_202090,info variables,search qword_202090,x/gx 0x202090,vmmap,x/gx 0x5581dee00000+0x202090,x/gx 0x5581dee00000+0x202040,x/16bx 0x5581dee00000+0x202060,fastbins,malloc_chunk 0x5581e56cd100,x/gx 0x783e5e09daed,p &__malloc_hook,x/10gx 0x783e5e09db10-0x23,heap -v,regs,context stack,heap -l,context,continue

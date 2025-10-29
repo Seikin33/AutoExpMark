@@ -1,0 +1,1 @@
+telescope 0x6020a0 10,hexdump 0x2b84a0d0 32,x/gx 0x2b84a030+8,x/gx 0x2b84a030+16,search -p 0x602068,malloc_chunk 0x2b84a000,regs,stack 10,continue

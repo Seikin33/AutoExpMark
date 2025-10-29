@@ -1,0 +1,1 @@
+regs,context,heap,search MIRACLE,search -x "MIRACLE",search MIRACLE 0x5a45a86a9000 0x5a45a86aca00,search MIRACLE,search -t string MIRACLE,hexdump 0x5a45a86a94e0 32,search -t string ROCK,search -t string FLOWER,hexdump 0x5a45a86a9115 16,telescope 0x5a45a86a94d0 5,telescope 0x5a45a86a9480 5,stack 20,bins,vmmap,continue

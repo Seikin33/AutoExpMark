@@ -1,0 +1,1 @@
+telescope 0x6020e0 40,telescope 0x6021e0 40,search 0x0000000100000000,telescope 0x6022e0 10,hexdump 0x71fc110 100,telescope 0x71fc110 10,bins,gotplt,got,gotplt,context,x/10gx 0x601fa0,continue

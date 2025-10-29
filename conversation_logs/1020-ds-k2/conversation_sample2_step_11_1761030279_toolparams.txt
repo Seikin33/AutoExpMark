@@ -1,0 +1,1 @@
+x/10gx 0x602060,x/wx 0x6020B0,search aaaaaaaa,search bbbbbbbb,x/10gx 0x602068,regs,context stack,vmmap heap,x/20gx 0x602060,continue

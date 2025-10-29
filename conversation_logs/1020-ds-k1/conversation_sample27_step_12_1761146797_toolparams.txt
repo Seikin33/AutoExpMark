@@ -1,0 +1,1 @@
+regs,context,heap,telescope 0x78d7160b47a8 2,p &__free_hook,telescope 0x78d7160b57a8 2,p system,telescope 0x5937c17f95e0 10,search /bin/sh,stack 20,bins,continue

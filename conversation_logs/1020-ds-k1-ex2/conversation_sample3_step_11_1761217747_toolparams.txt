@@ -1,0 +1,1 @@
+procinfo,regs,vmmap,context,k,search /bin/sh,telescope $rsp 40,continue

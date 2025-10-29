@@ -1,0 +1,1 @@
+x/10gx 0x6020e0,x/gx 0x6020c0,got,gotplt,x/gx 0x601018,hexdump 0x6020bd,x/gx 0x10daf0f0,x/10gx 0x6020a0,context,continue

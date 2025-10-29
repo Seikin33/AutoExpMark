@@ -1,0 +1,1 @@
+heap,bins,telescope 0x804d094 20,telescope 0x804d08c 20,telescope 0x804d09c 20,x/x 0x0804d020,telescope 0x83c3588 10,context,continue

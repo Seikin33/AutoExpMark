@@ -1,0 +1,1 @@
+heap chunks,heap,telescope 0x804b120 20,gotplt,regs,stack 20,search 0x804b120,x/4wx 0x804b014,context,x/10wx 0x804b168,x/4wx 0x804b238,continue

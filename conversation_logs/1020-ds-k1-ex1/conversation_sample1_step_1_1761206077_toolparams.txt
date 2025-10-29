@@ -1,0 +1,1 @@
+search -x 0x71fc010 0x602000 0x603000,search -x 0x71fc010,search -x 71fc010,search -p 0x71fc010,search -p 0x71fc010 0x602000 0x603000,telescope 0x602000 40,telescope 0x6020e0 40,x/32wx 0x602060,telescope 0x6021e0 20,info address key1,info address key2,x/2wx 0x6022b8,telescope 0x6020e0 64,x/40gx 0x6020e0,x/40wx 0x602060,continue

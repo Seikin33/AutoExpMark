@@ -1,0 +1,1 @@
+x/10gx &heaparray,hexdump 0x34496080 0x80,x/gx 0x344960e0,x/gx 0x6020ad,x/gx &magic,got,gotplt,x/10gx 0x602018,malloc_chunk 0x34496080,malloc_chunk 0x34496010,search /bin/sh,heap bins,continue

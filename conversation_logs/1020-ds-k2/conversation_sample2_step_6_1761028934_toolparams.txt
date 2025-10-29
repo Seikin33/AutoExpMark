@@ -1,0 +1,1 @@
+telescope 0x602060 10,dd 0x6020B0,bins,vmmap,search aaaaaaaa,search bbbbbbbb,regs,stack 10,nearpc,continue

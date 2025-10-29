@@ -1,0 +1,1 @@
+x/4gx 0x6020c0,gotplt,hexdump 0x310fd030 0x90,x/4gx 0x6020b0,regs,stack 20,continue

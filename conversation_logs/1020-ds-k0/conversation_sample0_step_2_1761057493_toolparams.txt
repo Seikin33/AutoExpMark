@@ -1,0 +1,1 @@
+heap,bins,telescope 0x602140 20,x/gx 0x602100,telescope 0x2a34a580 10,telescope 0x2a34a540 10,telescope 0x2a34a020 10,malloc_chunk 0x2a34a530,malloc_chunk 0x2a34a570,telescope 0x602138 10,checksec,gotplt,vmmap libc,regs,mp,continue

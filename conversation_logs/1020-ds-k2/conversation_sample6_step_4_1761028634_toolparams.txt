@@ -1,0 +1,1 @@
+telescope 0x6020d0 20,malloc_chunk 0x21329960,hexdump 0x21329970 40,smallbins,got,gotplt,search -p 0x7168a7967b98,heap -l,bins,regs,stack 10,continue

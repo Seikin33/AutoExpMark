@@ -1,0 +1,1 @@
+heap,malloc_chunk 0x8b51000,malloc_chunk 0x8b51048,malloc_chunk 0x8b51090,malloc_chunk 0x8b510e0,telescope 0x804B120 10,telescope 0x804B0A0 10,telescope 0x804B0E0 10,gotplt,x/10wx 0x804b000,hexdump 0x804b120 64,bins,context,regs,continue

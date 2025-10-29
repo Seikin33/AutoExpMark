@@ -1,0 +1,1 @@
+info proc,info registers,stack 20,shell ps aux | grep sample25,info threads,info signals,shell ls -la ./data/,file ./data/sample25,b *main,b *add,b *delete,b *edit,b *show,run,continue

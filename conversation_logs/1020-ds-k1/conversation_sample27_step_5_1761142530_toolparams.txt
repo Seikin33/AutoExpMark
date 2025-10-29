@@ -1,0 +1,1 @@
+search "leak:",telescope 0x602d22c02000 40,malloc_chunk 0x602d427051c0,malloc_chunk 0x602d427052d0,hexdump 0x602d427051d0 0x120,telescope 0x602d427050d0 10,telescope 0x602d427050a0 10,telescope 0x602d42705080 10,telescope 0x602d42705170 10,telescope 0x602d42705110 10,continue

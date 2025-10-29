@@ -1,0 +1,1 @@
+heap chunks,heap,x/10wx 0x804b120,x/10wx 0x804b0a0,x/10wx 0x804b0e0,got,gotplt,malloc_chunk 0x804b238,x/10wx 0x804b0c8,x/10wx 0x804b148,bins,x/10wx 0x09006161,x/10wx 0x0804b120,continue

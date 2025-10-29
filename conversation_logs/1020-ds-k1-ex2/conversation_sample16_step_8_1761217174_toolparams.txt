@@ -1,0 +1,1 @@
+regs,context,stack 20,gotplt,telescope 0x6020c0 10,x/8gx 0x602070,x/s 0x7ffc45b984f0,continue

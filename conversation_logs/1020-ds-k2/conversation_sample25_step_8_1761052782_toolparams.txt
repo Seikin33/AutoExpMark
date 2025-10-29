@@ -1,0 +1,1 @@
+malloc_chunk 0x5d91ee4420f0,malloc_chunk 0x5d91ee442020,malloc_chunk 0x5d91ee442050,malloc_chunk 0x5d91ee442000,telescope 0x5d91ea202260 10,telescope 0x5d91ea2020c0 10,search -p 0x7d60b6845b78,malloc_chunk 0x5d91ee4420d0,malloc_chunk 0x5d91ee4421f0,hexdump 0x5d91ee4420e0 32,hexdump 0x5d91ee442200 32,continue

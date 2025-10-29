@@ -1,0 +1,1 @@
+regs,context,heap,telescope 0x204ce000 40,telescope 0x6020B8 20,telescope 0x204cf2b0 20,search ROCK,search DREAM,stack 20,canary,fastbins,unsortedbin,hexdump 0x204ce010 100,continue

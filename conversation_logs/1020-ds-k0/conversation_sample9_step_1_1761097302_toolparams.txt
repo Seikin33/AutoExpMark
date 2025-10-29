@@ -1,0 +1,1 @@
+telescope 0x6020D8 10,heap,vmmap,arena,mp,bins,gotplt,context,continue

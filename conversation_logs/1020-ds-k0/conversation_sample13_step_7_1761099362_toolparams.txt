@@ -1,0 +1,1 @@
+context,search -t dword 6 0x652052425000 0x652052428000,search -t dword 6,search -t dword 6 data,telescope 0x652052425000 100,info proc,info inferiors,info files,shell ps aux | grep sample13,detach,attach 855505,shell ps aux | grep -v grep | grep sample13,continue

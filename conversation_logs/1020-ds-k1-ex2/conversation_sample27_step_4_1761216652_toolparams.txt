@@ -1,0 +1,1 @@
+context,stack 20,telescope 0x5d232c402000 0x100,malloc_chunk 0x5d2350c15190,malloc_chunk 0x5d2350c15160,malloc_chunk 0x5d2350c15130,malloc_chunk 0x5d2350c15100,search -p 0x5d2350c15080,gotplt,got,plt,heap bins fast,hexdump 0x5d2350c15190 0x30,hexdump 0x5d2350c15160 0x30,hexdump 0x5d2350c15080 0x30,hexdump 0x5d2350c15020 0x20,hexdump 0x5d2350c15050 0x20,continue

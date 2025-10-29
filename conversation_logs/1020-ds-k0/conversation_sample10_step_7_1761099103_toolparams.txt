@@ -1,0 +1,1 @@
+x/gx 0x6020A8,telescope 0x12c35010 10,hexdump 0x12c36830 128,bins,heap chunks,continue

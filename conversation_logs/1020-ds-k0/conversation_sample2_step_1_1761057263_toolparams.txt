@@ -1,0 +1,1 @@
+disassemble 0x4009A0,disassemble sub_4009A0,x/20i 0x4009A0,x/30i 0x4009A0,x/30i 0x400A79,telescope 0x602060 10,telescope 0x602060 10 -l,telescope 0x602060 10,hexdump 0x602060 80,hexdump 0x6020b0 4,malloc_chunk 0x25dad000,malloc_chunk 0x25dad030,telescope 0x602060+80 20,hexdump 0x6020b0 160,bins,continue

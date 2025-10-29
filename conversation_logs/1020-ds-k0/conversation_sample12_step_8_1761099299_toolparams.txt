@@ -1,0 +1,1 @@
+regs,context,heap,bins,search -s /bin/sh,x/gx 0x73cb3097c7a8,pid,procinfo,continue

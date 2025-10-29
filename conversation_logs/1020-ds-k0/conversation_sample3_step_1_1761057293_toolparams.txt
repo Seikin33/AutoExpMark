@@ -1,0 +1,1 @@
+regs,stack 30,search /bin/sh,gotplt,canary,vmmap,bins,continue

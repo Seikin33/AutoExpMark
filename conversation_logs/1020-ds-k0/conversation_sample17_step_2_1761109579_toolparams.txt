@@ -1,0 +1,1 @@
+ln heaparray,search -s heaparray,search -s magic,search -p 0x34496000,x/20gx 0x602000,vmmap 0x602000,search -t qword 0x34496000,telescope 0x6020a0 20,search -s magic,telescope 0x602100 10,search -t dword 0x1305,disassemble main,x/gx 0x6020c0,telescope 0x6020e0 10,hexdump 0x34496010 0x60,hexdump 0x34496080 0x60,hexdump 0x344960f0 0x60,malloc_chunk 0x344960e0,bins,continue

@@ -1,0 +1,1 @@
+x/40gx 0x2619c000,malloc_chunk 0x2619c140,telescope 0x6020c8 10,telescope 0x602100 10,search -p 0x7e8cf,heap,continue

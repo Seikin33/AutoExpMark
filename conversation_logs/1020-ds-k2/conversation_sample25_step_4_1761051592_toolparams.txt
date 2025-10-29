@@ -1,0 +1,1 @@
+telescope 0x5d91ea202260 10,telescope 0x5d91ea2020c0 10,heap chunks,bins,hexdump 0x5d91ee442010 32,hexdump 0x5d91ee442090 64,search -p 0x7d60b6481000 0x5d91ee442000 0x5d91ee463000,search -p 0x7d60b6481000,context,regs,stack 20,continue

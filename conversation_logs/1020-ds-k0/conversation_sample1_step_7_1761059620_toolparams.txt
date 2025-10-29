@@ -1,0 +1,1 @@
+x/32gx 0x6021E0,telescope 0x21aaf310,x/gx 0x78d575b1f7a8,bins,telescope 0x21aaf110,p free,continue

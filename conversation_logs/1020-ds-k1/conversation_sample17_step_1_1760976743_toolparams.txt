@@ -1,0 +1,1 @@
+disassemble main,disassemble create_heap,x/10gx 0x6020e0,x/10gx 0x33f20000,x/10gx 0x33f20070,x/10gx 0x33f200e0,x/gx 0x6020c0,bins,continue

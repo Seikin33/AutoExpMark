@@ -1,0 +1,1 @@
+regs,nearpc,stack 10,telescope 0x5d232c402058 4,telescope 0x5d232c402060 20,telescope 0x5d2350c15170 4,hexdump 0x5d2350c151d0 32,malloc_chunk 0x5d2350c151d0,fastbins,continue

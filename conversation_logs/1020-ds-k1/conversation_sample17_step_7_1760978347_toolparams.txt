@@ -1,0 +1,1 @@
+x/10gx 0x6020e0,vmmap,info proc mappings,bt,info functions,info registers,heap,bins,info proc,search -t string sample17,info files,continue

@@ -1,0 +1,1 @@
+regs,stack 20,telescope 0xffc176e8 20,canary,retaddr,hexdump 0xffc176e8 64,search -p 0x8048c10,telescope 0x804b070 10,continue

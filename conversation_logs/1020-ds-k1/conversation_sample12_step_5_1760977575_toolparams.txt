@@ -1,0 +1,1 @@
+regs,stack 20,malloc_chunk 0x5905958c7000,telescope $rsp 20,hexdump $rsi 32,telescope 0x59057a202000 20,bins,continue

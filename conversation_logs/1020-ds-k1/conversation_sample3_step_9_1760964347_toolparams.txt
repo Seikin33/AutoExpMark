@@ -1,0 +1,1 @@
+context,heap bins,malloc_chunk 0x3799f000,gotplt,telescope 0x602120 4,stack 20,search /bin/sh,canary,telescope 0x602018 2,hexdump 0x3799f000 0x100,telescope 0x602040 2,continue

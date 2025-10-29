@@ -1,0 +1,1 @@
+telescope 0x5581df002000 40,malloc_chunk 0x5581e56cd000,malloc_chunk 0x5581e56cd020,malloc_chunk 0x5581e56cd090,hexdump 0x5581df002060 0x40,p libc.address,p libc_leak,bins,context,continue

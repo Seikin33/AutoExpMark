@@ -1,0 +1,1 @@
+regs,telescope $rsp 40,heap,vmmap,continue

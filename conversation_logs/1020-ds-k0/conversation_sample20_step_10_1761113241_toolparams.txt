@@ -1,0 +1,1 @@
+telescope 0x804b120 20,got,gotplt,x/wx 0x804b014,search /bin/sh,heap,heap chunks,heap -l,regs,context,x/40wx 0x902a000,info threads,continue

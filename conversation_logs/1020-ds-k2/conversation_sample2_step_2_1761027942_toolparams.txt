@@ -1,0 +1,1 @@
+context,x/10gx 0x602060,x/x 0x6020B0,malloc_chunk 0xbcb0000,malloc_chunk 0xbcb0030,hexdump 0xbcb0010 32,stack 20,continue

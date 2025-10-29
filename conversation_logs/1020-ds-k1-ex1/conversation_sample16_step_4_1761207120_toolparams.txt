@@ -1,0 +1,1 @@
+telescope 0x6020C0 20,telescope 0x6020C8 10,gotplt,x/gx 0x602018,x/gx 0x602070,hexdump 0x6020c8 64,bins,x/gx 0x6020d0,hexdump 0x602070 32,x/gx 0x6020c8,hexdump 0x602018 32,continue

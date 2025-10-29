@@ -1,0 +1,1 @@
+x/10gx 0x6020a0,malloc_chunk 0x2b84a000,malloc_chunk 0x2b84a030,x/8gx 0x2b84a020,x/wx 0x6020b0,fastbins,regs,continue

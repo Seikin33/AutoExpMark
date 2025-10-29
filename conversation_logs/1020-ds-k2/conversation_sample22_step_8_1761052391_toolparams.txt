@@ -1,0 +1,1 @@
+telescope 0x602040 40,malloc_chunk 0x374cb000,bins,x/gx 0x602060,x/4gx 0x602060,heap,continue

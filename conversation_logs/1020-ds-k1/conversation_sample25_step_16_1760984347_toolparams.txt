@@ -1,0 +1,1 @@
+regs,context,telescope 0x5774da946000 50,telescope 0x707629ac8b10 10,telescope 0x707629ac8aed 10,x/gx 0x707629ac8b28,argv,telescope 0x707629ac8d88 5,telescope 0x707629ac8d88 5,telescope 0x626eff303000 20,info proc,continue

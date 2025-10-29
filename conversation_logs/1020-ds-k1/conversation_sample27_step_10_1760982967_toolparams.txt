@@ -1,0 +1,1 @@
+telescope 0x55a8e6402060 20,hexdump 0x55a8e6402040 32,telescope 0x55a8eace4170,telescope 0x55a8eace40b0,telescope 0x55a8eace41d0,telescope 0x55a8eace4100,search "/bin/sh",p/x 0x7f7835617b78 - (0x7f7835617b78 - 0x7f7835253000),continue

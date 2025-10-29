@@ -1,0 +1,1 @@
+x/wx 0x804A288,x/wx 0x804A2A0,x/wx 0x804A2A4,x/wx 0x804A2A8,malloc_chunk 0x970e410,malloc_chunk 0x970e450,x/wx 0x804a248,x/10wx 0x804a2c0,telescope 0x970e410 20,continue

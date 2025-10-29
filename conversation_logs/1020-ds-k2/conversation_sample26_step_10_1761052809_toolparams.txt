@@ -1,0 +1,1 @@
+pid,procinfo,heap,bins,gotplt,x/8gx 0x602018,x/8gx 0x6020a0,regs,stack 20,telescope $rsp 40,search /bin/sh,vmmap,continue

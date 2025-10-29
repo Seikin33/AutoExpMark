@@ -1,0 +1,1 @@
+x/gx 0x6020A8,telescope 0x6020A8 20,telescope 0x281ca010 20,malloc_chunk 0x281cb830,malloc_chunk 0x281cb820,malloc_chunk 0x281cb8c0,malloc_chunk 0x281cb8b0,hexdump 0x281cb830 32,heap bins,bins,search a,continue

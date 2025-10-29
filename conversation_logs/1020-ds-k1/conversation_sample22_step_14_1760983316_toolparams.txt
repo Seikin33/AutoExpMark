@@ -1,0 +1,1 @@
+regs,context,stack 10,search -x 0x45226,search 0x7e57dacae226,info proc,info mappings,vmmap,info registers,continue

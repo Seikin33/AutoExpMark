@@ -1,0 +1,1 @@
+x/gx 0x58cd17602090,x/wx 0x58cd17602040,telescope 0x58cd17602040 20,telescope $rax,telescope 0x58cd2caee010,hexdump 0x58cd2caee010 32,hexdump 0x58cd2caee0a0 16,heap,bins,continue

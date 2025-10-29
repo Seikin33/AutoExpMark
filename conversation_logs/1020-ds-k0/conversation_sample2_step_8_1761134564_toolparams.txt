@@ -1,0 +1,1 @@
+telescope &ptr 10,info variables ptr,info address ptr,x/20gx 0x602000,x/10gx 0x602060,heap chunks,unsortedbin,x/gx 0x602070,x/32gx 0x602060,malloc_chunk 0x3ad39000,hexdump 0x3ad39000 0x100,fastbins,p/x 0x78a890f44b78 - 88,p/x 0x78a890f44b20 - 0x78a890b80000,continue

@@ -1,0 +1,1 @@
+x/10gx 0x6020e0,x/wx 0x6020c0,telescope 0x10daf0e0 20,telescope 0x10daf010 20,telescope 0x10daf080 20,x/gx 0x10daf0e0,continue

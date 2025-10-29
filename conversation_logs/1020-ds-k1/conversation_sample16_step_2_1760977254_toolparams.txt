@@ -1,0 +1,1 @@
+context,telescope 0x6020C0 80,x/20gx 0x6020C0,malloc_chunk 0x3bfb6140,search 0x61616161,search -x 0x61616161 0x3bfb6000 0x3bfd7000,search -x 61616161,stack 20,continue

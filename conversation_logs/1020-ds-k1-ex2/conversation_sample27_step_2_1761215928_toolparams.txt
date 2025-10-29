@@ -1,0 +1,1 @@
+regs,stack 20,telescope 0x5d232c402060 20,hexdump 0x5d232c402058 32,malloc_chunk 0x5d2350c15070,malloc_chunk 0x5d2350c15010,malloc_chunk 0x5d2350c15040,search 0x5d232c200000,search -x 0x5d232c200000,search 5d232c200000,gotplt,info functions,plt,x/10gx 0x5d232c401fd8,checksec,continue

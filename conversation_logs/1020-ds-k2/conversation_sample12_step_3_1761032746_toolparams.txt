@@ -1,0 +1,1 @@
+vmmap,heap,telescope 0x5d4dc9002000 20,regs,context,hexdump 0x7ffe4735035e 32,bins,canary,continue

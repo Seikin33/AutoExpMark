@@ -1,0 +1,1 @@
+regs,context,stack 20,telescope $rsp 20,search /bin/sh,vmmap,bins,continue

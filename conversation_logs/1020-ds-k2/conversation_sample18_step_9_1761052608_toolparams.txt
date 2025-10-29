@@ -1,0 +1,1 @@
+context,regs,bt,vmmap,search /bin/sh,envp,heap,gotplt,continue

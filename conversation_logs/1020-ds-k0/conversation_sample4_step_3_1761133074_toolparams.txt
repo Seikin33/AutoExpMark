@@ -1,0 +1,1 @@
+regs,stack 20,x/gx 0x6020B8,telescope 0x24292010 10,telescope 0x242920b0 10,telescope 0x24292150 10,telescope 0x24292170 10,telescope 0x242923f0 10,telescope 0x24291000 10,continue

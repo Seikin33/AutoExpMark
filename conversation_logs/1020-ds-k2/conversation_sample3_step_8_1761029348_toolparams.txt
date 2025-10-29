@@ -1,0 +1,1 @@
+regs,telescope $rsp 20,malloc_chunk 0xd2ea000,hexdump 0xd2ea0c0 16,gotplt,x/16gx 0x602018,x/4gx 0x602120,x/4gx 0x602140,x/gx 0x602160,search /bin/sh,continue

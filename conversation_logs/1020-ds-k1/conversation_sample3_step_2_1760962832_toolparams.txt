@@ -1,0 +1,1 @@
+regs,context,stack 20,telescope $rsp 40,gotplt,search -p 0x7cfd63d5c000,search -p 0x400000,hexdump $rsp 100,continue

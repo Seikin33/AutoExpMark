@@ -1,0 +1,1 @@
+heap,bins,telescope 0x804B120 10,telescope 0x804B0A0 10,telescope 0x804B0E0 10,top_chunk,gotplt,malloc_chunk 0x8b510e0,vmmap heap,x/32wx 0x8b51000,x/32wx 0x8b51080,telescope 0x804B0CC,telescope 0x804B0C8,telescope 0x804B148,continue

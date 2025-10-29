@@ -1,0 +1,1 @@
+regs,gotplt,x/gx 0x602018,vmmap,pid,heap,info proc,stack 20,info threads,continue

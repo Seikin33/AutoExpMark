@@ -1,0 +1,1 @@
+telescope 0x281ca010 20,malloc_chunk 0x281cb830,malloc_chunk 0x281cb8c0,malloc_chunk 0x281cb830,heap chunks,context,continue

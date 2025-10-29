@@ -1,0 +1,1 @@
+bins,malloc_chunk 0x55cb79116000,malloc_chunk 0x55cb79116020,malloc_chunk 0x55cb79116050,p/x 0x55cb79116000 + 0x20+0x30+0x30+0x50+0x20,malloc_chunk 0x55cb791160f0,telescope 0x55cb79116000 20,p/x 0x55cb791160f0 + 0x20,malloc_chunk 0x55cb79116110,p/x 0x55cb79116110 + 0x110,malloc_chunk 0x55cb79116220,top_chunk,arena,vmmap libc,continue

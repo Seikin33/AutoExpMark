@@ -1,0 +1,1 @@
+disassemble create_heap,disassemble main,x/10gx 0x6020e0,x/gx 0x6020c0,malloc_chunk 0x34496000,hexdump 0x34496010 0x60,malloc_chunk 0x34496070,malloc_chunk 0x344960e0,bins,continue

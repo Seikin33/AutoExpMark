@@ -1,0 +1,1 @@
+heap chunks,telescope 0x5d91ea202260 10,telescope 0x5d91ea2020c0 10,heap bins fast,hexdump 0x5d91ee442000 0x100,search -p 0x7d60b6481000,continue

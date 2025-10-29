@@ -1,0 +1,1 @@
+telescope 0x602140 20,gotplt,malloc_chunk 0x3b667000,telescope 0x3b668530 20,search /8 0x6262626262626262,search bbbbbbbb,context,continue

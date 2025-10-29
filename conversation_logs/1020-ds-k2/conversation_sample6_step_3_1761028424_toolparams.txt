@@ -1,0 +1,1 @@
+x/gx 0x6020d0,x/gx 0x6020d8,malloc_chunk 0x21329960,fastbins,smallbins,hexdump 0x21329970 32,got,gotplt,continue

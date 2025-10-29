@@ -1,0 +1,1 @@
+regs,x/gx 0x795bbf437000 + 0x3c4b08,x/gx 0x795bbf437000 + 0x3c4b10,x/gx 0x795bbf437000 + 0x45270,x/gx 0x0000795bbf4bca70,x/gx 0x795bbf437000 + 0x4526a + 6,continue

@@ -1,0 +1,1 @@
+telescope 0x6020c0 20,hexdump 0x10daf080 0x80,malloc_chunk 0x10daf0e0,telescope 0x6020ad 10,fastbins,distance 0x10daf0e0 0x6020ad,continue

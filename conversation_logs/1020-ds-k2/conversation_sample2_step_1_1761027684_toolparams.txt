@@ -1,0 +1,1 @@
+p &ptr,info variables ptr,nm sample2 | grep ptr,shell readelf -s sample2 | grep ptr,pwd,shell ls -la,shell ls -la data/,shell readelf -s data/sample2 | grep ptr,x/20gx 0x602000,telescope 0x602060 10,p dword_6020B0,x/gx 0x6020B0,hexdump 0xbcb0010 32,hexdump 0xbcb0040 32,x/gx 0xbcb0000,x/gx 0xbcb0008,x/gx 0xbcb0010,x/gx 0xbcb0030,x/gx 0xbcb0038,x/gx 0xbcb0040,continue

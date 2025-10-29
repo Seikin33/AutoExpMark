@@ -1,0 +1,1 @@
+heap,bins,telescope 0x804b120 10,telescope 0x804b0a0 10,telescope 0x804b0e0 10,telescope 0x804b0cc,telescope 0x804b0c8,telescope 0x804b148,malloc_chunk 0x804b118,hexdump 0x902a008,hexdump 0x902a098,hexdump 0x902a050,malloc_chunk 0x902a0e0,hexdump 0x902a0e0,x/10wx 0x804b0a0,continue

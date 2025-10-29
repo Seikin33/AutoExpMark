@@ -1,0 +1,1 @@
+x/gx 0x65481f202040,x/gx 0x65481f202090,telescope 0x65481f202060 10,heap chunks,malloc_chunk 0x654835aaf000,hexdump 0x654835aaf010 32,bins,vmmap,context,continue

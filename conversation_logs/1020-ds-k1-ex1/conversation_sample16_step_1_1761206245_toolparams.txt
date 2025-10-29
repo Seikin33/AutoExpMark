@@ -1,0 +1,1 @@
+x/7gx 0x6020C8,x/16gx 0x6020C0,hexdump 0x39ca1000 0x100,hexdump 0x39ca1010 16,hexdump 0x39ca1030 16,hexdump 0x39ca1140 16,hexdump 0x39ca1250 16,malloc_chunk 0x39ca1000,malloc_chunk 0x39ca1020,malloc_chunk 0x39ca1130,malloc_chunk 0x39ca1240,gotplt,search 0x61616161,continue

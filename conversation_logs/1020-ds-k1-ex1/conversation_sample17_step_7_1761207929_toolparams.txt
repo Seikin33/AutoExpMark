@@ -1,0 +1,1 @@
+regs,context,stack 20,search /home/pwn/flag,procinfo,continue

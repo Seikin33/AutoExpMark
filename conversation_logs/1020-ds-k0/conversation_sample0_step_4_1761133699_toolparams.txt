@@ -1,0 +1,1 @@
+telescope 0x602018 4,telescope 0x602140 10,malloc_chunk 0xe149000,context,hexdump 0xe149000 64,continue

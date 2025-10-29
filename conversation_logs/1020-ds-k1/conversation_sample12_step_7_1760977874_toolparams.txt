@@ -1,0 +1,1 @@
+regs,context,heap,bins,telescope 0x59057a202000 40,x/gx 0x7d1c8ccd47a8,search /bin/sh,stack 20,continue

@@ -1,0 +1,1 @@
+telescope 0x0804B070,telescope 0x92ec410,telescope 0x92ec428,telescope 0x92ec450,telescope 0xff994000,telescope 0xff9b0000,gotplt,telescope 0x804b03c,bins,telescope 0x92ec478,telescope 0x92ec4a0,telescope 0x0804B068,stack,continue

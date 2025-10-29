@@ -1,0 +1,1 @@
+pid,regs,context,stack 20,telescope $rsp 40,vmmap,heap,bins,procinfo,continue

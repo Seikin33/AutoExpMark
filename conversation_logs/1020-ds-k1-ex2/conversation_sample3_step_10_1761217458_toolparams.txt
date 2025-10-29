@@ -1,0 +1,1 @@
+context,stack 40,telescope $rsp 60,x/4gx 0x602120,x/gx 0x602018,gotplt,heap chunks,x/32gx 0x1632e000,search /bin/sh,bins,continue

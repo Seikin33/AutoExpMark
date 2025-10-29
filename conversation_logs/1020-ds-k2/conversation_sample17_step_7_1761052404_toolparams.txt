@@ -1,0 +1,1 @@
+regs,context,telescope &heaparray 10,x/gx 0x6020c0,x/2gx 0x6020ad,gotplt,x/10gx 0x602000,x/gx 0x602018,x/s 0x25fcd080,search -p 0x25fcd010,malloc_chunk 0x25fcd0e0,continue

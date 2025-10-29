@@ -1,0 +1,1 @@
+telescope 0x804b120 10,vmmap,info proc,heap,bins,regs,search /bin/sh,search 0x804,context,continue

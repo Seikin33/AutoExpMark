@@ -1,0 +1,1 @@
+procinfo,regs,info program,file,info files,info target,checksec,file ./data/sample0,checksec,gotplt,x/10gx 0x602140,continue

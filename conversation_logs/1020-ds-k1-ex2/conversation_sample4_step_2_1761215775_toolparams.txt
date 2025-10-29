@@ -1,0 +1,1 @@
+regs,stack 20,telescope 0x15bce000 10,search MIRACLE,search DREAM,x/gx 0x6020B8,canary,x/gx $rsp+0x98,info frame,continue

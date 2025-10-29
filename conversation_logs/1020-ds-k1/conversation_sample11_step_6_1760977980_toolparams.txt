@@ -1,0 +1,1 @@
+regs,context stack,telescope $rsp 20,heap,telescope 0x62f4022c4000 10,x/gx 0x0804b070,procinfo,continue

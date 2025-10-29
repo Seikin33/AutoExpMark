@@ -1,0 +1,1 @@
+bins,telescope 0x21aaf100 40,telescope 0x6021E0 40,hexdump 0x21aaf200 32,gotplt,x/10gx 0x601fa0,heap,continue

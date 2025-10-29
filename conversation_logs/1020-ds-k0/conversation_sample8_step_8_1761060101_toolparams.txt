@@ -1,0 +1,1 @@
+context,stack 20,envp,argv,search /bin/sh,search /bin/sh,search sh,vmmap,info registers,continue

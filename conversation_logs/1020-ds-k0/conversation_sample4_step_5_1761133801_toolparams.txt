@@ -1,0 +1,1 @@
+heap,bins,telescope 0x6020B8 20,telescope 0x242924b0 20,search /bin/sh,search system,stack 30,regs,continue

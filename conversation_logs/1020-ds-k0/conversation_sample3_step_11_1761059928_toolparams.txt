@@ -1,0 +1,1 @@
+regs,context,stack 20,telescope $rsp 40,gotplt,telescope 0x602018 2,telescope 0x7cc4000 20,telescope 0x7cc40c0 10,hexdump 0x7cc40c0 16,search 0x7fdf19d34247,continue

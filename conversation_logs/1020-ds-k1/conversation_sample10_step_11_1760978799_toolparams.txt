@@ -1,0 +1,1 @@
+x/gx 0x602018,x/gx 0x291c000+32,telescope 0x291c000 20,malloc_chunk 0x291d830,bins,hexdump 0x291d8b0 0x100,continue

@@ -1,0 +1,1 @@
+context,x/gx 0x6020A8,telescope 0x281ca010 40,heap chunks,bins,hexdump 0x281ca010 200,continue

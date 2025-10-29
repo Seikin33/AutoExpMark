@@ -1,0 +1,1 @@
+telescope 0x65481f202060 40,x/gx 0x65481f202090,x/wx 0x65481f202040,hexdump 0x654835aaf010 0x80,hexdump 0x654835aaf0a0 0x10,heap chunks,context,continue

@@ -1,0 +1,1 @@
+context,telescope $rsp 40,gotplt,malloc_chunk 0xd2ea000,telescope 0x602120 8,vmmap libc,search "/bin/sh",disassemble sub_400D43,info functions,info functions sample3,disassemble 0x400000,0x402000,telescope 0x602018 20,hexdump 0xd2ea010 0x80,x/xg 0x602160,continue

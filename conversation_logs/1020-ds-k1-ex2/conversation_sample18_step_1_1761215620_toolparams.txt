@@ -1,0 +1,1 @@
+context,telescope 0x804A288,malloc_chunk 0x8c88410,gotplt,search 0x804a248,hexdump 0x8c88418 56,x/wx 0x8c88418+52,continue

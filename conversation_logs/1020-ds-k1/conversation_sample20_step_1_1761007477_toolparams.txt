@@ -1,0 +1,1 @@
+regs,context,x/10wx 0x804B0CC,x/10wx 0x804B0C8,x/10wx 0x804B148,x/10wx 0x804B120,x/10wx 0x804B0A0,malloc_chunk 0x9ff7000,heap bins,stack 20,continue

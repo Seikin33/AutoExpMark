@@ -1,0 +1,1 @@
+context,regs,stack 20,telescope 0x602090 10,x/gx 0x6020e0,hexdump 0x2e547010 32,hexdump 0x2e5471a0 32,hexdump 0x6020a0 64,bins,continue

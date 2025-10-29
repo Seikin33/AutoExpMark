@@ -1,0 +1,1 @@
+regs,telescope 0x5a88d2602000,telescope 0x11854891e000,search -t qword 0x5a88fedf4000,telescope 0x7ffdae533ae0,telescope 0x5a88fedf4000 40,search -t qword 0x5a88fedf4010,telescope 0x11854891e3d0,telescope 0x11854891e3d0 20,hexdump 0x5a88fedf4010 32,hexdump 0x5a88fedf4050 48,malloc_chunk 0x5a88fedf4000,malloc_chunk 0x5a88fedf4020,malloc_chunk 0x5a88fedf4070,continue

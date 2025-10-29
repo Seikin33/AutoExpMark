@@ -1,0 +1,1 @@
+regs,stack 20,x/10gx 0x6020A8,heap chunks,malloc_chunk 0x12c36830,bins,telescope 0x12c35000 20,x/gx 0x75c348091b78,continue

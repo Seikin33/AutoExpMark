@@ -1,0 +1,1 @@
+context,stack 20,telescope 0x11854891e3c0 16,telescope 0x11854891e3c0 48,hexdump 0x11854891e3c0 0x180,hexdump 0x5a88fedf4030 0x50,bins,telescope 0x11854891e3c0 96,x/96wx 0x11854891e3c0,telescope 0x5a88fedf4070 0x20,telescope 0x5a88fedf40d0 0x20,p/x 0x7e3d781e7b78 - 88 - 0x10,vmmap 0x7e3d781e7b10,x/16gx 0x11854891e3c0,x/48gx 0x11854891e3c0,continue

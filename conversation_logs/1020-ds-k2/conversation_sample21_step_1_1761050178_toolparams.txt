@@ -1,0 +1,1 @@
+regs,telescope $rsp 20,hexdump 0x7ffefac41930 40,context,heap,x/gx &ptr,info variables ptr,info variables,x/10gx 0x602000,x/20gx 0x602000+0x100,nm sample21 | grep ptr,search ptr,info address ptr,maintenance info sections,x/10gx 0x602080,bt,disass 0x400824,x/10i 0x400824,x/10i 0x400b24,x/10i 0x400b59

@@ -1,0 +1,1 @@
+x/gx 0x730fb1f7cb20,x/10gx 0x730fb1f7cb20-0x20,heap chunks,regs,search -p 0x730fb1bfd27a,continue

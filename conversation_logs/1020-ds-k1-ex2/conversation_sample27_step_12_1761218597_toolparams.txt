@@ -1,0 +1,1 @@
+context,heap,bins,telescope 0x5f03268d2080 20,search xxxleak,p __free_hook,info program,search /bin/sh,continue

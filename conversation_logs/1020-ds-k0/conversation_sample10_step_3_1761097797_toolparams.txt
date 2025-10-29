@@ -1,0 +1,1 @@
+x/gx 0x6020A8,telescope 0x6020A8,x/10gx 0x12c35010,x/24bx 0x12c35010,telescope 0x12c36950,telescope 0x12c36830,hexdump 0x12c36950 32,x/gx 0x75c348091b78,bins,fastbins,unsortedbin,heap chunks,malloc_chunk 0x12c36940,context,stack 20,continue

@@ -1,0 +1,1 @@
+regs,context,stack,search "/bin/sh",telescope $rsp 20,continue

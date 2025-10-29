@@ -1,0 +1,1 @@
+x/gx 0x5eb0de002040,x/gx 0x5eb0de002090,x/8bx 0x5eb0de002060,telescope 0x5eb0e86da000 20,hexdump 0x5eb0e86da000 32,regs,context,bins,continue

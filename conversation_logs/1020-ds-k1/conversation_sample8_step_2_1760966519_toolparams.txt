@@ -1,0 +1,1 @@
+telescope 0x25c21030 20,telescope 0x25c210b0 20,telescope 0x6020c0 20,telescope 0x25c21000 10,telescope 0x6020b0 10,telescope 0x6020b8 10,continue

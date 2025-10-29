@@ -1,0 +1,1 @@
+regs,stack,telescope 0x63d57780205b,telescope 0x63d577802060,telescope 0x63d58bdf8080,hexdump 0x63d58bdf8020 32,hexdump 0x63d58bdf8050 32,malloc_chunk 0x63d58bdf8070,continue

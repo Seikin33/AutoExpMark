@@ -1,0 +1,1 @@
+pid,heap,bins,gotplt,checksec,regs,stack 20,search sh;,search sh,info proc,info inferiors,vmmap,continue

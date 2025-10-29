@@ -1,0 +1,1 @@
+x/10gx 0x291c000,x/3gx 0x291c010 + 24*0,telescope 0x291d820 20,heap,bins,gotplt,hexdump 0x291d820 80,continue
