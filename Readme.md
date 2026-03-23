@@ -349,3 +349,7 @@ heap23_00_hitcon_2014_stkof = EXPCode(
     ],
 )
 ```
+
+## 参考
+
+部分后端的实现参考了代码[nyu-ctf-llm](https://github.com/NYU-LLM-CTF/nyuctf_agents)
