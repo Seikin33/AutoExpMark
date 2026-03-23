@@ -1,0 +1,1 @@
+bins,heap,telescope 0x602140 32,malloc_chunk 0x1d3d7580,vmmap,continue

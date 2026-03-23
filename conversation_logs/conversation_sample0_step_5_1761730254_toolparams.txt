@@ -1,0 +1,1 @@
+telescope 0x602140 20,x/gx 0x602018,x/gx 0x602020,x/gx 0x602088,heap chunks,hexdump 0x1d3d6000 64,bins,continue

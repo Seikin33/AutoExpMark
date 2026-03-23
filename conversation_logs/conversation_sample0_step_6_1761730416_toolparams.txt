@@ -1,0 +1,1 @@
+heap,bins,telescope 0x602140 10,telescope 0x602018 5,telescope 0x602020 5,telescope 0x602088 5,vmmap,continue

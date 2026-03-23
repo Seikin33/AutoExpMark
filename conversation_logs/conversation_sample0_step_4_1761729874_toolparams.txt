@@ -1,0 +1,1 @@
+heap,bins,vmmap,telescope 0x602140 5,gotplt,hexdump 0x602018 40,context,continue

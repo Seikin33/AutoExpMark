@@ -93,7 +93,7 @@ def AnalyseEXP(exp:EXPCode, progress: Progress, task_id):
                 f.write(debug_plan)
             
             # 开始工具调试
-            gdbagent.one_round_conversation(max_calls=20)
+            gdbagent.one_round_conversation(max_calls=10)
             gdbagent.add_user_message("总结上述对话中涉及到的内存变化。")
 
             # 保存步骤总结
@@ -124,28 +124,28 @@ def main():
         sample0,
         #sample1,
         #sample2,
-        sample3,
-        sample4,
+        #sample3,
+        #sample4,
         #sample5,
         #sample6,
         #sample7,
         #sample8,
-        sample9,
+        #sample9,
         #sample10,
         #sample11,
         #sample12,
         #sample13,
         #sample14,
         #sample15,
-        sample16,
+        #sample16,
         #sample17,
-        sample18,
+        #sample18,
         #sample20,
         #sample21,
         #sample22,
         #sample25,
         #sample26,
-        sample27,
+        #sample27,
     ]
 
     with Progress(

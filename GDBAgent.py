@@ -12,6 +12,7 @@ from tmux_gdb_controller import TmuxGdbController, MemoryInfoParser
 from LLMTools.RunPwndbgCommand import RunPwndbgCommand
 from GDBInfo import GDBInfo, PrimaryInfo, AgentInfo, EXPCode
 from datetime import datetime
+from getGlobalInfo import GlobalInfo
 
 @dataclass
 class ModelConfig:
@@ -342,12 +343,22 @@ class GDBAgent:
         self.TmuxSession.send_key_combination_to_pane(self.TmuxSession.gdb_pane, ['C-c'])
         self.TmuxSession.send_key_combination_to_pane(self.TmuxSession.gdb_pane, ['C-l'])
         self.TmuxSession.send_command_to_pane(self.TmuxSession.gdb_pane, "heap")
+        heap_info = self.TmuxSession.read_pane_output(self.TmuxSession.gdb_pane)
         self.TmuxSession.send_command_to_pane(self.TmuxSession.gdb_pane, "vmmap")
+        vmmap_info = self.TmuxSession.read_pane_output(self.TmuxSession.gdb_pane)
         self.TmuxSession.send_command_to_pane(self.TmuxSession.gdb_pane, "bins")
+        bins_info = self.TmuxSession.read_pane_output(self.TmuxSession.gdb_pane)
         self.TmuxSession.send_command_to_pane(self.TmuxSession.gdb_pane, "checksec")
+        checksec_info = self.TmuxSession.read_pane_output(self.TmuxSession.gdb_pane)
+        global_info = GlobalInfo(
+            ChecksecStr=checksec_info,
+            vmmapStr=vmmap_info,
+            HeapStr=heap_info,
+            BinsStr=bins_info
+        )
         primary_info = PrimaryInfo(
             Decompilation=self.exp_code.DecompileCode,
-            DynamicMemory=self.TmuxSession.read_pane_output(self.TmuxSession.gdb_pane)
+            DynamicMemory=global_info.__str__()
         )
 
         self.prompt_manager = PromptManager(

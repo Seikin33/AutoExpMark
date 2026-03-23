@@ -1,0 +1,1 @@
+heap,bins,telescope 0x602140 8,hexdump 0x1d3d7540 64,search 0x602138,search -x 0x602138 0x1d3d6000 0x1d3d8000,search -x 0x602138,search 0x0000000000602138,hexdump 0x1d3d7570 32,continue
