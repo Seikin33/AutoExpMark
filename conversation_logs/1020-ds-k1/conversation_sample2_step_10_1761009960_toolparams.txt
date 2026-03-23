@@ -1,1 +1,0 @@
-x/10gx 0x6020a0,x/wx 0x6020b0,hexdump 0x2b84a030 32,x/gx 0x75f85f1657a8,telescope 0x2b84a000 20,telescope 0x2b84a100 20,search 0x75f85f1657a8,search 0x2b84a000,bins,continue

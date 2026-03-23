@@ -1,1 +1,0 @@
-context,telescope 0x602060 10,telescope 0x6020B0,search aaaaaaaa,search bbbbbbbb,telescope 0x602058 20,vmmap,info proc mappings,stack 20,disassemble 0x400d23,x/10i 0x400d23,continue

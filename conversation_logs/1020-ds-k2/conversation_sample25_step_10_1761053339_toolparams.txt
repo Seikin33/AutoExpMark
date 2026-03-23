@@ -1,1 +1,0 @@
-heap,bins,fastbins,unsortedbin,malloc_chunk 0x5d91ee442000,malloc_chunk 0x5d91ee442020,malloc_chunk 0x5d91ee442050,malloc_chunk 0x5d91ee4421f0,telescope 0x5d91ea202260 10,telescope 0x5d91ea2020c0 10,search -p 0x7d60b6845b78,regs,context,continue

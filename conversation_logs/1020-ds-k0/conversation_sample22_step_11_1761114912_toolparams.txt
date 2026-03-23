@@ -1,1 +1,0 @@
-regs,stack 20,x/20gx 0x602040,telescope 0x12c29000 10,x/gx 0x602148,gotplt,info functions,checksec,continue

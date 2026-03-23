@@ -1,1 +1,0 @@
-telescope 0x55cb40202000 20,search chunk,info variables chunk,telescope 0x55cb40202260 50,info variables size,telescope 0x55cb402020c0 50,heap bins,heap -l,vis_heap_chunks,vis,heap,continue

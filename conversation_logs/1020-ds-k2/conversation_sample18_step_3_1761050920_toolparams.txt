@@ -1,1 +1,0 @@
-regs,context,x/x 0x804A288,x/w 0x804A2A4,x/w 0x804A2A0,x/s 0x804A2A8,heap chunks,heap chunk 0x8239410,telescope 0x8239418 20,bins,x/x 0x804a248,x/4x 0x804a248,x/4x 0x804A288,continue

@@ -1,1 +1,0 @@
-x/10gx 0x6020a0,x/wx 0x6020b0,hexdump 0x2b84a000 32,hexdump 0x2b84a0d0 32,regs,stack 20,continue

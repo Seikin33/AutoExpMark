@@ -1,1 +1,0 @@
-procinfo,regs,context,heap,search sh,stack 20,gotplt,bins,x/10gx 0x6020d0,continue

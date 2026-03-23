@@ -1,1 +1,0 @@
-x/10gx 0x602140,gotplt,malloc_chunk 0xf61d530,malloc_chunk 0xf61d570,telescope 0x602140 20,hexdump 0xf61c000 64,continue

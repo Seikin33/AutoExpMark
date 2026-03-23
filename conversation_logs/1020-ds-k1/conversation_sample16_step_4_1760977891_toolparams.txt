@@ -1,1 +1,0 @@
-telescope 0x6020c0 20,telescope 0x6020c8 10,gotplt,heap,bins,telescope 0x6020c8 7,telescope 0x3bfb6020 2,continue

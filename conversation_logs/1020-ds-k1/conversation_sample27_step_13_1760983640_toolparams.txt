@@ -1,1 +1,0 @@
-regs,stack 20,heap,search /bin/sh,search 0x7ce81fdcb000 0x7ce820191000,search 0x7ce82018b000 0x7ce820191000,vmmap libc,search 0x7ce82018f000 0x7ce820191000,x/10gx 0x7ce82018f000,p/x 0x7ce81fdcb000 + 0x3c57a8,x/gx 0x7ce8201907a8,info address __free_hook,x/gx 0x7ce8201917a8,continue

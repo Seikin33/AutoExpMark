@@ -1,1 +1,0 @@
-regs,stack 20,telescope 0xffc88e18 10,x/x 0x804b070,gotplt,context,continue

@@ -1,1 +1,0 @@
-context,regs,telescope $rsp 20,telescope 0x0804B070 10,gotplt,search sh,heap chunks,vmmap,procinfo,continue

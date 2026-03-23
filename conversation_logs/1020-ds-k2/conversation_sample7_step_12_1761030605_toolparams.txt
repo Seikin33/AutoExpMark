@@ -1,1 +1,0 @@
-x/gx 0x730fb1f7cb10,hexdump 0x730fb1f7caed 0x40,telescope 0xc769000 40,vmmap libc,telescope 0x42f4e7f0f880 10,telescope 0x59459c32a010 10,vmmap heap,search -t qword 0x730fb1f7caed 0xc769000 0xc777000,search -t qword 0x730fb1f7caed,regs,bt,info proc,shell echo "Exploit Success!",continue

@@ -1,1 +1,0 @@
-search /bin/sh,heap,telescope 0x59fc0b103000 200,x/gx 0x7677f5f4e000,p &__free_hook,x/gx 0x7677f5f507a8,search -p 0x59fc0b103000,telescope 0x7ffc5dcca980 20,telescope 0x7677f5f4e1b0 20,search -t string /bin/sh,search -p 0x59fbd261cc0c,search -p 0x7ffc5dccb70c,hexdump 0x59fc0b103500 100,continue

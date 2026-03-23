@@ -1,1 +1,0 @@
-context,regs,stack 20,x/4gx 0x602120,x/4gx 0x602140,hexdump 0x7cc4010 32,gotplt,vmmap libc,x/gx 0x602040,x/gx 0x602018,continue

@@ -1,1 +1,0 @@
-gotplt,telescope 0x602018 4,telescope 0x602070 4,telescope 0x6020c0 16,heap,bins,regs,context,continue

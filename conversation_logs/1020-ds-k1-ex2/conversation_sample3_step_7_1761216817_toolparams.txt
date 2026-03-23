@@ -1,1 +1,0 @@
-regs,context,telescope $rsp 20,nearpc,stack 10,continue

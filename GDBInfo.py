@@ -60,4 +60,4 @@ class EXPCode:
         self.FinishedEXPCodeIdx = 1
 
     def __str__(self):
-        return os.path.basename(self.ExpCodePath)
+        return os.path.basename(self.ExpCodePath).split('.')[0]

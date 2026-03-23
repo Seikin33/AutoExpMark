@@ -1,1 +1,0 @@
-x/4gx 0x602120,x/4gx 0x602140,x/wx 0x602160,heap chunks,gotplt,x/2gx 0x602108,x/2gx 0x602110,x/gx 0x602120,x/10gx 0x602018,context,continue

@@ -1,1 +1,0 @@
-regs,context,stack 20,telescope 0x5d4dc9002000 40,heap chunks,bins,continue

@@ -1,1 +1,0 @@
-regs,info registers,info proc,stack 20,info program,p 1,continue

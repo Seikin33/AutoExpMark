@@ -1,1 +1,0 @@
-context,info program,checksec,file ./data/sample0,context,start,vmmap,heap,bins,telescope 0x602140 20

@@ -1,1 +1,0 @@
-telescope 0x804b120 20,gotplt,heap,bins,x/10wx 0x804b120,x/wx 0x804b014,x/wx 0x804b010,continue

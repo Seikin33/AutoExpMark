@@ -1,1 +1,0 @@
-x/gx 0x6020B8,malloc_chunk 0x1e07d010,malloc_chunk 0x1e07d0b0,telescope 0x1e07d020 20,telescope 0x1e07d0c0 20,search -s "DREAM",search -s "ROCK",malloc_chunk 0x1e07d150,bins,continue

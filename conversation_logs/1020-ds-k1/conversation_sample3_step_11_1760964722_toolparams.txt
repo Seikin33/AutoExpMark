@@ -1,1 +1,0 @@
-regs,telescope 0x602120 4,gotplt,x/gx 0x602018,x/gx 0x602040,heap chunks,search /bin/sh,context,continue

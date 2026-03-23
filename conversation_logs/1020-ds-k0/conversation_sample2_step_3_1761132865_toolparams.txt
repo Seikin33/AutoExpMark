@@ -1,1 +1,0 @@
-bins,heap,search -p 0x3ad39010 0x602000 0x603000,search -p 0x3ad39010,telescope 0x602060 10,x/wx 0x602070,telescope 0x602060 32,x/wx 0x6020b0,continue

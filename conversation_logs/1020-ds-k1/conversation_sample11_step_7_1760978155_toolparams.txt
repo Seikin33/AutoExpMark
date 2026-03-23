@@ -1,1 +1,0 @@
-regs,context,telescope $rsp 40,heap,search /bin/sh,envp,continue

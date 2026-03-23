@@ -1,1 +1,0 @@
-context,regs,stack 20,telescope $rsp 40,x/10gx $rbp-0x20,gotplt,hexdump 0x11b22250 40,telescope 0x6020c0 20,x/gx 0x602018,x/gx 0x602070,hexdump 0x11b22150 40,continue

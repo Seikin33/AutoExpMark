@@ -146,7 +146,7 @@ class GDBAgent:
         self._auto_save_conversation()  # 自动保存
 
         # 添加用户提示
-        UserPrompt = self.prompt_manager.get('user_prompt')
+        UserPrompt = self.prompt_manager.get('user_prompt_get_plan')
         self.conversation.append_user(UserPrompt)
         #logger.user_message(UserPrompt)
         self._auto_save_conversation()  # 自动保存
@@ -158,17 +158,13 @@ class GDBAgent:
             logger.error("Error: 生成调试计划失败，重新生成中")
             response = self.backend_notool.send(list(self.conversation.messages))
             
-        self.conversation.append_assistant(response.content, response.tool_call)
-        #logger.assistant_thought(response.content)
-        self._auto_save_conversation()  # 自动保存
+        self.response_parse(response)
 
         # 添加用户提示
-        UserPrompt = f'请根据你设计的调试计划，开始使用工具进行调试。'
+        UserPrompt = self.prompt_manager.get('user_prompt_start_plan')
         self.conversation.append_user(UserPrompt)
         #logger.user_message(UserPrompt)
         self._auto_save_conversation()  # 自动保存
-
-
     
     def response_parse(self, response:BackendResponse)->bool:
         """
@@ -214,8 +210,9 @@ class GDBAgent:
                 return True
 
         elif response.tool_call:
-            logger.print("只有 tool_call 存在，将伪造一个空assistant信息。")
-            self.conversation.append_assistant("Auto-continue", response.tool_call)
+            logger.print("\n只有 tool_call 存在，将伪造一个空assistant信息。")
+            self.conversation.append_assistant("Auto-continue", response.tool_call, response.reasoning_content)
+            logger.assistant_thought(response.reasoning_content)
             success, parsed_tool_call = self.backend.parse_tool_arguments(response.tool_call)
             if success:
                 tool = self.tools[parsed_tool_call.name]
@@ -272,11 +269,13 @@ class GDBAgent:
                 self.TmuxSession.send_command_to_pane(self.TmuxSession.gdb_pane, "continue")
                 break
 
-    def add_user_message(self, message: str):
-        self.conversation.append_user(message)
-        response = self.backend.send(list(self.conversation.messages))
-        self.response_parse(response)
+        UserPrompt = self.prompt_manager.get('user_prompt_summary_memory_change')
+        self.conversation.append_user(UserPrompt)
+        #logger.user_message(UserPrompt)
+        self.conversation.delete_all_reasoning_content()
 
+        response = self.backend_notool.send(list(self.conversation.messages))
+        self.response_parse(response)
 
     def load_history_conversation(self, file_path: str):
         """从JSON文件加载历史对话
@@ -369,7 +368,6 @@ class GDBAgent:
             finished_exploit_code=finished_exploit_code
         )
 
-
     def get_last_info(self):
         # 查找最后一个Assistant角色的对话记录
         for message in reversed(list(self.conversation.messages)):
@@ -406,82 +404,3 @@ class GDBAgent:
         self.auto_save_path = None
         self.tool_calls_save_path = None
         logger.info("自动保存功能已禁用")
-
-class GDBAgent_Prototype(GDBAgent):
-    def __init__(
-        self, 
-        prototype_name: str, 
-        last_info: str,
-        breakpoint_list: List[int], 
-        primary_info: PrimaryInfo,
-        tmux_session: TmuxGdbController,
-        config: ModelConfig,
-        auto_save_path: Optional[str] = None
-    ):
-        #super().__init__(
-        #    primary_info=primary_info,
-        #    last_info=last_info,
-        #    config=config,
-        #    tmux_session=tmux_session,
-        #    auto_save_path=auto_save_path,
-        #    exp_code=None  # Prototype agent doesn't use exp_code directly
-        #)
-        self.prototype_name = prototype_name
-        self.breakpoint_list = breakpoint_list
-        self.primary_info = primary_info
-        self.TmuxSession = tmux_session
-        self.last_info = last_info
-
-        self.prompt_manager = PromptManager(
-            promptyaml="./LLMPrompts/AutuGDBPrompt_Prototype.yaml",
-            prototype_name=self.prototype_name,
-            PrimaryInfo=self.primary_info,
-        )
-        
-        self.tools = {
-            "RunPwndbgCommand": RunPwndbgCommand(),
-        }
-        self.backend = DeepSeekBackend(
-            model="deepseek-reasoner",
-            tools=self.tools,
-            api_key=os.getenv("DEEPSEEK_API_KEY"),
-            config=config,
-        )
-        self.conversation = Conversation(name="GDBAgent_Prototype")
-
-        # 自动保存配置
-        self.auto_save_path = auto_save_path
-        self.auto_save_enabled = auto_save_path is not None
-        # 工具调用参数记录
-        self.tool_calls: List[str] = []
-        self.tool_calls_save_path: Optional[str] = None
-        if self.auto_save_enabled and self.auto_save_path is not None:
-            # 确保保存目录存在
-            os.makedirs(os.path.dirname(self.auto_save_path), exist_ok=True)
-            logger.info(f"自动保存功能已启用，保存路径: {self.auto_save_path}")
-            self.tool_calls_save_path = self._compute_tool_calls_save_path(self.auto_save_path)
-
-    def initialize_conversation(self, breakpoint_now: int):
-        """初始化对话"""
-        
-        # 添加系统提示
-        SystemPrompt = self.prompt_manager.get(
-            'system_prompt',
-            prototype_name=self.prototype_name,
-            tools_description=self.prompt_manager.get('tools_description'),
-            Pwndbg_Commands=self.prompt_manager.get('Pwndbg_Commands')
-        )
-        self.conversation.append_system(SystemPrompt)
-        logger.system_message(SystemPrompt)
-        self._auto_save_conversation()  # 自动保存
-
-        # 添加用户提示
-        UserPrompt = self.prompt_manager.get(
-            'user_prompt',
-            breakpoint_now=breakpoint_now,
-            LastInfo=self.last_info,
-            #source_code=self.source_code
-        )
-        self.conversation.append_user(UserPrompt)
-        logger.user_message(UserPrompt)
-        self._auto_save_conversation()  # 自动保存

@@ -1,1 +1,0 @@
-telescope 0x804a288 10,hexdump 0x804a2c0 40,telescope 0x8c88458 10,telescope 0x804a248 10,bins,x/4wx 0x804a2a0,malloc_chunk 0x8c88450,search 15935728,continue

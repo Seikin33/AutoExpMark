@@ -1,1 +1,0 @@
-pid,procinfo,regs,heap,bins,search "/bin/sh",gotplt,stack,telescope $rsp,vmmap,continue

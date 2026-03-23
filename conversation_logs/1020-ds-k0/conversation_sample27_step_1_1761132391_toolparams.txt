@@ -1,1 +1,0 @@
-info address author_name,info variables author_name,info variables book_pointers,x/100gx 0x644b83402000,x/4gx 0x644b9eca2080,x/s 0x644b9eca2020,x/s 0x644b9eca2050,bins,heap,continue

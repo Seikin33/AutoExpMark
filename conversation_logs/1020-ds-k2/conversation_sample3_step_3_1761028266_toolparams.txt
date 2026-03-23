@@ -1,1 +1,0 @@
-malloc_chunk 0xd2ea000,telescope 0x602120 40,got,gotplt,stack 20,regs,vmmap,x/gx 0x602040,x/gx 0x602028,x/gx 0x6020e0,x/s 0x6020e0,telescope 0x602108 10,telescope 0x602110 10,continue

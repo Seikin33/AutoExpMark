@@ -1,1 +1,0 @@
-search -p 0x5a88fedf4010,telescope 0x11854891e3d0 16,hexdump 0x5a88fedf4010 32,hexdump 0x5a88fedf4030 32,malloc_chunk 0x5a88fedf4020,heap,bins,malloc_chunk 0x5a88fedf4070,continue

@@ -1,1 +1,0 @@
-regs,context,stack 20,telescope 0x5d4dc9002000 20,bins,hexdump 0x7ffe4735035e 32,search 0x75fcec663840,search 0x5d4dc8e00000,search %15\$p,info signals,bt,argv,dumpargs,envp,continue

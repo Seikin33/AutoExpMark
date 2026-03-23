@@ -1,1 +1,0 @@
-telescope 0x6020D8 10,heap chunks,bins,search "/bin/sh" 0x10e67000 0x10e88000,search "/bin/sh",x/gx 0x602018,context,x/10gx 0x10e67000,x/10gx 0x10e67110,x/10gx 0x10e67220,x/10gx 0x10e67330,search -s "/bin/sh" 0x10e67000 0x10e88000,search -s "/bin/sh",search -s "bin" 0x10e67000,search -s "bin",continue

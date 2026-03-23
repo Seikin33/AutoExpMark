@@ -1,1 +1,0 @@
-x/10gx 0x6020C8,search -x '80 00 00 00' 0x602000 0x603000,search -t dword 0x80 0x602000 0x603000,search -t dword 0x80,x/20wx 0x6020c0,malloc_chunk 0x25c21000,malloc_chunk 0x25c21020,malloc_chunk 0x25c210b0,continue

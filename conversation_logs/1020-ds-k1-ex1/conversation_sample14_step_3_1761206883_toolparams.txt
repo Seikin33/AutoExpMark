@@ -1,1 +1,0 @@
-x/4gx 0x6020C0,x/wx 0x6020BC,x/gx 0x602090,telescope 0x602080 4,fastbins,heap,continue

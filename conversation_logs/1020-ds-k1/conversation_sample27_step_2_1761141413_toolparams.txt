@@ -1,1 +1,0 @@
-search -s 'leak:',x/40bx 0x602d22c0205b,telescope 0x602d22c0207b 20,search -t qword 0x602d427050,telescope 0x602d22c02061 20,telescope 0x602d427050 4,telescope 0x602d42705070 4,x/s 0x602d42705020,telescope 0x602d42705070 8,x/s 0x602d42705050,heap chunks,continue

@@ -1,1 +1,0 @@
-x/8gx 0x5b9ddb202060,x/gx 0x5b9ddb202090,x/wx 0x5b9ddb202040,x/32gx 0x5b9de10ef000,x/32gx 0x5b9de10ef090,telescope 0x5b9ddb202060 10,continue

@@ -1,1 +1,0 @@
-start,heap,bins,vmmap,telescope 0x602060 10,dd 0x6020B0,continue

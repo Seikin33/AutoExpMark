@@ -1,1 +1,0 @@
-x/10wx 0x804b118,x/10wx 0x804b120,x/10wx 0x92c5000,gotplt,x/wx 0x804b0cc,x/wx 0x804b0c8,x/wx 0x804b148,regs,stack 20,malloc_chunk 0x92c50e0,continue

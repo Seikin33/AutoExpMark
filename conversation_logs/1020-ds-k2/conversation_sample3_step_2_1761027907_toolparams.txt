@@ -1,1 +1,0 @@
-regs,stack 20,disassemble sub_400D43,disassemble 0x400d43,gotplt,search "/bin/sh",telescope 0x602000 20,context,info functions,info functions sample3,info functions,disassemble 0x400000,0x401000,disassemble 0x400e85,0x400e92,telescope 0x602120 10,x/x 0x602160,p system,x/gx 0x602040,vmmap libc,continue

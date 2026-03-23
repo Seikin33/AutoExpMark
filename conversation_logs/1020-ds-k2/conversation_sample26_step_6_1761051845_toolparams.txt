@@ -1,1 +1,0 @@
-gotplt,gotplt,x/10gx 0x602018,telescope 0x6020a0 40,malloc_chunk 0x32e1e000,malloc_chunk 0x32e1e190,search -p 0x602090,regs,stack 20,bins,continue

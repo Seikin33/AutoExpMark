@@ -1,1 +1,0 @@
-search b'leak:',search -t string leak:,search -x 0x55a8e6402000 0x55a8e6403000 b'leak:',search b'leak',hexdump 0x55a8e6402000 256,telescope 0x55a8e6402040 10,telescope 0x55a8e6402060 20,telescope 0x55a8eace4080,hexdump 0x55a8eace4020 32,hexdump 0x55a8eace4050 32,gotplt,info functions,disassemble 0x000055a8e6200840,telescope 0x55a8e6401f78 10,continue

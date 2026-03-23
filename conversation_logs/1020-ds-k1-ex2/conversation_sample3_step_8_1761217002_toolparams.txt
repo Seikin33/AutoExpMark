@@ -1,1 +1,0 @@
-regs,context,stack 30,telescope $rsp 80,gotplt,search /bin/sh,continue

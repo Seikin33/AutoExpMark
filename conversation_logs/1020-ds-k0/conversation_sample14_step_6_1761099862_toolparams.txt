@@ -1,1 +1,0 @@
-regs,context,heap,bins,vmmap,search /bin/sh,continue

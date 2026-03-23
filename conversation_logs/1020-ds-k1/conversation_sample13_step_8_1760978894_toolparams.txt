@@ -1,1 +1,0 @@
-context,vmmap,regs,stack 20,search -s b,telescope 0x64ae3f625000 40,telescope 0x64ae5a988000 20,hexdump 0x727b332d8aed 40,hexdump 0x727b332d8b00 30,info proc,info proc mappings,continue

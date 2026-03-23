@@ -1,1 +1,0 @@
-telescope 0x6020ad 20,x/gx 0x6020c0,telescope 0x602000 50,got,gotplt,x/gx 0x601018,disassemble free,x/10gx 0x601000,info functions free,hexdump 0x33f20080 80,hexdump 0x33f20080 0x70,hexdump 0x33f20010 0x20,continue

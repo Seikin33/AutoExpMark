@@ -1,1 +1,0 @@
-regs,stack 20,telescope $rsp 20,x/gx 0x6020B8,telescope 0x204cf4b0 10,malloc_chunk 0x204ce000,search "ROCK",search "FLOWER",fastbins,smallbins,vmmap,continue

@@ -1,1 +1,0 @@
-telescope 0x602040 40,hexdump 0x2a659010,hexdump 0x2a659030,malloc_chunk 0x2a659000,malloc_chunk 0x2a659020,malloc_chunk 0x2a659130,malloc_chunk 0x2a659240,x/s 0x2a659008,x/s 0x2a659010,x/s 0x2a659028,x/s 0x2a659030,x/s 0x2a659138,x/s 0x2a659140,x/s 0x2a659248,x/s 0x2a659250,bins,arena,vmmap heap,canary,continue

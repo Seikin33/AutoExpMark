@@ -1,1 +1,0 @@
-heap chunks,bins,telescope 0x55cb40202000 50,search chunk,info address chunk,info address size,telescope 0x55cb40202260 20,telescope 0x55cb402020c0 20,malloc_chunk 0x55cb79116000,malloc_chunk 0x55cb79116020,hexdump 0x55cb79116010 0x20,gotplt,got,gotplt,telescope 0x55cb40202000 20,vmmap,continue

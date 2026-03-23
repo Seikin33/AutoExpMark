@@ -1,1 +1,0 @@
-regs,stack 20,telescope 0x63d577802060 5,hexdump 0x63d57780205b 32,telescope 0x63d58bdf8080 4,hexdump 0x63d58bdf8020 10,hexdump 0x63d58bdf8050 10,continue

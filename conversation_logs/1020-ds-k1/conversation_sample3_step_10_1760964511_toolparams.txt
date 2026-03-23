@@ -1,1 +1,0 @@
-telescope 0x602120 4,x/gx 0x602018,x/gx 0x602040,malloc_chunk 0x3799f000,hexdump 0x3799f000 0x100,stack 20,telescope $rsp 20,search /bin/sh,regs,continue

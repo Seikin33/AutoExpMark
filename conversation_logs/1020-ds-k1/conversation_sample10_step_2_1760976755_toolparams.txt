@@ -1,1 +1,0 @@
-x/10gx 0x6020A8,telescope 0x291c010 20,x/10gx 0x291d820,x/10gx 0x291d940,gotplt,search -p 0x7fa1ddf09b78,context,continue

@@ -1,1 +1,0 @@
-regs,stack 20,hexdump $rsi 32,telescope 0x59057a202000 44,bins,continue

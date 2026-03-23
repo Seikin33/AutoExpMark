@@ -1,1 +1,0 @@
-regs,context,stack 20,telescope $rsp 40,telescope 0x602040 40,hexdump 0x60835dbf0000 128,vmmap libc,search 0x7f62a43b0000,info proc,info registers rip rsp rbp,continue

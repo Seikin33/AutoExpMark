@@ -1,1 +1,0 @@
-x/10gx 0x602060,x/wx 0x6020B0,regs,stack 20,telescope $rsp,search aaaaaaaa,search bbbbbbbb,disassemble 0x400d23,disassemble main,vmmap,x/10gx 0x602068,continue

@@ -1,1 +1,0 @@
-telescope 0x55a8e6402060 20,hexdump 0x55a8e6402040 32,telescope 0x55a8eace4080,telescope 0x55a8eace4170,telescope 0x55a8eace4110,malloc_chunk 0x55a8eace41c0,malloc_chunk 0x55a8eace42d0,bins,telescope 0x55a8e6402000 10,search 0x00000005,search 5,x/20wx 0x55a8e6402000,continue

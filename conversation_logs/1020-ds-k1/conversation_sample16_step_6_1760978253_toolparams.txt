@@ -1,1 +1,0 @@
-context,telescope 0x6020c0 20,x/gx 0x602018,x/gx 0x602070,malloc_chunk 0x3bfb6000,malloc_chunk 0x3bfb6020,search -p 0x73bc8860cb78,stack 20,canary,nearpc,continue

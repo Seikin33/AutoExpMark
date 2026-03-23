@@ -1,1 +1,0 @@
-info program,info registers,info threads,info files,continue

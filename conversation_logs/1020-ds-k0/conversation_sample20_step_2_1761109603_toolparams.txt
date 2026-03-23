@@ -1,1 +1,0 @@
-telescope 0x804b0a0 40,malloc_chunk 0x902a000,malloc_chunk 0x902a048,malloc_chunk 0x902a090,bins,search -x 0x902a000,search 0x902a000,search 0x00000000902a000,search 0x902a000,search aaaa,heap,continue

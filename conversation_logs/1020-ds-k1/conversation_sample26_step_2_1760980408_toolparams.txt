@@ -1,1 +1,0 @@
-malloc_chunk 0x2e547000,malloc_chunk 0x2e547190,p message,p &message,x/8gx 0x602100,x/8gx 0x602140,x/gx 0x602090,gotplt,search 0x602090,p &name,x/s &name,continue

@@ -1,1 +1,0 @@
-context,x/gx 0x602090,telescope 0x7ffcffc71ae0 10,telescope 0x7ffcffc71a98 10,heap,bins,stack 20,search -t qword 0x7ffcffc71ae0,info variables ptr,x/20gx 0x602000,x/gx 0x602098,telescope 0x7ffcffc71aa0 5,continue

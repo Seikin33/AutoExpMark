@@ -1,1 +1,0 @@
-pid,regs,context,stack,telescope $sp 40,search /bin/sh,continue

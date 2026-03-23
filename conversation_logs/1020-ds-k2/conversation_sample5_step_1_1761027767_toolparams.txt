@@ -1,1 +1,0 @@
-x/10wx 0x804d094,x/10wx 0x804d08c,x/10wx 0x804d0a0,x/10wx 0x804d0ac,x/10wx 0x804d068,telescope 0x804d094,telescope 0x804d08c,telescope 0x87d3510,telescope 0x87d39c0,heap,bins,gotplt,x/i 0x0804d020,search -p 0x87d09c,hexdump 0x87d3478 32,stack 20,canary,continue

@@ -1,1 +1,0 @@
-pid,regs,context,nearpc,stack 20,argv,envp,envp,x/20s $rsp-0x100,x/20gx $rsp,continue

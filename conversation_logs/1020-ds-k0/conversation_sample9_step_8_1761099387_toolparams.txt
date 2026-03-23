@@ -1,1 +1,0 @@
-telescope 0x6020D8 10,x/gx 0x602018,vmmap,info proc,heap chunks,search "/bin/sh",bins,context,continue

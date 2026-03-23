@@ -1,1 +1,0 @@
-telescope 0x2c288f9da160 15,malloc_chunk 0x602dbcd95040,hexdump 0x602dbcd95010 32,hexdump 0x602dbcd95030 32,bins,heap,continue

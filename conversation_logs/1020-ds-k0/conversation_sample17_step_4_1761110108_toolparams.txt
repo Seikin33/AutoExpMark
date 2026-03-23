@@ -1,1 +1,0 @@
-telescope 0x602000 40,x/10gx 0x6020ad,x/gx 0x6020c0,x/20gx 0x34496070,fastbins,x/10gx 0x6020e0,continue

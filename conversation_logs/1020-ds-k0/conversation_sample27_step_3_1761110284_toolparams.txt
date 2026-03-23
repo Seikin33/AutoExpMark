@@ -1,1 +1,0 @@
-context,regs,telescope 0x61e256e02000 40,telescope 0x61e268ad0070,telescope 0x61e268ad0100,telescope 0x61e268ad0190,hexdump 0x61e268ad0010 32,malloc_chunk 0x61e268ad00d0

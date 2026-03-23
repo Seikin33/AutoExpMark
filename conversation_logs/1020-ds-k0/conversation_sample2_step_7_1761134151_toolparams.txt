@@ -1,1 +1,0 @@
-x/10gx 0x602080,x/gx 0x6020b0,telescope 0x3ad39000 20,telescope 0x3ad39010 20,telescope 0x3ad39100 20,unsortedbin,arena,gotplt,vmmap libc,regs,stack 20,canary,continue

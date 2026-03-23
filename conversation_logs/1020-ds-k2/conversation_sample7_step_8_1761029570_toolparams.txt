@@ -1,1 +1,0 @@
-telescope 0x42f4e7f0f880 5,malloc_chunk 0x59459c32a000,malloc_chunk 0x59459c32a020,malloc_chunk 0x59459c32a040,search -t string 0x51 0x59459c32a000 0x59459c32a140,search -t bytes 0x51 0x59459c32a000 0x59459c32a140,search 0x51,search 0x51 heap,hexdump 0x59459c32a000 0x100,bins,vmmap libc,p &main_arena,heap,continue

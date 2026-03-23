@@ -1,1 +1,0 @@
-got,gotplt,x/10wx 0x804b120,x/10wx 0x804b0a0,x/10wx 0x804b0e0,x/10wx 0x0804b120,x/10wx 0x0804b014,telescope 0x902a000 40,x/wx 0x804b014,regs,continue

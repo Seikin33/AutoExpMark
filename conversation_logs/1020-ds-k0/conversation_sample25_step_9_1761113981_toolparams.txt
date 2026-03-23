@@ -1,1 +1,0 @@
-heap chunks,bins,telescope &chunk 10,telescope &size 10,malloc_chunk 0x55cb79116000,hexdump 0x55cb79116000 64,telescope 0x55cb79116020 20,continue

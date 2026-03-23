@@ -1,1 +1,0 @@
-smallbins,malloc_chunk 0x300e000,malloc_chunk 0x300e190,telescope 0x6020A0 20,gotplt,got,gotplt,x/10xg 0x602000,heap chunks,context,search -p 0x4006A0,continue

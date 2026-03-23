@@ -1,1 +1,0 @@
-p &page_list,x/8gx &page_list,p &size_list,x/8gx &size_list,p &name,x/s &name,p message,x/s message,x/10gx message,malloc_chunk 0x2e547000,malloc_chunk 0x2e5470c0,x/10gx 0x2e547010,x/10gx 0x2e5470d0,gotplt,continue

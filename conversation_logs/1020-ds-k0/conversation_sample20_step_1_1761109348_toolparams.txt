@@ -1,1 +1,0 @@
-regs,context,telescope 0x804b000 50,telescope 0x804b0a0 100,telescope 0x804b120 20,telescope 0x804b0e0 20,heap chunks,malloc_chunk 0x902a000,gotplt,stack 20,telescope 0x804b0c8 10,telescope 0x804b148 10,search -t string aaaaaaaa 0x902a000 0x904b000,search aaaaaaaa,continue

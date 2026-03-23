@@ -1,1 +1,0 @@
-regs,context,telescope 0x5acb77c02060 20,telescope 0x5acb77c02060 20,hexdump 0x5acb77c02060 160,telescope 0x5acb77c02040 8,fastbins,malloc_chunk 0x5acb7db82190,malloc_chunk 0x5acb7db82160,telescope 0x5acb7db82080 4,telescope 0x5acb7db82020 8,telescope 0x5acb7db82050 8,vmmap,continue

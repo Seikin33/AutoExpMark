@@ -1,1 +1,0 @@
-context,x/10gx 0x6020c0,malloc_chunk 0x1ab38140,gotplt,x/10gx 0x602018,bins,search 0x6020c0,search -x 0x6020c0 0x1ab38000 0x1ab59000,search -x 0x6020c0 heap,telescope 0x1ab38140 20,heap,continue

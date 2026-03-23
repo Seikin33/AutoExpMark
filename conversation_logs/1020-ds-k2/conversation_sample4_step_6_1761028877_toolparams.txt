@@ -1,1 +1,0 @@
-context,regs,stack 30,search /bin/sh

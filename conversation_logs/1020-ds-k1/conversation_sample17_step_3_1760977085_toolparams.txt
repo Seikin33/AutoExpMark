@@ -1,1 +1,0 @@
-telescope &heaparray 10,x/gx &magic,x/10gx 0x6020ad,telescope 0x33f20070 20,bins,x/gx 0x400000+0xbf5,vmmap,continue

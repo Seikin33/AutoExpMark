@@ -1,1 +1,0 @@
-x/gx 0x6020d0,x/gx 0x6020d8,x/gx 0x6020e0,x/wx 0x6020e8,x/wx 0x6020f0,x/wx 0x6020f8,malloc_chunk 0x2e07f930,hexdump 0x2e07f940 32,bins,heap,x/gx 0x602018,x/gx 0x602080,gotplt,search -p 0x7dc5671ecb98,search -p 0x0000000100000001,stack 20,regs,continue

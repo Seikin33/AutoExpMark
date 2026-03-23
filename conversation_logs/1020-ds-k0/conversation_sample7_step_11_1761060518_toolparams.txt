@@ -1,1 +1,0 @@
-x/gx 0x7e3d781e7b10,telescope 0x5a88fedf40a0 20,hexdump 0x5a88fedf4070 100,telescope 0x5a88fedf4070 20,bins,p/x 0x7e3d781e7b78 - 0x68,heap,telescope 0x5a88fedf40a0 10,search -t qword 0x5a88fedf40a0,continue

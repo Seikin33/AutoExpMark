@@ -1,1 +1,0 @@
-regs,x/8gx 0x7d60b6845aed,x/10gx 0x5d91ee442200,heap bins fast,bins,heap chunks,telescope 0x5d91ee442000 20,x/10gx 0x5d91ea202260,x/10gx 0x5d91ea2020c0,x/gx 0x7d60b6845b10,x/gx 0x7d60b6845b08,bt,search -t qword 0x60b6506ea0000000,continue

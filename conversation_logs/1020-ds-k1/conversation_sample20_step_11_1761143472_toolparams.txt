@@ -1,1 +1,0 @@
-context,search /bin/sh,info proc,continue

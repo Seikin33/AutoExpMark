@@ -1,1 +1,0 @@
-ln tinypad,p &tinypad,telescope 0x602040 40,malloc_chunk 0x12c29000,malloc_chunk 0x12c29080,malloc_chunk 0x12c29100,hexdump 0x12c29000 0x80,hexdump 0x12c29080 0x80,hexdump 0x12c29100 0x100,fastbins,search 0x7a5738288000,continue

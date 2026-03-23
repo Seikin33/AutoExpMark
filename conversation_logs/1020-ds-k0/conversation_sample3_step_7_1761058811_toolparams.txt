@@ -1,1 +1,0 @@
-context,regs,stack,telescope $rsp 40,disassemble $rip,x/gx 0x602120,x/4gx 0x602120,malloc_chunk 0x7cc4000,malloc_chunk 0x7cc4090,search -s '/bin/sh' $rsp $rsp+1000,search -s '/bin/sh',gotplt,x/gx 0x602018,x/gx 0x602040,x/20s 0x7cc4010,x/20s 0x7cc40c0,search -s '%',continue

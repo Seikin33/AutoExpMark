@@ -1,1 +1,0 @@
-regs,gotplt,x/10gx 0x602068,x/10gx 0x6020c8,x/100gx 0x5cae3eb4e000,stack 20,argv,envp,info proc,info program,continue

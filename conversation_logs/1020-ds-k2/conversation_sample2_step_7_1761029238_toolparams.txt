@@ -1,1 +1,0 @@
-context,telescope 0x602060 10,x/gx 0x6020B0,search aaaaaaaa,search bbbbbbbb,telescope 0x602080-24 20,stack 20,continue

@@ -1,1 +1,0 @@
-x/10gx 0x6020c8,x/10gx 0x602068,heap chunks,heap,bins,x/10gx 0x6020b0,got,gotplt,x/10gx 0x602018,x/20gx 0x2f510000,x/20gx 0x2f5100a0,x/10wx 0x602060,x/gx 0x602028,regs,continue

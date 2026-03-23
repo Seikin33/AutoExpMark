@@ -1,1 +1,0 @@
-malloc_chunk 0x1632e000,gotplt,telescope $rsp 20,search /bin/sh,hexdump 0x602100 32,hexdump 0x602140 32,arena,mp,regs,continue

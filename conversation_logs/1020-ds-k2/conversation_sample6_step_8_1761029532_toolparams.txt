@@ -1,1 +1,0 @@
-context,x/gx 0x602018,x/10gx 0x6020b8,stack 20,bins,heap,continue

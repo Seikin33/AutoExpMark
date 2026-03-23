@@ -1,1 +1,0 @@
-gotplt,gotplt,x/10gx 0x602018,heap chunks,bins,telescope 0x6020A0 20,disassemble 0x4006a0,regs,context,continue

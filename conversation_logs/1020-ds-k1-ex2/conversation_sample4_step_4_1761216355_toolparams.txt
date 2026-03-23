@@ -1,1 +1,0 @@
-regs,stack 20,canary,heap,fastbins,malloc_chunk 0x15bcf0b0,malloc_chunk 0x15bcf010,hexdump 0x15bcf0b0 32,x/gx 0x6020B8,telescope 0x15bcf2b0 20,telescope 0x15bcf280 20,search -p 0x7b3d9f2c3b78,search -s b'MIRACLE',vmmap libc,x/gx 0x15bcf2d0,continue

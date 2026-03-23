@@ -1,1 +1,0 @@
-heap,telescope 0x804B120 10,telescope 0x804B0A0 10,telescope 0x804B0E0 10,hexdump 0x8b51000 64,hexdump 0x8b51048 64,hexdump 0x8b51090 64,hexdump 0x8b510e0 64,gotplt,continue

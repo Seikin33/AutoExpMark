@@ -1,1 +1,0 @@
-telescope 0x626ed0a02000 20,search chunk,info variables,info address chunk,info address size,telescope 0x626ed0a02260 10,telescope 0x626ed0a020c0 10,hexdump 0x626eff303010 0x10,hexdump 0x626eff303090 0x40,telescope 0x626eff303030 10,telescope 0x626eff303060 10,malloc_chunk 0x626eff303020,malloc_chunk 0x626eff303050,continue

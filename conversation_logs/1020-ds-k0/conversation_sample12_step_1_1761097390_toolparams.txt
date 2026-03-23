@@ -1,1 +1,0 @@
-regs,context,stack 20,telescope $rsp 40,canary,vmmap libc,search 0x79290dd05000,search 0x79290dd25840,info variables,x/100gx 0x63e910202000,gotplt,info functions,bt,continue

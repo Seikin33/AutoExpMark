@@ -1,1 +1,0 @@
-x/10gx 0x602120,x/10gx 0x602140,x/4wx 0x602160,heap chunks,x/20gx 0xd2ea000,x/s 0xd2ea0c0,got,gotplt,x/gx 0x602040,stack 20,x/10gx $rsp,x/s 0x6020e0,context,continue

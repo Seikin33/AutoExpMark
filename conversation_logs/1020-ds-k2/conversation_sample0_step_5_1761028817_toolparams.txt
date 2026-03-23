@@ -1,1 +1,0 @@
-x/3gx 0x602140,x/gx 0x602018,x/gx 0x602020,x/gx 0x602088,malloc_chunk 0xf61c000,malloc_chunk 0xf61d530,malloc_chunk 0xf61d570,search bbbbbbbb,context,telescope 0x602130 20,continue

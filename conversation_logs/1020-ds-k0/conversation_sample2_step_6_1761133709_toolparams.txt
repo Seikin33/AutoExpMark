@@ -1,1 +1,0 @@
-telescope 0x6020A0 10,x/wx 0x6020B0,malloc_chunk 0x3ad39000,malloc_chunk 0x3ad390d0,malloc_chunk 0x3ad39030,malloc_chunk 0x3ad39100,hexdump 0x3ad39000 0x40,hexdump 0x3ad390d0 0x40,telescope 0x602060 5,gotplt,x/10gx 0x602000,arena,regs,continue

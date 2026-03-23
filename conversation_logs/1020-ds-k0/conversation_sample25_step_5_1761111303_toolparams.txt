@@ -1,1 +1,0 @@
-heap chunks,heap,heap bins all,bins,telescope 0x55cb79116000 20,telescope 0x55cb79116020 10,telescope 0x55cb79116050 10,telescope 0x55cb40202000 20,search -p 0x55cb79116000,search -s "Done",telescope 0x55cb40202100 40,telescope &size 20,telescope &chunk 20,hexdump 0x55cb79116200 32,telescope 0x55cb791161f0 10,telescope 0x55cb79116100 10,telescope 0x55cb791160f0 10,vmmap,continue

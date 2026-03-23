@@ -1,1 +1,0 @@
-telescope 0x602140 4,hexdump 0xf61d530 0x40,hexdump 0xf61d570 0x40,search 0x602138,telescope 0xf61d600 2,bins,hexdump 0xf61d540 0x40,hexdump 0xf61d580 0x40,telescope 0xf61d540 8,search -x 38 21 60 00 00 00 00 00,search -t bytes 38 21 60,search 0x0000000000602138,info registers rip,continue

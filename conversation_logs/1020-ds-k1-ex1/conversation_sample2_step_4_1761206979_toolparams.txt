@@ -1,6 +1,0 @@
-info program,run,heap,info registers,break main,info functions,run,interrupt,info proc,run,vmmap,run,vmmap,info threads,break sub_4009A0,run,vmmap,run
-vmmap
-heap
-bins
-p &ptr
-p dword_6020B0,run,vmmap

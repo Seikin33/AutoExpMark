@@ -1,1 +1,0 @@
-telescope 0x6020a0 10,x/x 0x6020b0,malloc_chunk 0x2b84a000,malloc_chunk 0x2b84a030,hexdump 0x2b84a0d0 32,bins,search -p 0x602068,context,continue

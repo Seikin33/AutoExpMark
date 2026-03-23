@@ -1,1 +1,0 @@
-heap chunks,heap,telescope 0x55cb79116000 10,telescope 0x55cb79116020 10,telescope 0x55cb79116050 10,search 0x6161616161616161,bins,hexdump 0x55cb79116010 32,vmmap heap,telescope 0x55cb79116090 20,telescope 0x55cb791160f0 10,search 0x120,search 0x100,telescope 0x55cb79116100 20,telescope 0x55cb791163b0 10,continue

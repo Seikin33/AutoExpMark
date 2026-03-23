@@ -1,1 +1,0 @@
-context,search b,x/100gx 0x64ae5a988000,x/gx 0x727b332d8b10,x/10gx 0x727b332d8aed,search -t string b,search -t string "name",vmmap sample13,search -t qword 0x64ae5a988000,x/20gx 0x727b332d81b0,x/20gx 0x7ffd9427f760,info proc mappings,info registers,info proc,continue

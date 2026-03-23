@@ -1,1 +1,0 @@
-regs,telescope 0x5eb0de002040 10,hexdump 0x5eb0de002060 0x40,telescope 0x5eb0e86da030 10,stack 20,canary,search -p 0x711cd167fb78,continue

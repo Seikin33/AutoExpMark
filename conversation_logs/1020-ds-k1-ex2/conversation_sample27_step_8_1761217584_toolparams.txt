@@ -1,1 +1,0 @@
-regs,context,heap,bins,telescope 0x5d232c402060 40,telescope 0x5d232c402058 2,x/gx 0x5d232c402020,hexdump 0x5d2350c151c0 64,search xxxleak,vmmap,checksec,continue

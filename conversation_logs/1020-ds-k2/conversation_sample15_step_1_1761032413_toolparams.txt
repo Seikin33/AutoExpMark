@@ -1,1 +1,0 @@
-regs,context,stack 20,telescope 0x5b9ddb202060 10,telescope 0x5b9ddb202090 5,heap,bins,continue

@@ -1,1 +1,0 @@
-telescope 0x602000 50,x/gx 0x374cb010,x/gx 0x374cb090,hexdump 0x374cb110 32,heap,continue

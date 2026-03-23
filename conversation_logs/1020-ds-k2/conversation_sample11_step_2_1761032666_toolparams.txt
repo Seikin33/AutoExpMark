@@ -1,1 +1,0 @@
-telescope 0xff8f8908 20,stack 20,gotplt,telescope 0x804b070 10,telescope 0x945f7f0 10,continue

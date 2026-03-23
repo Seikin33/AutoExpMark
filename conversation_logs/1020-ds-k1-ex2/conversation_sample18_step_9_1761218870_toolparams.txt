@@ -1,1 +1,0 @@
-x/wx 0x804a258,vmmap,heap,bins,search /bin/sh,regs,stack 10,context,procinfo,continue

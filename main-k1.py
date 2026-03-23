@@ -54,7 +54,7 @@ def AnalyseEXP(exp:EXPCode, progress: Progress, task_id):
     
     try:
         if not InitTerminal(TmuxSession, exp):
-            raise Exception("InitTerminal failed")
+            raise Exception("Init Terminal failed")
         
         auto_save_dir = "conversation_logs"
         os.makedirs(auto_save_dir, exist_ok=True)
@@ -94,12 +94,11 @@ def AnalyseEXP(exp:EXPCode, progress: Progress, task_id):
             
             # 开始工具调试
             gdbagent.one_round_conversation(max_calls=10)
-            gdbagent.add_user_message("总结上述对话中涉及到的内存变化。")
 
             # 保存步骤总结
             step_log_dir = f"./conversation_logs/{exp_name}"
             step_summary = gdbagent.get_last_info()
-            with open(os.path.join(step_log_dir, f"step_summary_{exp_name}_{exp.FinishedEXPCodeIdx}.md"), "w") as f:
+            with open(os.path.join(step_log_dir, f"step_summary_{exp_name}_{exp.FinishedEXPCodeIdx}.json"), "w") as f:
                 f.write(step_summary)
             
             DynamicMemoryInfoList.append(step_summary)
@@ -107,7 +106,11 @@ def AnalyseEXP(exp:EXPCode, progress: Progress, task_id):
             progress.update(task_id, advance=1, description=f"[cyan]Analyzing [bold]{exp_name}[/bold]: Step {i+1}/{total_steps}")
 
         DynamicMemoryInfoList = DynamicMemoryInfoList[1:]
-        finalLLM = SummarizeLLM(exp, DynamicMemoryInfoList)
+
+        with open(f'./data/writeup/{exp_name}.md','r') as f:
+            groundtruth_md = f.read()
+
+        finalLLM = SummarizeLLM(exp, DynamicMemoryInfoList, groundtruth_md)
         finalLLM.get_summary()
         progress.update(task_id, completed=total_steps, description=f"[green]Finished [bold]{exp_name}[/bold]")
     except Exception as e:
@@ -121,31 +124,30 @@ def AnalyseEXP(exp:EXPCode, progress: Progress, task_id):
 
 def main():
     exps:List[EXPCode] = [
-        sample0,
-        #sample1,
-        #sample2,
-        #sample3,
-        #sample4,
-        #sample5,
-        #sample6,
-        #sample7,
-        #sample8,
-        #sample9,
-        #sample10,
-        #sample11,
-        #sample12,
-        #sample13,
-        #sample14,
-        #sample15,
-        #sample16,
-        #sample17,
-        #sample18,
-        #sample20,
-        #sample21,
-        #sample22,
-        #sample25,
-        #sample26,
-        #sample27,
+        heap23_00_hitcon_2014_stkof,
+        #heap23_01_guosai_201x_pwn1,
+        #heap23_02_wdb_2018_babyheap,
+        #heap23_04_search_engine,
+        #heap23_05_cookbook,
+        #heap23_06_hitcon_2016_sleepyholder,
+        #heap23_07_0ctf_2017_babyheap,
+        #heap23_08_hitcontrainning_lab11_bamboobox,
+        #heap23_09_qwb_2018_silent2,
+        #heap23_10_0CTF_2015_FreeNote,
+        #heap23_11_pwnable_applestore,
+        #heap23_12_axb_2019_heap,
+        #heap23_13_starctf_2019_girlfriend,
+        #heap23_14_wustctf_2020_easyfast,
+        #heap23_15_nsctf_online_2019_pwn2,
+        #heap23_16_zctf_2016_note3,
+        #heap23_17_ZJCTF_2019_Easyheap,
+        #heap23_18_hacklu_2014_oreo,
+        #heap23_20_bctf_2016_bcloud,
+        #heap23_21_lctf_2016_pwn200,
+        #heap23_22_seccon_2016_tinypad,
+        #heap23_25_pwnhub_einherjar_level1,
+        #heap23_26_ctfhub_lore_level1,
+        #heap23_27_Asis_2016_b00ks
     ]
 
     with Progress(

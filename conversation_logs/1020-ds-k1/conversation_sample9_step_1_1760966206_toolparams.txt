@@ -1,1 +1,0 @@
-context,x/10gx 0x6020D8,gotplt,x/gx 0x602018,stack 20,heap,vmmap,continue

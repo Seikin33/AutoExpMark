@@ -1,1 +1,0 @@
-telescope 0x602000 100,malloc_chunk 0x2a659000,malloc_chunk 0x2a659020,hexdump 0x602060 40,gotplt,got,gotplt,telescope 0x602018 20,stack 20,telescope $rsp 50,regs,search 0x7e57dacae226,search 0x7e57dacae2,telescope 0x602140 20,continue

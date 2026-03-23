@@ -1,1 +1,0 @@
-x/10gx 0x602140,heap chunk 0x7acf530,malloc_chunk 0x7acf530,malloc_chunk 0x7acf570,telescope 0x7acf540 20,unsortedbin,fastbins,search -p 0x602140,heap chunks,continue

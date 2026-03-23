@@ -1,1 +1,0 @@
-x/32gx 0x6020e0,x/32gx 0x602060,x/gx 0x6022bc,x/gx 0x6022b8,x/gx 0x6021e0,telescope 0x71fc110 10,x/4gx 0x71fc200,bins,continue

@@ -1,1 +1,0 @@
-regs,run,info proc,quit,kill,file ./data/sample0,interrupt,\x04,send "\x04",signal SIGINT,kill,detach,quit,quit,quit,quit,quit,quit,quit,quit

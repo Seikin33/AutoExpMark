@@ -1,1 +1,0 @@
-telescope 0x602100 40,hexdump 0x374cb000 64,hexdump 0x374cb080 64,hexdump 0x374cb100 64,bins,vmmap heap,continue

@@ -1,1 +1,0 @@
-search -p 0x2a659000,search -p 0x2a659080,telescope 0x602000 128,telescope 0x602000+0x100 64,telescope 0x602000+0xf0 40,heap chunks,hexdump 0x2a659000 64,hexdump 0x2a659080 64,hexdump 0x2a659100 64,bins,vmmap libc,continue

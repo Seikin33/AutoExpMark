@@ -1,1 +1,0 @@
-regs,context,x/gx 0x6020B8,telescope $rsp 40,malloc_chunk 0x24292010,hexdump 0x24292010 64,canary,continue

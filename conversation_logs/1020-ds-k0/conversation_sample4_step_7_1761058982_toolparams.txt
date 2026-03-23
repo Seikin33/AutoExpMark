@@ -1,1 +1,0 @@
-x/gx 0x6020B8,heap chunks,search MIRACLE,search ROCK,telescope $rsp 20,hexdump 0x603000 200,bins,vmmap heap,search /x 41 41 41 41 41 41,search -x 414141414141,regs,context,telescope 0x603000 30,continue

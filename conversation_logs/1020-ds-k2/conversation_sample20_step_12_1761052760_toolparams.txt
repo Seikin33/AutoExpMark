@@ -1,1 +1,0 @@
-regs,stack 20,telescope $sp 40,search "/bin/sh",vmmap,bins,continue

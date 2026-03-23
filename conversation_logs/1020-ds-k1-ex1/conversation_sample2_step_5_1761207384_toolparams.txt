@@ -1,1 +1,0 @@
-run,vmmap,vmmap,run,vmmap,start,vmmap,x/10gx 0x602080,x/wx 0x6020B0,heap,bins,continue

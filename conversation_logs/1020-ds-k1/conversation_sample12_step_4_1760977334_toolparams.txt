@@ -1,1 +1,0 @@
-regs,stack 20,hexdump 0x5905958c7000 64,hexdump 0x5905958c70a0 64,telescope 0x59057a202000 40,bins,hexdump 0x7ffe000a6ade 32,continue

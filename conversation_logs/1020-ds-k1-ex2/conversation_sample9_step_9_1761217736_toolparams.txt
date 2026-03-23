@@ -1,1 +1,0 @@
-pid,regs,stack 30,telescope $rsp 40,search "/bin/sh",search "sh",argv,envp,heap,bins,gotplt,continue

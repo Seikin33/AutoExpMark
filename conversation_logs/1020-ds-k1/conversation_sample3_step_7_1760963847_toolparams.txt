@@ -1,1 +1,0 @@
-regs,context,telescope 20,gotplt,heap bins,bins,search /bin/sh,vmmap libc,search -p 0x7cfd63d7c840,continue

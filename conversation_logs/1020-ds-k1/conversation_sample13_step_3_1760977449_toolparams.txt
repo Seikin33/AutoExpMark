@@ -1,1 +1,0 @@
-regs,context,stack 20,telescope 0x5c0425c02060 10,telescope 0x5c0437a4f010 2,telescope 0x5c0437a4f030 2,bins,search -p 0x76fc02a8cb78,p __malloc_hook,p __free_hook,x/gx 0x76fc02a8cb10,x/gx 0x76fc02a8cbe8,vmmap,continue

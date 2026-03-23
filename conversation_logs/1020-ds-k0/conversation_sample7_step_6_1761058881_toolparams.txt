@@ -1,1 +1,0 @@
-telescope 0x11854891e000 48,telescope 0x11854891e000 48,vmmap,telescope 0x5a88d2602000 48,search -p 0x5a88fedf4010,telescope 0x11854891e3d0 48,telescope 0x11854891e3d0 24,telescope 0x5a88fedf4040,telescope 0x5a88fedf4010 10,telescope 0x5a88fedf4090 10,telescope 0x5a88fedf40e0 10,heap,search -p 0x51,search -p 0x91,bins,continue

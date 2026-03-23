@@ -1,1 +1,0 @@
-telescope 0x1465d010 32,telescope 0x1465e820,telescope 0x1465e940,x/gx 0x1465d030,x/gx 0x1465d060,telescope 0x1465e8c0,telescope 0x1465e9e0,search -t string a,continue

@@ -1,1 +1,0 @@
-info address author_name,p author_name,info variables author_name,search xxxxxxxxxxxxxxxxxxxxxxxxxxxleak:,hexdump 0x61e256e02040 32,search book_pointers,telescope 0x61e256e02000 40,telescope 0x61e256e02060 20,telescope 0x61e268ad0080 10,hexdump 0x61e268ad0020 32,hexdump 0x61e268ad0050 32,heap chunks,bins,continue

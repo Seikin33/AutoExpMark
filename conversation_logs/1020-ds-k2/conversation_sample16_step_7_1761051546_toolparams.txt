@@ -1,1 +1,0 @@
-x/gx 0x602018,x/gx 0x602070,telescope 0x6020c0 20,heap chunks,bins,regs,telescope $rsp 40,search -8 0x7e8cfda823a0,continue

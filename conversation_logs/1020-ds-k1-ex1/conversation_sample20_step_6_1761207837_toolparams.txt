@@ -1,1 +1,0 @@
-telescope 0x804B120 10,telescope 0x804B0A0 10,telescope 0x804B0E0 10,telescope 0x804B014,telescope 0x804B010,heap chunks,heap,malloc_chunk 0x8b51000,malloc_chunk 0x8b51048,malloc_chunk 0x8b51090,continue

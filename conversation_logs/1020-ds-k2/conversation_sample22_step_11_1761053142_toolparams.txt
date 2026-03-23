@@ -1,1 +1,0 @@
-telescope 0x602040 40,hexdump 0x602060 32,telescope 0x374cb010 32,telescope 0x374cb030 32,bins,telescope 0x374cb140 32,telescope 0x374cb250 32,search 0x6666666666666666,p main_arena,continue

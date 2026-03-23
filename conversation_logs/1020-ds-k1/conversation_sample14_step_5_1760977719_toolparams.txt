@@ -1,1 +1,0 @@
-regs,context,x/gx 0x602090,x/4gx 0x6020C0,stack 20,continue

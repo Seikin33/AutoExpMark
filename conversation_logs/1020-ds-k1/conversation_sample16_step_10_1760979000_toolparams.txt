@@ -1,1 +1,0 @@
-regs,stack 30,heap,search "/bin/sh",nearpc,envp,x/20s 0x7ffe8d0fc84a,continue

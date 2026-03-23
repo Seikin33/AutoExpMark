@@ -1,1 +1,0 @@
-procinfo,regs,telescope 0x7758348ed7a8,continue

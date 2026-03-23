@@ -1,1 +1,0 @@
-x/10gx 0x602140,heap chunks,hexdump 0x1d3d7020 32,hexdump 0x1d3d7540 16,hexdump 0x1d3d7580 32,bins,continue

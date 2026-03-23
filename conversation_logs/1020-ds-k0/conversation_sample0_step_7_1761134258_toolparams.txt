@@ -1,1 +1,0 @@
-procinfo,vmmap,info proc,info registers,info inferiors,inferior 1,info registers,inferior 2,info registers,run,vmmap,ctrl+c,exit,interrupt,kill,quit,continue

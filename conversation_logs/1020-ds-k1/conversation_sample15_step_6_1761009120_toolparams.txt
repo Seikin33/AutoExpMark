@@ -1,1 +1,0 @@
-x/gx 0x58cd17602090,x/wx 0x58cd17602040,x/48bx 0x58cd17602060,x/10gx 0x58cd2caee030,x/10gx 0x58cd2caee020,telescope 0x58cd2caee030 10,regs,continue

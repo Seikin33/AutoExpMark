@@ -1,1 +1,0 @@
-x/20gx 0x55a8e6402060,telescope 0x55a8eace4080,heap bins fast,x/s 0x55a8e6402040,hexdump 0x55a8eace4100 32,heap chunks,continue

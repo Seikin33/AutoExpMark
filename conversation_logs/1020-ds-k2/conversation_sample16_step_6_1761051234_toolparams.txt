@@ -1,1 +1,0 @@
-context,regs,stack 20,telescope 0x6020c0 40,x/10gx 0x6020c0,x/gx 0x602018,x/gx 0x602070,heap,bins,info proc,continue

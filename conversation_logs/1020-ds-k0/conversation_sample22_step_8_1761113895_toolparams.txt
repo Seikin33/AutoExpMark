@@ -1,1 +1,0 @@
-telescope 0x602040 40,hexdump 0x12c29000 0x40,fastbins,telescope 0x602060,heap chunks,telescope 0x602040+256 32,continue

@@ -1,1 +1,0 @@
-x/wx 0x804b0cc,x/wx 0x804b0c8,x/wx 0x804b148,telescope 0x92c5000 20,telescope 0x92c5048 20,telescope 0x92c5090 20,gotplt,regs,stack 20,bins,continue

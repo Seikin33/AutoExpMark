@@ -1,1 +1,0 @@
-telescope 0x602040 100,vmmap,info registers,bt,info proc,info inferiors,shell ps aux | grep sample22,info signals,continue

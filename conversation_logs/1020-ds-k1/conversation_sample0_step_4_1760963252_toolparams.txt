@@ -1,1 +1,0 @@
-telescope 0x602140 20,hexdump 0x7acf540 64,telescope 0x602018 20,hexdump 0x7ace000 64,search 0x6262626262626262,malloc_chunk 0x7acf530,vmmap,continue

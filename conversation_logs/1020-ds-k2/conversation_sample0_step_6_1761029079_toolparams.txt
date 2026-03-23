@@ -1,1 +1,0 @@
-telescope 0x602140 3,gotplt,x/gx 0x602018,heap chunks,hexdump 0xf61d020 40,hexdump 0xf61d580 40,hexdump 0xf61d540 40,context,regs,continue

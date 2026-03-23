@@ -1,1 +1,0 @@
-x/gx 0x602068,vmmap,info proc,regs,bt,context,canary,search /bin/sh,x/50gx 0x6527eba74000,info registers

@@ -1,1 +1,0 @@
-x/10gx 0x602140,telescope 0xe14a020 -n 20,telescope 0xe14a020 20,telescope 0xe14a540 20,telescope 0xe14a580 20,hexdump 0xe14a540 64,heap chunks,x/gx 0x602138,x/gx 0x602140,continue

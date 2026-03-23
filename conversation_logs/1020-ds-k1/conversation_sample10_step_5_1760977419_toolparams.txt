@@ -1,1 +1,0 @@
-context,stack 20,telescope 0x291c010 40,hexdump 0x291d820 64,hexdump 0x291d940 64,gotplt,continue

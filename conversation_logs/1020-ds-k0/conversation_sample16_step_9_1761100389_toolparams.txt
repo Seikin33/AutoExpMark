@@ -1,1 +1,0 @@
-regs,context,heap,bins,telescope 0x6020C8 40,x/gx 0x602018,x/gx 0x602020,search /bin/sh,vmmap,continue

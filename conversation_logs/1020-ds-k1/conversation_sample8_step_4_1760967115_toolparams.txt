@@ -1,1 +1,0 @@
-x/10gx 0x6020c8,gotplt,got,gotplt,x/10gx 0x602000,x/gx 0x602068,x/10gx 0x6020b0,telescope 0x25c21030 10,x/2gx 0x25c21000,x/2gx 0x25c21010,x/10wx 0x6023c8,x/10wx 0x6020c0,continue

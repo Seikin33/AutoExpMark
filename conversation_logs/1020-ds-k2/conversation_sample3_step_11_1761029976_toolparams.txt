@@ -1,1 +1,0 @@
-x/gx 0x602018,hexdump 0xd2ea010 64,x/4gx 0x602120,x/s 0x6020e0,telescope $rsp 20,vmmap libc,x/4gx 0x602140,context,continue

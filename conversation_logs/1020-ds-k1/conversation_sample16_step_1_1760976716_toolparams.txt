@@ -1,1 +1,0 @@
-x/7gx 0x6020C8,x/16gx 0x6020C0,telescope 0x3bfb6000 40,hexdump 0x3bfb6020 256,search 0x61616161,search 0x61616161 0x3bfb6000 0x3bfd7000,search -t dword 0x61616161,heap chunks,continue

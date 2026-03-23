@@ -1,1 +1,0 @@
-context,telescope $rsp 40,stack 20,got,gotplt,vmmap libc,search /bin/sh,heap,bins,continue

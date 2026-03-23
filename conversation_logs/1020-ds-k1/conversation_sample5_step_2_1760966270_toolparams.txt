@@ -1,1 +1,0 @@
-x/wx 0x804d09c,x/wx 0x804d094,x/wx 0x804d08c,x/wx 0x804d0ac,x/s 0x8767008,x/wx 0x804d020,search "sh;",telescope 0x8767510 20,telescope 0x87679c0 20,heap chunk 0x87679c8,regs,continue

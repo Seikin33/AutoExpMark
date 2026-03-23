@@ -13,7 +13,9 @@ from rich.progress import Progress, BarColumn, TextColumn, TimeRemainingColumn, 
 import threading
 import json
 import re
+import glob
 from collections import defaultdict
+from typing import List
 
 @dataclass
 class ModelConfig:
@@ -22,7 +24,12 @@ class ModelConfig:
     max_tokens: int = 65536
 
 class SummarizeLLM:
-    def __init__(self, exp_code:EXPCode, DynamicMemoryInfoList:list[str]):
+    def __init__(
+        self, 
+        exp_code:EXPCode, 
+        DynamicMemoryInfoList:list[str],
+        groundtruth_writeup:str
+    ):
         MemoryInfoSummary = ""
         count = 1
         for code_line, dynamic_memory_info in zip(exp_code.ExploitCode, DynamicMemoryInfoList):
@@ -30,8 +37,8 @@ class SummarizeLLM:
             count += 1
         self.exp_name = os.path.basename(exp_code.ExpCodePath).split('.')[0]
         self.prompt_manager = PromptManager(
-            promptyaml="./LLMPrompts/SummarizePrompt.yaml",
-            exp_code=exp_code,
+            promptyaml="./LLMPrompts/SummarizeNewPrompt.yaml",
+            groundtruth_writeup=groundtruth_writeup,
             decompilation_code=exp_code.DecompileCode,
             MemoryInfoSummary=MemoryInfoSummary
         )
@@ -40,7 +47,7 @@ class SummarizeLLM:
             tools={},
             api_key=os.getenv("DEEPSEEK_API_KEY"),
             config=ModelConfig(
-                temperature=0.7,
+                temperature=1.0,
                 max_tokens=65536
             )
         )
@@ -209,5 +216,59 @@ def main_summary_generation():
                         logger.error(f"A summary generation thread raised an exception: {e}")
 
 if __name__ == "__main__":
-    main_summary_generation()
-    
+    exp_names = [
+        "heap23_00_hitcon_2014_stkof",
+        "heap23_01_guosai_201x_pwn1",
+        "heap23_02_wdb_2018_babyheap",
+        "heap23_04_search_engine",
+        "heap23_05_cookbook",
+        "heap23_06_hitcon_2016_sleepyholder",
+        "heap23_07_0ctf_2017_babyheap",
+        "heap23_08_hitcontrainning_lab11_bamboobox",
+    ]
+    exps:List[EXPCode] = [
+        #heap23_00_hitcon_2014_stkof,
+        #heap23_01_guosai_201x_pwn1,
+        #heap23_02_wdb_2018_babyheap,
+        #heap23_04_search_engine,
+        #heap23_05_cookbook,
+        #heap23_06_hitcon_2016_sleepyholder,
+        #heap23_07_0ctf_2017_babyheap,
+        #heap23_08_hitcontrainning_lab11_bamboobox,
+        heap23_09_qwb_2018_silent2,
+        heap23_10_0CTF_2015_FreeNote,
+        heap23_11_pwnable_applestore,
+        heap23_12_axb_2019_heap,
+        heap23_13_starctf_2019_girlfriend,
+        heap23_14_wustctf_2020_easyfast,
+        heap23_15_nsctf_online_2019_pwn2,
+        heap23_16_zctf_2016_note3,
+        heap23_17_ZJCTF_2019_Easyheap,
+        heap23_18_hacklu_2014_oreo,
+        heap23_19_0ctf_2018_heapstorm2,
+        heap23_20_bctf_2016_bcloud,
+        heap23_21_lctf_2016_pwn200,
+        heap23_22_seccon_2016_tinypad,
+        #heap23_23_xihu_2019_storm_note,
+        heap23_25_pwnhub_einherjar_level1,
+        heap23_26_ctfhub_lore_level1,
+        heap23_27_Asis_2016_b00ks
+    ]
+    for exp in exps:
+        exp_name = str(exp)
+        #with open(f'./data/writeup/{exp_name}.md','r') as f:
+        #    groundtruth_md = f.read()
+        with open(f'./data/exp/{exp_name}.py','r') as f:
+            groundtruth_md = f.read()
+        length = len(exp.ExploitCode)
+        DynamicMemoryInfoList = []
+        '''for i in range(1, length+1):
+            # 优先匹配带有时间戳的历史对话文件：conversation_{exp_name}_step_{i}_<任意数字>.json
+            pattern = f'./conversation_logs/{exp_name}/step_summary_{exp_name}_{i}.json'
+            target_path = pattern
+
+            with open(target_path, 'r') as f:
+                conversation_data = f.read()
+                DynamicMemoryInfoList.append(conversation_data)'''
+        finalLLM = SummarizeLLM(exp, DynamicMemoryInfoList, groundtruth_md)
+        finalLLM.get_summary()

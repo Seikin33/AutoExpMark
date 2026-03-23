@@ -1,1 +1,0 @@
-telescope 0x602000 64,x/10gx 0x602060,malloc_chunk 0x12c29000,malloc_chunk 0x12c29130,bins,vmmap heap,x/gx 0x602100,continue

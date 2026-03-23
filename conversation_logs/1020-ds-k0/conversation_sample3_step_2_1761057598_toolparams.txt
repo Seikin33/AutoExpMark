@@ -1,1 +1,0 @@
-context,regs,telescope $rsp 40,canary,search "/bin/sh",search "ddd",x/10gx 0x602000,x/20gx 0x602100,continue

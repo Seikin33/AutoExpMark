@@ -1,1 +1,0 @@
-dd 0x5eb0de002040,db 0x5eb0de002060 48,dq 0x5eb0de002090,telescope 0x5eb0e86da030 10,malloc_chunk 0x5eb0e86da020,bins,telescope 0x5eb0e86da180 8,malloc_chunk 0x5eb0e86da170,heap chunks,continue

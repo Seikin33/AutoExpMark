@@ -1,1 +1,0 @@
-regs,context,stack 20,telescope $rsp 40,search ROCK,search DREAM,search FLOWER,search MIRACLE,heap,malloc_chunk 0x5a45a86a94b0,malloc_chunk 0x5a45a86a94d0,envp,continue

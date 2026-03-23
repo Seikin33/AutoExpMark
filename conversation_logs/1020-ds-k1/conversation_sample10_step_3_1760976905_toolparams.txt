@@ -1,1 +1,0 @@
-x/2gx 0x6020A8,x/12gx 0x6020A8+16,hexdump 0x291d950 32,hexdump 0x291d830 32,gotplt,search -p 0x7fa1ddf09b78,continue

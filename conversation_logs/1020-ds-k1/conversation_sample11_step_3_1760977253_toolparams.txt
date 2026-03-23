@@ -1,1 +1,0 @@
-telescope 0x804b070 20,malloc_chunk 0x891a7e0,telescope 0xffd78728 10,heap bins,bins,regs,stack 15,canary,search /bin/sh,x/s 0xf7ed7b2b,gotplt,continue

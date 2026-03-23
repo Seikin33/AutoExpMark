@@ -1,1 +1,0 @@
-telescope 0x6020d0 20,heap chunks,heap,bins,got,gotplt,regs,context stack,hexdump 0x213992f0 40,x/8gx 0x6020d0,x/3wx 0x6020e8,x/gx 0x602018,disassemble 0x400760,continue

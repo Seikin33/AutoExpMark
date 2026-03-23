@@ -1,1 +1,0 @@
-context,x/x 0x804b0cc,x/x 0x804b0c8,x/x 0x804b148,x/10x 0x804b120,x/10x 0x804b0a0,x/10x 0x804b0e0,malloc_chunk 0x96ba000,hexdump 0x96ba000 0x50,search -t string aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,search aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,stack 20,regs,continue

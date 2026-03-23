@@ -1,1 +1,0 @@
-regs,context,stack 20,search "/bin/sh",gotplt,vmmap,heap,bins,telescope $rsp 40,continue

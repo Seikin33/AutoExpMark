@@ -1,1 +1,0 @@
-procinfo,vmmap,bins,search /bin/sh,p __free_hook,x/gx &__free_hook,p system,regs,stack 20,telescope 0x599e4dba8500 10,continue

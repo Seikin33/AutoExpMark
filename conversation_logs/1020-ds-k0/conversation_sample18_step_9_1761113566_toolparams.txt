@@ -1,1 +1,0 @@
-regs,context,stack 20,search /bin/sh,telescope 0x571060df6000,vmmap,bins,continue

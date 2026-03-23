@@ -1,1 +1,0 @@
-regs,context,stack 20,gotplt,x/10gx 0x602018,x/gx 0x602070,disass 0x400730,0x400740,x/s 0x7b1b057223a0,x/10gx 0x6020C0,x/10gx 0x6020C8,telescope 0x6020C0 10,bins,continue

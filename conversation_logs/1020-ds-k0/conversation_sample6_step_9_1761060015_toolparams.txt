@@ -1,1 +1,0 @@
-gotplt,x/gx 0x602018,x/10gx 0x6020d0,malloc_chunk 0x213992e0,bins,x/4gx 0x6020b8,continue

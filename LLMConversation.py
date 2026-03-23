@@ -15,6 +15,7 @@ class Message:
     role: MessageRole
     content: str
     tool_data: Optional[dict] = None
+    reasoning_content: Optional[str] = None #仅限含工具调用的assistant消息才会保存，正常情况下的思维链是不保存的
 
     def dump(self):
         """
@@ -26,6 +27,13 @@ class Message:
                 d["tool_call"] = {"name": self.tool_data.name, "parsed_args": self.tool_data.parsed_arguments}
             else:
                 d["tool_call"] = {"name": self.tool_data.name, "args": self.tool_data.arguments}
+            d["reasoning_content"] = self.reasoning_content
+
+            # 注意：reasoning_content 只在有工具调用的情况下才会保存，正常情况下的思维链是不保存的
+            # 原因详见傻逼的deepseek-v3.2思考模式下的工具调用
+            # 修改时间：2025.12.18
+            # 参考文档：https://api-docs.deepseek.com/zh-cn/guides/thinking_mode#%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8
+            
         elif self.role == MessageRole.OBSERVATION and self.tool_data is not None:
             d["tool_result"] = {"name": self.tool_data.name, "result": self.tool_data.result}
         return d
@@ -40,7 +48,7 @@ class Conversation:
             Return last `len_observations` observations and truncate the rest in get_messages.
             None (default) means return all. This helps truncate the conversation to last few steps.
         """
-        self.all_messages = []        
+        self.all_messages:list[Message] = []        
         self.round = 0
         self.name = name
         self.truncate_content = truncate_content
@@ -75,17 +83,23 @@ class Conversation:
         """
         return [m.dump() for m in self.all_messages]
 
+    def delete_all_reasoning_content(self):
+        self.all_messages = [
+            replace(m, reasoning_content=None) if m.reasoning_content is not None else m
+            for m in self.all_messages
+        ]
+
     def next_round(self):
         self.round += 1
-    def append(self, role, content, tool_data=None):
-        m = Message(index=self.round, role=role, content=content, tool_data=tool_data)
+    def append(self, role, content, tool_data=None, reasoning_content=None):
+        m = Message(index=self.round, role=role, content=content, tool_data=tool_data, reasoning_content=reasoning_content)
         self.all_messages.append(m)
     def append_system(self, content):
         self.append(MessageRole.SYSTEM, content)
     def append_user(self, content):
         self.append(MessageRole.USER, content)
-    def append_assistant(self, content, tool_data):
-        self.append(MessageRole.ASSISTANT, content, tool_data)
+    def append_assistant(self, content, tool_data, reasoning_content=None):
+        self.append(MessageRole.ASSISTANT, content, tool_data, reasoning_content)
     def append_observation(self, tool_data):
         # Truncate length
         truncate_message = " ...very long output, trunctated!"

@@ -1,1 +1,0 @@
-regs,context,stack 20,telescope 0x1e07d010 10,telescope 0x1e07d170 10,canary,telescope $rsp 20,fastbins,bins,continue

@@ -1,1 +1,0 @@
-telescope 0x6021E0 32,telescope 0x6022E0 32,search 0x0000000000000000 0x602000 0x603000,search -t qword 0x0000000000000000,search -t qword 0x0000000000000001,gotplt,gotplt,x/10gx 0x602018,telescope 0x21aaf110 40,bins,heap chunks,continue

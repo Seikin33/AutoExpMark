@@ -1,1 +1,0 @@
-heap chunks,heap,x/10wx 0x804b120,got,gotplt,x/wx 0x804b238,arena,mp,telescope 0x804b100 20,x/40wx 0x902a000,x/wx 0x804b014,x/wx 0x804b010,continue

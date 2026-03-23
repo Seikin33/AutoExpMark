@@ -1,1 +1,0 @@
-search -p 0x300e010,search -p 0x300e0d0,telescope 0x602000 40,x/10gx 0x300e010,x/10gx 0x300e0d0,continue

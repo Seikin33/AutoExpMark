@@ -1,1 +1,0 @@
-telescope 0x5eb20e002060 10,x/x 0x5eb20e00204c,heap bins fast,unsortedbin,x/8gx 0x7085f6a5db10,x/8gx 0x7085f6a5daed,hexdump 0x5eb230df60e0 32,continue

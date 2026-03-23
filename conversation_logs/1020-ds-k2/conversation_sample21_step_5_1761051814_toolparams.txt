@@ -1,1 +1,0 @@
-regs,context,stack,pid,procinfo,argv,envp,search "/bin/sh",search /bin/sh,search /bin/sh,search /bin/sh,search /bin/sh,search /bin/sh,search /bin/sh,continue

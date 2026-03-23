@@ -1,1 +1,0 @@
-regs,stack 20,x/10gx 0x7ffefac41930,x/gx 0x602080,bt,nearpc,continue

@@ -1,1 +1,0 @@
-search leak:,search -t string leak:,search leak,telescope 0x644b83402000 20,x/20gx 0x644b83402000,find 0x644b9eca1000, 0x644b9ecc3000, "leak:",find /w 0x644b9eca1000 0x644b9ecc3000 "leak:",telescope $rsp,regs,info registers,x/10gx 0x644b9eca2070,print 0x644b9eca2070,heap,p 1,continue

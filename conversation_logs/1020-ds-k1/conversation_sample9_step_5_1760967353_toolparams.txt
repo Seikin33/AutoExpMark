@@ -1,1 +1,0 @@
-telescope 0x6020D8 10,heap chunks,search '/bin/sh',x/s 0x10e67010,x/s 0x10e67120,x/s 0x10e67230,x/10gx 0x10e67340,bins,arena,top_chunk,telescope 0x6020c0,x/gx 0x602018,search -s "/bin/sh" 0x10e67000 0x10e88000,search -s "/bin/sh",search -s "EEEEE",x/100gx 0x10e67000,continue

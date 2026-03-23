@@ -1,1 +1,0 @@
-telescope 0x602140 4,got,gotplt,x/gx 0x602018,heap chunks,hexdump 0x602018 16,hexdump 0x7acf020 32,continue

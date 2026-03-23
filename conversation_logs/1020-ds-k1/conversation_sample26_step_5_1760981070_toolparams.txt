@@ -1,1 +1,0 @@
-gotplt,gotplt,x/10gx 0x602090,telescope 0x602100 8,hexdump 0x602140 0x20,hexdump 0x6020a0 0x20,x/gx 0x6020e0,malloc_chunk 0x2e547000,malloc_chunk 0x2e547190,smallbins,hexdump 0x6020a0 0x60,x/10gx 0x602060,heap -v,regs,continue

@@ -1,1 +1,0 @@
-x/10gx 0x281ca010,telescope 0x281ca010 40,hexdump 0x281cb830 0x100,hexdump 0x281cb8c0 0x100,malloc_chunk 0x281cb830,find_fake_fast 0x281cb830,find_fake_fast 0x281cb830 0x50,bins,gotplt,x/gx 0x602018,continue

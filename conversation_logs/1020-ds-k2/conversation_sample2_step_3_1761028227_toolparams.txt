@@ -1,1 +1,0 @@
-regs,info program,info inferiors,continue

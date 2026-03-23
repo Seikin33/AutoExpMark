@@ -1,1 +1,0 @@
-x/6gx 0x6020d0,telescope 0x213992e0 20,smallbins,heap chunks,continue

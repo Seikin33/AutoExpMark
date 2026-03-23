@@ -1,1 +1,0 @@
-regs,telescope $rsp 20,canary,telescope 0x602120 10,gotplt,hexdump 0xd2ea010 40,hexdump $rsi 10,nearpc,continue

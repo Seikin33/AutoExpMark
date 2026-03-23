@@ -1,1 +1,0 @@
-x/gx 0x6020B8,regs,telescope $rsp 40,search ROCK,search DREAM,fastbins,bins unsorted,gotplt,continue

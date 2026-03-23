@@ -1,1 +1,0 @@
-regs,stack 20,telescope 0x59057a202000 40,malloc_chunk 0x5905958c7000,search /bin/sh,bins,continue

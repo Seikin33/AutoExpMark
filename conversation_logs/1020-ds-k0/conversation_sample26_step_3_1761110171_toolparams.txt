@@ -1,1 +1,0 @@
-gotplt,gotplt,gotplt,telescope 0x602000 50,telescope 0x300e000 20,telescope 0x300e190 20,info symbol 0x602090,info symbol 0x6020A0,heap,bins,telescope 0x6020a0 10,telescope 0x602100 20,telescope 0x300e0d0 10,x/10gx 0x602018,continue

@@ -1,1 +1,0 @@
-telescope 0x42f4e7f0f880 120,heap chunks,hexdump 0x59459c32a010 32,hexdump 0x59459c32a030 32,bins,continue

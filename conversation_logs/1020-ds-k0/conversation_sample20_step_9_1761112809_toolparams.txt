@@ -1,1 +1,0 @@
-telescope 0x804b120 10,telescope 0x804b0a0 10,telescope 0x804b0e0 10,got,gotplt,telescope 0x804b014,telescope 0x804b010,print libc.sym['system'],p system,print printf,print free,heap,bins,continue

@@ -1,1 +1,0 @@
-regs,hexdump 0x724561D57A8 8,x/gx 0x724561D57A8,p/x 0x724561993000 + 0x3c57a8,x/gx 0x724561d587a8,telescope 0x5dce3d701000 20,info proc,stack 10,continue

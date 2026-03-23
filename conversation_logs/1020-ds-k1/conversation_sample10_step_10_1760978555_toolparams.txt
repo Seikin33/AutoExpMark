@@ -1,1 +1,0 @@
-telescope 0x291c018 40,x/10gx 0x602018,gotplt,malloc_chunk 0x291d830,bins,heap,x/20gx 0x291c000,continue

@@ -1,1 +1,0 @@
-telescope 0x602140 20,telescope 0xe14a020 32,telescope 0xe14a540 32,telescope 0xe14a580 32,heap,bins,vmmap heap,continue

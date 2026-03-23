@@ -1,1 +1,0 @@
-regs,heap,search /bin/sh,telescope $sp 40,continue

@@ -1,1 +1,0 @@
-disass main,x/gx 0x6020c0,disass create_heap,x/10gx 0x6020e0,telescope 0xc00c000 50,telescope 0xc00c070 50,telescope 0xc00c0e0 50,bins,continue

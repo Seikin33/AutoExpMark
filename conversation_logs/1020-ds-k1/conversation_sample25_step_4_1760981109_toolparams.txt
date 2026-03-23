@@ -1,1 +1,0 @@
-heap chunks,heap,fastbins,telescope 0x626eff303000 40,x/10gx 0x626ed0a02260,x/10gx 0x626ed0a020c0,search 0x6161616161616161,search -t qword 0x6161616161616161 0x626eff303000 0x626eff324000,search -t qword 0x6161616161616161 heap,vmmap heap,continue

@@ -1,1 +1,0 @@
-telescope 0x804a288 4,malloc_chunk 0x970e410,malloc_chunk 0x970e450,gotplt,hexdump 0x804a2c0 32,telescope 0x804a2a0 2,continue

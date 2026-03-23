@@ -1,1 +1,0 @@
-regs,nearpc,telescope $rsp 20,search /bin/sh,dq 0x602000 40,gotplt,canary,telescope $rsp-0x100 40,bt,info functions,info functions sample3,disas main,disassemble main,info address main,info file,x/10i 0x4009f2,x/20i 0x4009d0,x/20i 0x400f75,x/20i 0x400d43,x/30i 0x400e00

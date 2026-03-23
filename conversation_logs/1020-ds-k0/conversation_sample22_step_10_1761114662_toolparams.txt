@@ -1,1 +1,0 @@
-telescope 0x602040 40,heap chunks,x/10gx 0x12c29000,x/10gx 0x12c29120,x/8gx 0x602060,bins,x/s 0x4019F0,info address tinypad,continue

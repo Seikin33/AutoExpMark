@@ -1,1 +1,0 @@
-p &heap,p &len,p key1,p key2,telescope &heap 33,telescope &len 33,hexdump 0x2d15c108 8,malloc_chunk 0x2d15c100,continue

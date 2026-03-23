@@ -1,1 +1,0 @@
-x/10gx 0x6020D8,gotplt,arena,mp,vmmap,continue

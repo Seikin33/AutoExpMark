@@ -1,1 +1,0 @@
-x/gx 0x602090,x/wx 0x6020BC,x/4gx 0x6020c0,heap bins,x/10gx 0x3f09d000,x/10gx 0x602080,telescope 0x602080 10,continue

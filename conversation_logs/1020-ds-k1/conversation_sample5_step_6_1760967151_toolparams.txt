@@ -1,1 +1,0 @@
-pid,procinfo,regs,heap,bins,stack 20,search sh,search sh;,search "sh;",vmmap,telescope 0x64bae1042560 10,telescope $rsp 20,envp,argv,continue

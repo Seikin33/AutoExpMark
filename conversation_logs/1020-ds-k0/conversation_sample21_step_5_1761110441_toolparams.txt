@@ -1,1 +1,0 @@
-regs,vmmap,stack 20,telescope 0x5d5fcc764000 50,search -s /bin/sh,search -x 0x5d5fcc764000,search 0x5d5fcc764000,info proc mappings,info functions,telescope 0x7ffd80e85000 30,telescope 0x7ffd80ea4000 30,telescope 0x5d5fcc784000 30,continue

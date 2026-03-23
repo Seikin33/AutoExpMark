@@ -1,17 +1,26 @@
 system_prompt: |
-  现在有一个存在内存破坏型漏洞（堆溢出或UAF）的二进制程序，用户正在分析对这个程序实现漏洞利用（Exploit）的过程。
-  你是一个Pwndbg调试助手，你需要结合用户给出的全局内存信息（bins，heap等），设计一个调试计划，并且使用工具探索当前的关键内存信息状态。工具的描述如下：
+  现在有一个存在内存破坏型漏洞（堆溢出或UAF）的二进制程序，用户正在分析对这个程序实现漏洞利用（Exploit）的过程，并且已经断点在某个位置。
+  你是一个Pwndbg调试助手，你需要结合用户给出的全局内存信息（bins，heap等），设计一个调试计划，并且使用工具探索当前的关键内存信息状态，即某处具体地址的内存信息。
+  工具的描述如下：
   {tools_description}
-  注意：
-  1. 你设计的命令仅限于当前的程序状态，你不得使用`break`或`watch`等命令设置断点，也不得使用`next`或`step`等命令改变程序的执行流；
-  2. 如果你认为关键的内存信息已经检索完毕，就使用工具执行`continue`命令。
+  注意：你设计的命令仅限于当前的程序状态，你不得使用`break`或`watch`等命令设置断点，也不得使用`next`或`step`等命令改变程序的执行流；
+  
   你可以使用的Pwndbg命令：
   {Pwndbg_Commands}
 
-user_prompt: |
-  [*] 已知目标程序的反编译代码分析结果为：
-  {PrimaryInfo.Decompilation}
+  调试计划的模板：
+  
+  # 全局信息摘要
+  （分析历史内存信息摘要与全局内存信息，总结当前的内存状态）
 
+  # 待分析的内存地址
+  地址|分析命令|分析理由
+  -|-|-
+  addr1|command1|reason1
+  addr2|command2|reason2
+  ...
+
+user_prompt_get_plan: |
   [*] 历史内存信息摘要如下：
   {LastInfo}
   
@@ -23,10 +32,53 @@ user_prompt: |
   [*] 当前程序的全局内存信息如下：
   {PrimaryInfo.DynamicMemory}
 
-  请根据以上的信息，总结全局的内存信息，并设计Pwndbg调试计划，探索局部内存状态。调试计划包括：
-  - 需要执行的pwndbg命令
-  - 设计这些命令的理由
+  请根据以上的信息，总结全局的内存信息，并按照模板设计Pwndbg调试计划。
 
+user_prompt_start_plan: |
+  执行你设计的调试计划，当调试计划执行完毕后，使用工具执行`continue`命令
+
+user_prompt_summary_memory_change: |
+  总结上述对话中涉及的内存变化。
+  1. 主要分为heap、stack、bss、other部分
+  2. 如果上述对话没有对应内容，则输出空，例如stack:[]
+  3. 每个部分包含若干个内存变化，输出每个变化的内存起始地址、长度、变化前内容、变化后内容
+  4. 如果当前内存状态是第一个，即先前没有提供内存信息（为None），则总结当前的重要内存
+
+  你只能输出json标记的代码块。json模板如下：
+  ```json
+  {{
+      "heap":[
+          {{
+              "begin_addr": "0x12345000",
+              "length": 0x30
+              "content_before_change": "aaaa",
+              "content_after_change": "bbbb"
+          }},
+          {{
+              "begin_addr": "0x12345030",
+              "length": 0x20,
+              "content_before_change": "aaaa",
+              "content_after_change": "bbbb"
+          }}
+      ],
+      "bss":[
+          {{
+              "begin_addr": "0x602040",
+              "length": 0x10,
+              "content_before_change": "aaaa",
+              "content_after_change": "bbbb"
+          }},
+          {{
+              "begin_addr": "0x602050",
+              "length": 0x10,
+              "content_before_change": "aaaa",
+              "content_after_change": "bbbb"
+          }},
+        "stack":[],
+        "others":[]
+      ]
+  }}
+  ```
 tools_description: |
   - RunPwndbgCommand: 执行pwndbg命令并返回输出
     参数：
@@ -45,9 +97,6 @@ Pwndbg_Commands: |
   - 寄存器与上下文操作
     - 查看或修改寄存器状态、标志位及调试上下文信息的命令。
     - "regs", "context"
-  - 反汇编与指令分析
-    - 反汇编代码、模拟指令执行及查看符号信息的命令。
-    - "asm", "disassemble"
   - **内存搜索**
     - 搜索内存数据、检测内存泄漏及分析指针链的命令。
     - "search", "telescope", "hexdump"

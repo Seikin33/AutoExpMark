@@ -1,1 +1,0 @@
-telescope 0x55a8e6402040 5,telescope 0x55a8e6402060 20,telescope 0x55a8eace4080,telescope 0x55a8eace4170,telescope 0x55a8eace4110,hexdump 0x55a8eace41c0 32,hexdump 0x55a8eace42d0 32,search /bin/sh,malloc_chunk 0x55a8eace41c0,malloc_chunk 0x55a8eace42d0,fastbins,continue

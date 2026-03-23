@@ -1,1 +1,0 @@
-x/gx 0x602090,x/wx 0x6020BC,telescope 0x6020C0 4,x/8gx 0x3c73d000,x/8gx 0x602080,bins,continue

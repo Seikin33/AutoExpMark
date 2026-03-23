@@ -1,1 +1,0 @@
-x/4gx 0x602140,x/gx 0x602018,x/gx 0x602020,x/gx 0x602088,hexdump 0x7acf540 64,print 0x000074f6c54d96a0 - 0x74f6c546a000,continue

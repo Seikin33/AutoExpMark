@@ -1,1 +1,0 @@
-heap chunks,bins,got,gotplt,x/10gx 0x6020C8,x/10gx 0x6020C0,telescope 0x1ab38020 10,regs,x/gx 0x602018,x/gx 0x602070,info symbol 0x71141224d3a0,continue

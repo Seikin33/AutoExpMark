@@ -1,1 +1,0 @@
-x/wx 0x804D09C,x/wx 0x804D094,info proc mappings,info registers,heap chunks,bins,search sh,search 0x7cbd7c,info proc,continue

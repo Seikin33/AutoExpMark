@@ -1,1 +1,0 @@
-x/10wx 0x804b120,x/wx 0x804b014,x/wx 0x804b00c,heap,vmmap,bins,continue

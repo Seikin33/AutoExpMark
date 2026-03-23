@@ -1,1 +1,0 @@
-telescope 0x6020e0 40,telescope 0x602060 40,telescope 0x602260 20,p &key1,telescope 0x6022b0 10,malloc_chunk 0xc37b100,hexdump 0xc37b100 0x100,malloc_chunk 0xc37b200,telescope 0xc37b0f0 40,gotplt,got,gotplt,bins,context,continue

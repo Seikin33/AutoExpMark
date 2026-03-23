@@ -1,1 +1,0 @@
-regs,context,telescope $rsp 20,malloc_chunk 0x300e000,malloc_chunk 0x300e190,gotplt,x/10gx 0x602000,x/10gx 0x602018,telescope 0x602000 40,search -p 0x4006A0,bins,continue

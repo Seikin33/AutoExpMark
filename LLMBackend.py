@@ -1,3 +1,5 @@
+# 新增功能：增加返回字段
+
 import json
 from dataclasses import dataclass
 from openai import OpenAI
@@ -16,12 +18,14 @@ class BackendResponse:
     prompt_tokens: int = 0
     completion_tokens: int = 0
     total_tokens: int = 0
+    reasoning_content: Optional[str] = None
 
     def __str__(self):
         return (f"content='{self.content}'" if self.content else "") + \
                 (f"tool_call='{self.tool_call.arguments}'" if self.tool_call else "") + \
                 (f"error='{self.error}'" if self.error else "") + \
-                (f"cost={self.cost}")
+                (f"cost={self.cost}") + \
+                (f"reasoning_content='{self.reasoning_content}'" if self.reasoning_content else "")
 
 class Backend:
     """Base class for LLM Backend"""
@@ -136,6 +140,7 @@ class Backend:
                             "arguments": m.tool_data.arguments
                         }
                     }]
+                msg["reasoning_content"] = getattr(m, "reasoning_content", None)
                 formatted_messages.append(msg)
             else:
                 formatted_messages.append({
@@ -179,13 +184,16 @@ class Backend:
                     arguments=oai_call.function.arguments
                 )
             
+            reasoning_content = getattr(response.choices[0].message, "reasoning_content", None)
+
             return BackendResponse(
                 content=response.choices[0].message.content,
                 tool_call=tool_call,
                 cost=cost,
                 prompt_tokens=prompt_tokens,
                 completion_tokens=completion_tokens,
-                total_tokens=total_tokens
+                total_tokens=total_tokens,
+                reasoning_content=reasoning_content
             )
         
         except Exception as e:

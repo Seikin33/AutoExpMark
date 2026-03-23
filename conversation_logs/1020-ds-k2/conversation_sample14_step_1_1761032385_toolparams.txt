@@ -1,1 +1,0 @@
-x/gx 0x602090,x/wx 0x6020BC,x/4gx 0x6020C0,malloc_chunk 0x2ae72000,malloc_chunk 0x2ae72050,search -p 0x2ae72000,search -p 0x2ae72010,search -p 0x2ae72060,continue

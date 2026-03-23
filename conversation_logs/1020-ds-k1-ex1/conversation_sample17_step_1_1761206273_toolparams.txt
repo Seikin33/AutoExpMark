@@ -1,1 +1,0 @@
-disassemble create_heap,disassemble main,telescope 0x6020e0 10,dq 0x6020c0,hexdump 0x10daf010 0x60,hexdump 0x10daf080 0x60,hexdump 0x10daf0f0 0x60,malloc_chunk 0x10daf000,malloc_chunk 0x10daf070,malloc_chunk 0x10daf0e0,telescope 0x6020b0 20,telescope 0x6020c0 5,continue

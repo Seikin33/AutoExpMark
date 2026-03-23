@@ -1,1 +1,0 @@
-telescope 0x6020D8 10,hexdump 0x3d1c3000 64,context,continue

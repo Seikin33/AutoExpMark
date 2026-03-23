@@ -1,1 +1,0 @@
-x/10gx 0x6020A8,x/20gx 0x281ca010,x/gx 0x602018,hexdump 0x281cb820 0x100,hexdump 0x281cb8b0 0x200,bins,x/50gx 0x281ca020,stack 20,regs,canary,info registers rip,continue

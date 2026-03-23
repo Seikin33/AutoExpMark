@@ -1,1 +1,0 @@
-telescope 0x2c288f9da000 20,hexdump 0x2c288f9da000 160,vmmap,hexdump 0x602d92602000 160,search -p 0x602dbcd95010,hexdump 0x2c288f9da160 160,telescope 0x2c288f9da160 24,search -p 0x602dbcd95030,heap chunks,telescope 0x2c288f9da160 30,hexdump 0x602dbcd95010 0x10,hexdump 0x602dbcd95030 0x10,bins,continue

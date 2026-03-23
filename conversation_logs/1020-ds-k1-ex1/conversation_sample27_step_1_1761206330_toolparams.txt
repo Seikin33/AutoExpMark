@@ -1,1 +1,0 @@
-search "leak:",search 0x63d58bdf8080,telescope 0x63d58bdf8080,hexdump 0x63d58bdf8020 32,hexdump 0x63d58bdf8050 32,bins,vmmap,search 0x63d58bdf8080 0x63d577600000 0x63d577803000,search -p 0x63d58bdf8080,hexdump 0x63d57780205b 64,telescope 0x63d577802060 10,continue

@@ -1,1 +1,0 @@
-regs,context,vmmap,telescope $rsp,search -p 0x77583496d27a,continue

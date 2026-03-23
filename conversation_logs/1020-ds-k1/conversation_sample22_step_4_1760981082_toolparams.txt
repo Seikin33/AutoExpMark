@@ -1,1 +1,0 @@
-telescope 0x602040 40,x/20gx 0x602040,x/20gx 0x602140,telescope 0x2a659010,telescope 0x2a659090,heap chunks,arena,search aaaaaaaa,search bbbbbbbb,vmmap,gotplt,continue

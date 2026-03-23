@@ -1,1 +1,0 @@
-x/gx 0x6020A8,telescope 0x12c35010,heap chunks,malloc_chunk 0x12c36820,hexdump 0x12c36830 96,malloc_chunk 0x12c368b0,hexdump 0x12c368c0 128,hexdump 0x12c368c0 256,hexdump 0x12c369c0 64,x/gx 0x12c35018,x/gx 0x12c35020,continue

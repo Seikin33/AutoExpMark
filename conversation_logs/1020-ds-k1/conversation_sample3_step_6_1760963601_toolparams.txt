@@ -1,1 +1,0 @@
-regs,telescope $rsp 40,x/gx 0x602040,x/4gx 0x602120,x/4gx 0x602140,x/wx 0x602160,malloc_chunk 0x3799f000,malloc_chunk 0x3799f0b0,bins,continue

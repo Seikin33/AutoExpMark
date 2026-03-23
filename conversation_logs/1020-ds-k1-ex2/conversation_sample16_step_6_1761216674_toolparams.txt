@@ -1,1 +1,0 @@
-gotplt,x/gx 0x602018,x/gx 0x602070,x/4gx 0x6020c0,malloc_chunk 0x11b22020,x/32gx 0x11b22000,p 0x7ef0cf997b78 - 0x3c4b78,context,continue

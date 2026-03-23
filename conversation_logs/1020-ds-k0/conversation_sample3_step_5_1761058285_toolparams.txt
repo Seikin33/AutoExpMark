@@ -1,1 +1,0 @@
-context,x/4gx 0x602120,x/4gx 0x602140,x/wx 0x602160,malloc_chunk 0x7cc4000,malloc_chunk 0x7cc4090,malloc_chunk 0x7cc40b0,stack 20,search -s '/bin/sh',bins,continue

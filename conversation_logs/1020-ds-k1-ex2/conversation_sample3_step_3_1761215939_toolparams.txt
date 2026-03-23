@@ -1,1 +1,0 @@
-regs,stack 20,x/4gx 0x602100,malloc_chunk 0x1632e000,gotplt,search /bin/sh,canary,nearpc 20,fsbase,continue

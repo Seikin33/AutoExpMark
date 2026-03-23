@@ -1,1 +1,0 @@
-x/wx 0x804A288,x/20wx 0x9fed410,x/s 0x9fed418,x/s 0x9fed431,gotplt,x/wx 0x804A2A8,x/s 0x804A2C0,continue

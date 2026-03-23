@@ -1,1 +1,0 @@
-x/gx 0x6020B8,heap chunks,telescope $rsp 20,regs,search -t string ROCK,continue

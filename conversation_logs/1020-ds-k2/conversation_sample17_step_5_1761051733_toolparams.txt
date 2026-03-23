@@ -1,1 +1,0 @@
-p heaparray,x/10gx &heaparray,p magic,x/10gx 0x6020ad,x/10gx 0x6020b0,gotplt,x/10gx 0x602018,context,hexdump 0x25fcd080 0x70,continue

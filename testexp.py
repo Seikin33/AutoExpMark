@@ -81,7 +81,7 @@ def AnalyseEXP(exp:EXPCode):
 
 def main():
     exps = [
-        #sample0,
+        sample0,
         #sample1,
         #sample2,
         #sample3,

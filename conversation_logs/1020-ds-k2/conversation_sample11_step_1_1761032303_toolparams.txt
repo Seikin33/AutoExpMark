@@ -1,1 +1,0 @@
-p myCart,x/x 0x804b070,x/x 0x804b068,telescope 0x945f410 27*5,telescope 0xff8f8908 20,hexdump 0x945f410 200,search -p 0xff8d9000 0xff8fa000,search -p 0xff8d9000,search -p 0xff8f8908,context,continue

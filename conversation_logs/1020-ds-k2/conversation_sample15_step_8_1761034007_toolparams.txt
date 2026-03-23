@@ -1,1 +1,0 @@
-telescope 0x5b9ddb202040 20,malloc_chunk 0x5b9de10ef090,malloc_chunk 0x5b9de10ef100,bins,regs,stack 20,search 0x763ed19e1b78,vmmap heap,continue

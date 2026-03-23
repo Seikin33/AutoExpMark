@@ -1,1 +1,0 @@
-heap,search /bin/sh,envp,stack 20,regs,hexdump 0x62c350f4e240 100,telescope 0x79438ef763a0 1,continue

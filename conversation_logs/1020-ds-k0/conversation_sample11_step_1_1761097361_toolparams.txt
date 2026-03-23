@@ -1,1 +1,0 @@
-p myCart,p dword_804B070,info variables,info variables myCart,x/x 0x0804b068,info address myCart,hexdump 0xff9b30d8 40,telescope 0xff9b30d8 10,malloc_chunk 0x92ec7e0,bins,stack 20,search -p 0xff9b30d8,telescope 0x92ec7f0 10,telescope 0x92ec7e0 20,search -t string iPhone,search iPhone,telescope 0x92ec810 10,telescope 0x92ec860 10,telescope 0x92ec7c0 10,x/x 0x0804b068

@@ -1,1 +1,0 @@
-x/gx 0x6020A8,telescope 0x291c010 10,x/12gx 0x291c010+16,hexdump 0x291d830,hexdump 0x291d8c0,hexdump 0x291d950,hexdump 0x291d9e0,malloc_chunk 0x291d820,malloc_chunk 0x291d8b0,malloc_chunk 0x291d940,malloc_chunk 0x291d9d0,disassemble sub_400D87,disassemble 0x400D87,gotplt,x/gx 0x602060,continue

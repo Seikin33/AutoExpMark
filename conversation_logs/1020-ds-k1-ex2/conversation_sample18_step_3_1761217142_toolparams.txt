@@ -1,1 +1,0 @@
-telescope 0x8c88410 20,x/wx 0x804a248,x/wx 0x804a288,x/wx 0x804a2a4,x/s 0x804a2a8,telescope 0x8c88450 10,search -p 0xf7e1dcb0,x/10wx 0x8c88490,continue

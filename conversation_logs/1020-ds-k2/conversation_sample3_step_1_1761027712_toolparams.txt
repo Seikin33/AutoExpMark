@@ -1,1 +1,0 @@
-context,regs,search /bin/sh,telescope $rsp 40,gotplt,telescope 0x602000 20,hexdump 0x6020e0 20,p system,continue

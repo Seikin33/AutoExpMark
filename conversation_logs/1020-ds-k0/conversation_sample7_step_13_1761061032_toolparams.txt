@@ -1,1 +1,0 @@
-heap,bins,arena,telescope 0x3dee2000 40,search -x 51,search -x 51 0x3dee2000 0x3def0000,search -x 51,search -x 91,search -p 0x3dee2000,telescope 0x755361b710d8 10,search -p 0x3dee2100,search -p 0x3dee2,hexdump 0x3dee2000 200,hexdump 0x3dee2100 200,info registers,search -t string "Command:",search -t string "Command:" 0x400000 0x4f4000,search "Command:",ps,info proc

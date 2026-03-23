@@ -1,1 +1,0 @@
-context,heap,bins,search -s /bin/sh,regs,telescope 0x58b90e74f000,vmmap,continue

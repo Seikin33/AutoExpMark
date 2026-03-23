@@ -1,1 +1,0 @@
-x/gx 0x6020B8,heap chunks,search 0x6161616161616161,search -t qword 0x6161616161616161,stack 20,regs,bins,telescope 0x6020B8 10,vmmap,continue

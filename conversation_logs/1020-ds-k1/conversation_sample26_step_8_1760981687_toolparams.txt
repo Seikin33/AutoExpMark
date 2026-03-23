@@ -1,1 +1,0 @@
-context,regs,stack 20,telescope 0x602100 8,telescope 0x602140 8,telescope 0x6020a0 4,telescope 0x6020e0 2,gotplt,got,gotplt,telescope 0x602018 10,heap,bins,continue

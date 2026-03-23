@@ -1,10 +1,10 @@
 from GDBInfo import EXPCode
 
 Encode_EXP={
-    0: "stkof_exp",
-    1: "pwn1_exp",
-    2: "wangdingbei_exp",
-    3: "note2_exp",
+    0: "heap23_00_hitcon_2014_stkof",
+    1: "heap23_01_guosai_201x_pwn1",
+    2: "heap23_02_wdb_2018_babyheap",
+    3: "heap23_03_zctf_2016_note2",
     4: "search_engine_exp",
     5: "cookbook_exp",
     6: "sleepy_holder_exp",
@@ -31,15 +31,15 @@ Encode_EXP={
     27: "Asis_2016_b00ks",
 }
 
-sample0 = EXPCode(
-    ExpCodePath="./data/sample0.py",
-    DecompileCodePath="./data/sample0-analysis-ds.md",
+heap23_00_hitcon_2014_stkof = EXPCode(
+    ExpCodePath="./data/exp/heap23_00_hitcon_2014_stkof.py",
+    DecompileCodePath="./data/decompile/heap23_00_hitcon_2014_stkof.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'split-window', '-h']",
-        "p = process('./data/sample0')",
-        "elf = ELF('./data/sample0')",
+        "p = process('./data/bin/heap23_00_hitcon_2014_stkof')",
+        "elf = ELF('./data/bin/heap23_00_hitcon_2014_stkof')",
         "libc = elf.libc",
         "g_pointer = 0x602140"
     ],
@@ -86,15 +86,15 @@ sample0 = EXPCode(
     ],
 )
 
-sample1 = EXPCode(
-    ExpCodePath="./data/sample1.py",
-    DecompileCodePath="./data/sample1-analysis-ds.md",
+heap23_01_guosai_201x_pwn1 = EXPCode(
+    ExpCodePath="./data/exp/heap23_01_guosai_201x_pwn1.py",
+    DecompileCodePath="./data/decompile/heap23_01_guosai_201x_pwn1.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample1')",
-        "p = process('./data/sample1')",
+        "elf = ELF('./data/bin/heap23_01_guosai_201x_pwn1')",
+        "p = process('./data/bin/heap23_01_guosai_201x_pwn1')",
         "libc = elf.libc",
         "sl = lambda s : p.sendline(s)",
         "sd = lambda s : p.send(s)",
@@ -152,15 +152,15 @@ sample1 = EXPCode(
     ],
 )
 
-sample2 = EXPCode(
-    ExpCodePath="./data/sample2.py",
-    DecompileCodePath="./data/sample2-analysis-ds.md",
+heap23_02_wdb_2018_babyheap = EXPCode(
+    ExpCodePath="./data/exp/heap23_02_wdb_2018_babyheap.py",
+    DecompileCodePath="./data/decompile/heap23_02_wdb_2018_babyheap.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample2')",
-        "p = process('./data/sample2')",
+        "elf = ELF('./data/bin/heap23_02_wdb_2018_babyheap')",
+        "p = process('./data/bin/heap23_02_wdb_2018_babyheap')",
         "libc = elf.libc",
         "sl = lambda s : p.sendline(s.encode() if isinstance(s, str) else s)",
         "sd = lambda s : p.send(s.encode() if isinstance(s, str) else s)",
@@ -223,15 +223,15 @@ sample2 = EXPCode(
     ],
 )
 
-sample3 = EXPCode(
-    ExpCodePath="./data/sample3.py",
-    DecompileCodePath="./data/sample3-analysis-ds.md",
+heap23_03_zctf_2016_note2 = EXPCode(
+    ExpCodePath="./data/exp/heap23_03_zctf_2016_note2.py",
+    DecompileCodePath="./data/decompile/heap23_03_zctf_2016_note2.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample3')",
-        "p = process('./data/sample3')",
+        "elf = ELF('./data/bin/heap23_03_zctf_2016_note2')",
+        "p = process('./data/bin/heap23_03_zctf_2016_note2')",
         "libc = elf.libc",
     ],
     DIYFunctions=[
@@ -286,16 +286,16 @@ sample3 = EXPCode(
     ],
 )
 
-sample4 = EXPCode(
-    ExpCodePath="./data/sample4.py",
-    DecompileCodePath="./data/sample4-groundtruth-writeup.md",
+heap23_04_search_engine = EXPCode(
+    ExpCodePath="./data/exp/heap23_04_search_engine.py",
+    DecompileCodePath="./data/decompile/heap23_04_search_engine.c",
     InitializeCode=[
         "from pwn import *",
         "import re",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample4')",
-        "elf = ELF('./data/sample4')",
+        "p = process('./data/bin/heap23_04_search_engine')",
+        "elf = ELF('./data/bin/heap23_04_search_engine')",
         "libc = elf.libc",
     ],
     DIYFunctions=[
@@ -415,16 +415,16 @@ sample4 = EXPCode(
     ],
 )
 
-sample5 = EXPCode(
-    ExpCodePath="./data/sample5.py",
-    DecompileCodePath="./data/sample5-groundtruth-writeup.md",
+heap23_05_cookbook = EXPCode(
+    ExpCodePath="./data/exp/heap23_05_cookbook.py",
+    DecompileCodePath="./data/decompile/heap23_05_cookbook.c",
     InitializeCode=[
         "from pwn import *",
         "from LibcSearcher import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample5')",
-        "elf = ELF('./data/sample5')",
+        "p = process('./data/bin/heap23_05_cookbook')",
+        "elf = ELF('./data/bin/heap23_05_cookbook')",
         "libc = elf.libc",
         "system_off = libc.symbols['system']",
         "fgets_off = libc.symbols['fgets']",
@@ -543,16 +543,16 @@ sample5 = EXPCode(
     ],
 )
 
-sample6 = EXPCode(
-    ExpCodePath="./data/sample6.py",
-    DecompileCodePath="./data/sample6-analysis-ds.md",
+heap23_06_hitcon_2016_sleepyholder = EXPCode(
+    ExpCodePath="./data/exp/heap23_06_hitcon_2016_sleepyholder.py",
+    DecompileCodePath="./data/decompile/heap23_06_hitcon_2016_sleepyholder.c",
     InitializeCode=[
         "from pwn import *",
         "from LibcSearcher import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample6')",
-        "p = process('./data/sample6')",
+        "elf = ELF('./data/bin/heap23_06_hitcon_2016_sleepyholder')",
+        "p = process('./data/bin/heap23_06_hitcon_2016_sleepyholder')",
         "libc = elf.libc",
         "f_ptr = 0x6020d0",
         "atoi_GOT = elf.got['atoi']",
@@ -605,15 +605,15 @@ sample6 = EXPCode(
     ],
 )
 
-sample7 = EXPCode(
-    ExpCodePath="./data/sample7.py",
-    DecompileCodePath="./data/sample7-analysis-ds.md",
+heap23_07_0ctf_2017_babyheap = EXPCode(
+    ExpCodePath="./data/exp/heap23_07_0ctf_2017_babyheap.py",
+    DecompileCodePath="./data/decompile/heap23_07_0ctf_2017_babyheap.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample7')",
-        "elf = ELF('./data/sample7')",
+        "p = process('./data/bin/heap23_07_0ctf_2017_babyheap')",
+        "elf = ELF('./data/bin/heap23_07_0ctf_2017_babyheap')",
         "libc = elf.libc"
     ],
     DIYFunctions=[
@@ -662,15 +662,15 @@ sample7 = EXPCode(
     ],
 )
 
-sample8 = EXPCode(
-    ExpCodePath="./data/sample8.py",
-    DecompileCodePath="./data/sample8-analysis-ds.md",
+heap23_08_hitcontrainning_lab11_bamboobox = EXPCode(
+    ExpCodePath="./data/exp/heap23_08_hitcontrainning_lab11_bamboobox.py",
+    DecompileCodePath="./data/decompile/heap23_08_hitcontrainning_lab11_bamboobox.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample8')",
-        "p = process('./data/sample8')",
+        "elf = ELF('./data/bin/heap23_08_hitcontrainning_lab11_bamboobox')",
+        "p = process('./data/bin/heap23_08_hitcontrainning_lab11_bamboobox')",
         "libc = elf.libc",
         "sl = lambda s : p.sendline(s.encode() if isinstance(s, str) else s)",
         "sd = lambda s : p.send(s.encode() if isinstance(s, str) else s)",
@@ -730,15 +730,15 @@ sample8 = EXPCode(
     ],
 )
 
-sample9 = EXPCode(
-    ExpCodePath="./data/sample9.py",
-    DecompileCodePath="./data/sample9-analysis-ds.md",
+heap23_09_qwb_2018_silent2 = EXPCode(
+    ExpCodePath="./data/exp/heap23_09_qwb_2018_silent2.py",
+    DecompileCodePath="./data/decompile/heap23_09_qwb_2018_silent2.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample9')",
-        "p = process('./data/sample9')",
+        "elf = ELF('./data/bin/heap23_09_qwb_2018_silent2')",
+        "p = process('./data/bin/heap23_09_qwb_2018_silent2')",
         "libc = elf.libc",
         "func_addr = 0x4009C0",
         "free_got_plt = 0x602018",
@@ -777,15 +777,15 @@ sample9 = EXPCode(
     ],
 )
 
-sample10 = EXPCode(
-    ExpCodePath="./data/sample10.py",
-    DecompileCodePath="./data/sample10-analysis-ds.md",
+heap23_10_0CTF_2015_FreeNote = EXPCode(
+    ExpCodePath="./data/exp/heap23_10_0CTF_2015_FreeNote.py",
+    DecompileCodePath="./data/decompile/heap23_10_0CTF_2015_FreeNote.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample10')",
-        "elf = ELF('./data/sample10')",
+        "p = process('./data/bin/heap23_10_0CTF_2015_FreeNote')",
+        "elf = ELF('./data/bin/heap23_10_0CTF_2015_FreeNote')",
         "libc = elf.libc",
     ],
     DIYFunctions=[
@@ -845,15 +845,15 @@ sample10 = EXPCode(
     ],
 )
 
-sample11 = EXPCode(
-    ExpCodePath="./data/sample11.py",
-    DecompileCodePath="./data/sample11-analysis-ds.md",
+heap23_11_pwnable_applestore = EXPCode(
+    ExpCodePath="./data/exp/heap23_11_pwnable_applestore.py",
+    DecompileCodePath="./data/decompile/heap23_11_pwnable_applestore.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample11')",
-        "elf = ELF('./data/sample11')",
+        "p = process('./data/bin/heap23_11_pwnable_applestore')",
+        "elf = ELF('./data/bin/heap23_11_pwnable_applestore')",
         "libc = elf.libc",
     ],
     DIYFunctions=[
@@ -906,15 +906,15 @@ sample11 = EXPCode(
     ],
 )
 
-sample12 = EXPCode(
-    ExpCodePath="./data/sample12.py",
-    DecompileCodePath="./data/sample12-analysis-ds.md",
+heap23_12_axb_2019_heap = EXPCode(
+    ExpCodePath="./data/exp/heap23_12_axb_2019_heap.py",
+    DecompileCodePath="./data/decompile/heap23_12_axb_2019_heap.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample12')",
-        "elf = ELF('./data/sample12')",
+        "p = process('./data/bin/heap23_12_axb_2019_heap')",
+        "elf = ELF('./data/bin/heap23_12_axb_2019_heap')",
         "libc = elf.libc",
     ],
     DIYFunctions=[
@@ -956,15 +956,15 @@ sample12 = EXPCode(
     ],
 )
 
-sample13 = EXPCode(
-    ExpCodePath="./data/sample13.py",
-    DecompileCodePath="./data/sample13-analysis-ds.md",
+heap23_13_starctf_2019_girlfriend = EXPCode(
+    ExpCodePath="./data/exp/heap23_13_starctf_2019_girlfriend.py",
+    DecompileCodePath="./data/decompile/heap23_13_starctf_2019_girlfriend.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample13')",
-        "elf = ELF('./data/sample13')",
+        "p = process('./data/bin/heap23_13_starctf_2019_girlfriend')",
+        "elf = ELF('./data/bin/heap23_13_starctf_2019_girlfriend')",
         "libc = elf.libc",
     ],
     DIYFunctions=[
@@ -1004,15 +1004,15 @@ sample13 = EXPCode(
     ],
 )
 
-sample14 = EXPCode(
-    ExpCodePath="./data/sample14.py",
-    DecompileCodePath="./data/sample14-analysis-ds.md",
+heap23_14_wustctf_2020_easyfast = EXPCode(
+    ExpCodePath="./data/exp/heap23_14_wustctf_2020_easyfast.py",
+    DecompileCodePath="./data/decompile/heap23_14_wustctf_2020_easyfast.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample14')",
-        "elf = ELF('./data/sample14')",
+        "p = process('./data/bin/heap23_14_wustctf_2020_easyfast')",
+        "elf = ELF('./data/bin/heap23_14_wustctf_2020_easyfast')",
         "libc = elf.libc",
     ],
     DIYFunctions=[
@@ -1054,15 +1054,15 @@ sample14 = EXPCode(
     ],
 )
 
-sample16 = EXPCode(
-    ExpCodePath="./data/sample16.py",
-    DecompileCodePath="./data/sample16-groundtruth-writeup.md",
+heap23_16_zctf_2016_note3 = EXPCode(
+    ExpCodePath="./data/exp/heap23_16_zctf_2016_note3.py",
+    DecompileCodePath="./data/decompile/heap23_16_zctf_2016_note3.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample16')",
-        "elf = ELF('./data/sample16')",
+        "p = process('./data/bin/heap23_16_zctf_2016_note3')",
+        "elf = ELF('./data/bin/heap23_16_zctf_2016_note3')",
         "libc = elf.libc",
         "ptr = 0x6020C8",
         "free_got = elf.got['free']",
@@ -1115,16 +1115,16 @@ sample16 = EXPCode(
     ],
 )
 
-sample15 = EXPCode(
-    ExpCodePath="./data/sample15.py",
-    DecompileCodePath="./data/sample15-groundtruth-writeup.md",
+heap23_15_nsctf_online_2019_pwn2 = EXPCode(
+    ExpCodePath="./data/exp/heap23_15_nsctf_online_2019_pwn2.py",
+    DecompileCodePath="./data/decompile/heap23_15_nsctf_online_2019_pwn2.c",
     InitializeCode=[
         "from pwn import *",
         "from pwncli import one_gadget",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample15')",
-        "elf = ELF('./data/sample15')",
+        "p = process('./data/bin/heap23_15_nsctf_online_2019_pwn2')",
+        "elf = ELF('./data/bin/heap23_15_nsctf_online_2019_pwn2')",
         "libc = elf.libc",
         "choice_words = '6.exit\\n'",
         "menu_add = 1",
@@ -1199,15 +1199,15 @@ sample15 = EXPCode(
     ],
 )
 
-sample17 = EXPCode(
-    ExpCodePath="./data/sample17.py",
-    DecompileCodePath="./data/sample17-groundtruth-writeup.md",
+heap23_17_ZJCTF_2019_Easyheap = EXPCode(
+    ExpCodePath="./data/exp/heap23_17_ZJCTF_2019_Easyheap.py",
+    DecompileCodePath="./data/decompile/heap23_17_ZJCTF_2019_Easyheap.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample17')",
-        "elf = ELF('./data/sample17')",
+        "p = process('./data/bin/heap23_17_ZJCTF_2019_Easyheap')",
+        "elf = ELF('./data/bin/heap23_17_ZJCTF_2019_Easyheap')",
         "libc = elf.libc",
         "n2b = lambda x    : str(x).encode()",
         "rv  = lambda x    : p.recv(x)",
@@ -1253,16 +1253,16 @@ sample17 = EXPCode(
     ],
 )
 
-sample18 = EXPCode(
-    ExpCodePath="./data/sample18.py",
-    DecompileCodePath="./data/sample18-groundtruth-writeup.md",
+heap23_18_hacklu_2014_oreo = EXPCode(
+    ExpCodePath="./data/exp/heap23_18_hacklu_2014_oreo.py",
+    DecompileCodePath="./data/decompile/heap23_18_hacklu_2014_oreo.c",
     InitializeCode=[
         "from pwn import *",
         "from LibcSearcher import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample18')",
-        "p = process('./data/sample18')",
+        "elf = ELF('./data/bin/heap23_18_hacklu_2014_oreo')",
+        "p = process('./data/bin/heap23_18_hacklu_2014_oreo')",
         "libc = elf.libc",
     ],
     DIYFunctions=[
@@ -1312,16 +1312,16 @@ sample18 = EXPCode(
     ],
 )
 
-sample19 = EXPCode(
-    ExpCodePath='./data/sample19.py',
-    DecompileCodePath='./data/sample19-groundtruth-writeup.md',
+heap23_19_0ctf_2018_heapstorm2 = EXPCode(
+    ExpCodePath='./data/exp/heap23_19_0ctf_2018_heapstorm2.py',
+    DecompileCodePath='./data/decompile/heap23_19_0ctf_2018_heapstorm2.c',
     InitializeCode=[
         'from pwn import *',
         'import itertools',
         'from hashlib import sha256',
         'context.log_level = \'debug\'',
         'context.terminal = [\'tmux\', \'splitw\', \'-h\']',
-        'elf = ELF(\'./data/sample19\')',
+        'elf = ELF(\'./data/bin/heap23_19_0ctf_2018_heapstorm2\')',
         'libc = elf.libc',
         'p = None',
         'storage = 0x13370000 + 0x800',
@@ -1379,7 +1379,7 @@ sample19 = EXPCode(
             'def heap_fengshui():',
             '    global p',
             '    while True:',
-            '        p = process(\'./data/sample19\')',
+            '        p = process(\'./data/heap23_19_0ctf_2018_heapstorm2\')',
             '        proof()',
             '        p.sendline(b\'1\')',
             '        p.recvuntil(b\'Command: \')',
@@ -1443,16 +1443,16 @@ sample19 = EXPCode(
     ],
 )
 
-sample20 = EXPCode(
-    ExpCodePath="./data/sample20.py",
-    DecompileCodePath="./data/sample20-groundtruth-writeup.md",
+heap23_20_bctf_2016_bcloud = EXPCode(
+    ExpCodePath="./data/exp/heap23_20_bctf_2016_bcloud.py",
+    DecompileCodePath="./data/decompile/heap23_20_bctf_2016_bcloud.c",
     InitializeCode=[
         "from pwn import *",
         "from LibcSearcher import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample20')",
-        "p = process('./data/sample20')",
+        "elf = ELF('./data/bin/heap23_20_bctf_2016_bcloud')",
+        "p = process('./data/bin/heap23_20_bctf_2016_bcloud')",
         "free_got = elf.got['free']",
         "puts_plt = elf.plt['puts']",
         "printf_got = elf.got['printf']",
@@ -1495,15 +1495,15 @@ sample20 = EXPCode(
     ],
 )
 
-sample21 = EXPCode(
-    ExpCodePath="./data/sample21.py",
-    DecompileCodePath="./data/sample21-groundtruth-writeup.md",
+heap23_21_lctf_2016_pwn200 = EXPCode(
+    ExpCodePath="./data/exp/heap23_21_lctf_2016_pwn200.py",
+    DecompileCodePath="./data/decompile/heap23_21_lctf_2016_pwn200.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample21')",
-        "p = process('./data/sample21')",
+        "elf = ELF('./data/bin/heap23_21_lctf_2016_pwn200')",
+        "p = process('./data/bin/heap23_21_lctf_2016_pwn200')",
         "shellcode = asm(shellcraft.amd64.linux.sh(), arch='amd64')",
     ],
     DIYFunctions=[
@@ -1549,15 +1549,15 @@ sample21 = EXPCode(
     ],
 )
 
-sample22 = EXPCode(
-    ExpCodePath="./data/sample22.py",
-    DecompileCodePath="./data/sample22-groundtruth-writeup.md",
+heap23_22_seccon_2016_tinypad = EXPCode(
+    ExpCodePath="./data/exp/heap23_22_seccon_2016_tinypad.py",
+    DecompileCodePath="./data/decompile/heap23_22_seccon_2016_tinypad.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample22')",
-        "p = process('./data/sample22')",
+        "elf = ELF('./data/bin/heap23_22_seccon_2016_tinypad')",
+        "p = process('./data/bin/heap23_22_seccon_2016_tinypad')",
         "libc = elf.libc",
         "log.info('PID: ' + str(proc.pidof(p)[0]))",
         "main_arena_offset = 0x3c4b20",
@@ -1615,12 +1615,12 @@ sample22 = EXPCode(
     ],
 )
 
-sample23 = EXPCode(
-    ExpCodePath="./data/sample23.py",
-    DecompileCodePath="./data/sample23-groundtruth-writeup.md",
+heap23_23_xihu_2019_storm_note = EXPCode(
+    ExpCodePath="./data/exp/heap23_23_xihu_2019_storm_note.py",
+    DecompileCodePath="./data/decompile/heap23_23_xihu_2019_storm_note.c",
     InitializeCode=[
         "from pwn import *",
-        "p = process('./data/sample23')",
+        "p = process('./data/bin/heap23_23_xihu_2019_storm_note')",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
     ],
@@ -1671,15 +1671,15 @@ sample23 = EXPCode(
     ],
 )
 
-sample24 = EXPCode(
-    ExpCodePath="./data/sample24.py",
-    DecompileCodePath="./data/sample24-groundtruth-writeup.md",
+heap23_24_rctf_2019_babyheap = EXPCode(
+    ExpCodePath="./data/exp/heap23_24_rctf_2019_babyheap.py",
+    DecompileCodePath="./data/decompile/heap23_24_rctf_2019_babyheap.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample24')",
-        "p = process('./data/sample24')",
+        "elf = ELF('./data/bin/heap23_24_rctf_2019_babyheap')",
+        "p = process('./data/bin/heap23_24_rctf_2019_babyheap')",
         "libc = elf.libc",
         "uu64    = lambda data               :u64(data.ljust(8, b'\\0'))",
     ],
@@ -1773,15 +1773,15 @@ sample24 = EXPCode(
     ],
 )
 
-sample25 = EXPCode(
-    ExpCodePath="./data/sample25.py",
-    DecompileCodePath="./data/sample25-groundtruth-writeup.md",
+heap23_25_pwnhub_einherjar_level1 = EXPCode(
+    ExpCodePath="./data/exp/heap23_25_pwnhub_einherjar_level1.py",
+    DecompileCodePath="./data/decompile/heap23_25_pwnhub_einherjar_level1.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample25')",
-        "elf = ELF('./data/sample25')",
+        "p = process('./data/bin/heap23_25_pwnhub_einherjar_level1')",
+        "elf = ELF('./data/bin/heap23_25_pwnhub_einherjar_level1')",
         "libc = elf.libc",
     ],
     DIYFunctions=[
@@ -1828,16 +1828,16 @@ sample25 = EXPCode(
     ],
 )
 
-sample26 = EXPCode(
-    ExpCodePath="./data/sample26.py",
-    DecompileCodePath="./data/sample26-groundtruth-writeup.md",
+heap23_26_ctfhub_lore_level1 = EXPCode(
+    ExpCodePath="./data/exp/heap23_26_ctfhub_lore_level1.py",
+    DecompileCodePath="./data/decompile/heap23_26_ctfhub_lore_level1.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "elf = ELF('./data/sample26')",
+        "elf = ELF('./data/bin/heap23_26_ctfhub_lore_level1')",
         "libc = elf.libc",
-        "p = process('./data/sample26')",
+        "p = process('./data/bin/heap23_26_ctfhub_lore_level1')",
         "free_got = elf.got['free']",
         "puts_got = elf.got['puts']",
         "atoi_got = elf.got['atoi']",
@@ -1895,15 +1895,15 @@ sample26 = EXPCode(
     ],
 )
 
-sample27 = EXPCode(
-    ExpCodePath="./data/sample27.py",
-    DecompileCodePath="./data/sample27-groundtruth-writeup.md",
+heap23_27_Asis_2016_b00ks = EXPCode(
+    ExpCodePath="./data/exp/heap23_27_Asis_2016_b00ks.py",
+    DecompileCodePath="./data/decompile/heap23_27_Asis_2016_b00ks.c",
     InitializeCode=[
         "from pwn import *",
         "context.log_level = 'debug'",
         "context.terminal = ['tmux', 'splitw', '-h']",
-        "p = process('./data/sample27')",
-        "elf = ELF('./data/sample27')",
+        "p = process('./data/bin/heap23_27_Asis_2016_b00ks')",
+        "elf = ELF('./data/bin/heap23_27_Asis_2016_b00ks')",
         "libc = elf.libc",
     ],
     DIYFunctions=[

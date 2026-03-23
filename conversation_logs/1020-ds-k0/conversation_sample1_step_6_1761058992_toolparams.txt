@@ -1,1 +1,0 @@
-x/32gx 0x6021E0,info address heap,x/32gx 0x6020e0,telescope 0x21aaf110 20,got,gotplt,x/gx 0x602018,hexdump 0x21aaf200 64,hexdump 0x21aaf100 64,bins,x/32gx 0x6021e0,x/10gx 0x6021c0,continue

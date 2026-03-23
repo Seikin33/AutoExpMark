@@ -1,1 +1,0 @@
-regs,stack 20,telescope $rsp,argv,x/10s $rsp-0x100,envp,x/10s 0x7ffd798a0f58,vmmap,info registers,continue

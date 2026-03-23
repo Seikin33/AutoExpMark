@@ -1,1 +1,0 @@
-gotplt,x/wx 0x804a288,x/wx 0x804a2a4,x/wx 0x804a2a0,hexdump 0x804a2a8 32,telescope 0x9fec408 20,telescope 0x9fed410 10,telescope 0x9fed450 10,fastbins,heap chunks,x/10wx 0x804a258,continue

@@ -1,1 +1,0 @@
-regs,disassemble $rip,telescope $rsp 40,search -x 6a 48 68 2f 2f 2f 73,search -x 6a48,search -x 6a48682f2f2f73,hexdump 0x7ffe51e5e990 64,continue

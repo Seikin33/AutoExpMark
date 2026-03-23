@@ -1,1 +1,0 @@
-x/gx 0x281ca010,x/gx 0x281ca018,x/10gx 0x281ca020,x/gx 0x602018,x/5gx 0x602000,telescope 0x281cb820 20,telescope 0x281cb8c0 20,search /bin/sh,bins,heap chunks,continue

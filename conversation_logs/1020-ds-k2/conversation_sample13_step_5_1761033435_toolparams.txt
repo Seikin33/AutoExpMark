@@ -1,1 +1,0 @@
-x/10gx 0x5b5d3e602060,telescope 0x5b5d43dd9010,telescope 0x5b5d43dd90c0,telescope 0x5b5d43dd9150,x/gx 0x5b5d43dd90d0,x/gx 0x7a858befbaed,x/gx 0x7a858befbb10,telescope 0x7a858befbaed 10,continue

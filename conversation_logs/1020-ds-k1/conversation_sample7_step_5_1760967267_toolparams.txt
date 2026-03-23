@@ -1,1 +1,0 @@
-telescope 0x2c288f9da160 80,hexdump 0x602dbcd95010 32,hexdump 0x602dbcd95010 40,hexdump 0x602dbcd95030 32,hexdump 0x602dbcd95050 48,malloc_chunk 0x602dbcd95020,hexdump 0x602dbcd95090 16,hexdump 0x602dbcd950e0 16,search -t qword 0x51,search -t qword 0x91,bins,continue

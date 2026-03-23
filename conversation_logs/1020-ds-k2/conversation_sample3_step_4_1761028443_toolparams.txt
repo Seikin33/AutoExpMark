@@ -1,1 +1,0 @@
-regs,context,malloc_chunk 0xd2ea000,malloc_chunk 0xd2ea090,x/4gx 0x602120,x/gx 0x602140,x/gx 0x602160,x/s 0x6020e0,gotplt,stack 20,telescope $rsp 10,disassemble 0x400d43,info functions 0x400d43,disassemble sub_400D43,search /bin/sh,search -p 0x602040,x/gx 0x602040,p system,continue

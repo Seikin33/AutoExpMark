@@ -1,1 +1,0 @@
-x/10gx 0x602060,x/wx 0x6020B0,search "aaaaaaaa",x/10gx 0x602068,regs,bt,x/20gx 0x7fffffffe320,info proc mappings,search -x 0x0000000000000021,search 0x21,continue

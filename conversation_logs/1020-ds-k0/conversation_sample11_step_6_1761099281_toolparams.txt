@@ -1,1 +1,0 @@
-regs,context,stack 20,telescope $sp 40,heap,telescope 0x63d2098f3000 20,continue

@@ -1,1 +1,0 @@
-regs,stack 20,gotplt,x/10gx 0x602018,vmmap,x/gx 0x6020d0,search "sh",continue

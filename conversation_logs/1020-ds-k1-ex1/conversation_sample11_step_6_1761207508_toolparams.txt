@@ -1,1 +1,0 @@
-regs,context,stack 20,telescope $rsp 40,gotplt,search -s "/bin/sh",telescope 0x804b066 10,telescope 0xffc17708 10,continue

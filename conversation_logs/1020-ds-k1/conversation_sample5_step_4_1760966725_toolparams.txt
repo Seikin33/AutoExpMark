@@ -1,1 +1,0 @@
-x/x 0x804d0a0,x/x 0x804d09c,x/20wx 0x87682b0,heap,bins,gotplt,regs,context,search sh;,search sh,x/10wx $esp,continue

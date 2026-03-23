@@ -1,1 +1,0 @@
-telescope 0x6020D8 10,heap chunks,search /bin/sh,search EEEEE,x/gx 0x602018,arena,mp,top_chunk,hexdump 0x10e67340 64,continue

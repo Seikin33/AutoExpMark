@@ -1,1 +1,0 @@
-x/gx 0x6020A8,telescope 0x6020A8 10,telescope 0x281ca010 40,hexdump 0x281cb830 32,hexdump 0x281cb8c0 32,hexdump 0x281cb950 32,hexdump 0x281cb9e0 32,regs,stack 20,gotplt,search 12345678,search 61,continue

@@ -1,1 +1,0 @@
-heap chunks,heap,telescope 0x5a88fedf4000 40,telescope 0x5a88fedf40d0,telescope 0x7e3d781e7b10,bins,telescope 0x7e3d781e7aed,search -t qword 0x71 0x5a88fedf4000 0x5a88fedf4140,search 0x71,telescope 0x5a88fedf40a0 20,vmmap,search -t qword 0x5a88fedf4000,telescope 0x7ffdae533ae0 50,search -t qword 0x1 0x5a88fedf4000 0x5a88fee15000,search 0x1,continue
